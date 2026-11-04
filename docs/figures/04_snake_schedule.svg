@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="1260" viewBox="0 0 1520 1260">
+<rect width="100%" height="100%" fill="white"/>
+<text x="760.0" y="39.72" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="27" fill="#17232f" font-weight="700" text-anchor="middle">蛇形路径如何保留上一块缓存</text>
+<text x="760.0" y="71.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#526274" font-weight="400" text-anchor="middle">延续 768×2048 × 2048×768 示例；每个 Ai / BTj 占 512 KiB；路径为当前单核宏块顺序</text>
+<text x="45" y="122.56" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="21" fill="#17232f" font-weight="700" text-anchor="start">（a）C 的 3×3 宏块：同一行保留 Ai，转弯保留端点 BTj</text>
+<rect x="105" y="200" width="240" height="110" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="225.0" y="235.92" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="22" fill="#23608b" font-weight="700" text-anchor="middle">1  ·  C00</text>
+<text x="225.0" y="267.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">A0 × BT0^T</text>
+<text x="225.0" y="290.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">256×256 INT32</text>
+<rect x="425" y="200" width="240" height="110" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="545.0" y="235.92" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="22" fill="#23608b" font-weight="700" text-anchor="middle">2  ·  C01</text>
+<text x="545.0" y="267.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">A0 × BT1^T</text>
+<text x="545.0" y="290.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">256×256 INT32</text>
+<rect x="745" y="200" width="240" height="110" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="865.0" y="235.92" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="22" fill="#23608b" font-weight="700" text-anchor="middle">3  ·  C02</text>
+<text x="865.0" y="267.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">A0 × BT2^T</text>
+<text x="865.0" y="290.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">256×256 INT32</text>
+<rect x="745" y="390" width="240" height="110" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="865.0" y="425.92" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="22" fill="#186b61" font-weight="700" text-anchor="middle">4  ·  C12</text>
+<text x="865.0" y="457.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">A1 × BT2^T</text>
+<text x="865.0" y="480.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">256×256 INT32</text>
+<rect x="425" y="390" width="240" height="110" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="545.0" y="425.92" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="22" fill="#186b61" font-weight="700" text-anchor="middle">5  ·  C11</text>
+<text x="545.0" y="457.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">A1 × BT1^T</text>
+<text x="545.0" y="480.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">256×256 INT32</text>
+<rect x="105" y="390" width="240" height="110" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="225.0" y="425.92" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="22" fill="#186b61" font-weight="700" text-anchor="middle">6  ·  C10</text>
+<text x="225.0" y="457.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">A1 × BT0^T</text>
+<text x="225.0" y="480.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">256×256 INT32</text>
+<rect x="105" y="580" width="240" height="110" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="225.0" y="615.92" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="22" fill="#23608b" font-weight="700" text-anchor="middle">7  ·  C20</text>
+<text x="225.0" y="647.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">A2 × BT0^T</text>
+<text x="225.0" y="670.9399999999999" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">256×256 INT32</text>
+<rect x="425" y="580" width="240" height="110" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="545.0" y="615.92" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="22" fill="#23608b" font-weight="700" text-anchor="middle">8  ·  C21</text>
+<text x="545.0" y="647.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">A2 × BT1^T</text>
+<text x="545.0" y="670.9399999999999" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">256×256 INT32</text>
+<rect x="745" y="580" width="240" height="110" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="865.0" y="615.92" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="22" fill="#23608b" font-weight="700" text-anchor="middle">9  ·  C22</text>
+<text x="865.0" y="647.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">A2 × BT2^T</text>
+<text x="865.0" y="670.9399999999999" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">256×256 INT32</text>
+<polyline points="345,255 410,255" fill="none" stroke="#23608b" stroke-width="3"/>
+<polygon points="410,255 400.0950818741206,259.78462087522354 400.0950818741206,250.21537912477646" fill="#23608b"/>
+<polyline points="665,255 730,255" fill="none" stroke="#23608b" stroke-width="3"/>
+<polygon points="730,255 720.0950818741205,259.78462087522354 720.0950818741205,250.21537912477646" fill="#23608b"/>
+<polyline points="865,310 865,375" fill="none" stroke="#9a5a13" stroke-width="3"/>
+<polygon points="865,375 860.2153791247765,365.0950818741206 869.7846208752235,365.0950818741206" fill="#9a5a13"/>
+<polyline points="745,445 680,445" fill="none" stroke="#23608b" stroke-width="3"/>
+<polygon points="680,445 689.9049181258795,440.21537912477646 689.9049181258795,449.78462087522354" fill="#23608b"/>
+<polyline points="425,445 360,445" fill="none" stroke="#23608b" stroke-width="3"/>
+<polygon points="360,445 369.9049181258794,440.21537912477646 369.9049181258794,449.78462087522354" fill="#23608b"/>
+<polyline points="225,500 225,565" fill="none" stroke="#9a5a13" stroke-width="3"/>
+<polygon points="225,565 220.21537912477646,555.0950818741205 229.78462087522354,555.0950818741205" fill="#9a5a13"/>
+<polyline points="345,635 410,635" fill="none" stroke="#23608b" stroke-width="3"/>
+<polygon points="410,635 400.0950818741206,639.7846208752235 400.0950818741206,630.2153791247765" fill="#23608b"/>
+<polyline points="665,635 730,635" fill="none" stroke="#23608b" stroke-width="3"/>
+<polygon points="730,635 720.0950818741205,639.7846208752235 720.0950818741205,630.2153791247765" fill="#23608b"/>
+<text x="530" y="173.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="400" text-anchor="middle">A0 在本宏块行内驻留；只替换 BT 条带</text>
+<text x="530" y="363.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#186b61" font-weight="400" text-anchor="middle">A1 在本宏块行内驻留；只替换 BT 条带</text>
+<text x="530" y="553.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="400" text-anchor="middle">A2 在本宏块行内驻留；只替换 BT 条带</text>
+<text x="990" y="359.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#9a5a13" font-weight="400" text-anchor="middle">保留 BT2</text>
+<text x="100" y="549.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#9a5a13" font-weight="400" text-anchor="middle">保留 BT0</text>
+<rect x="1090" y="166" width="385" height="548" rx="12" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<text x="1282" y="205.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#17232f" font-weight="700" text-anchor="middle">每步新增的 DDR 读取</text>
+<text x="1110" y="254.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="700" text-anchor="start">1</text>
+<text x="1145" y="253.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="start">A0 + BT0</text>
+<text x="1425" y="253.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#17232f" font-weight="400" text-anchor="middle">1 MiB</text>
+<text x="1110" y="301.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="700" text-anchor="start">2</text>
+<text x="1145" y="300.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="start">BT1</text>
+<text x="1425" y="300.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#17232f" font-weight="400" text-anchor="middle">512 KiB</text>
+<text x="1110" y="348.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="700" text-anchor="start">3</text>
+<text x="1145" y="347.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="start">BT2</text>
+<text x="1425" y="347.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#17232f" font-weight="400" text-anchor="middle">512 KiB</text>
+<text x="1110" y="395.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#9a5a13" font-weight="700" text-anchor="start">4</text>
+<text x="1145" y="394.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="start">A1（复用 BT2）</text>
+<text x="1425" y="394.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#17232f" font-weight="400" text-anchor="middle">512 KiB</text>
+<text x="1110" y="442.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="700" text-anchor="start">5</text>
+<text x="1145" y="441.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="start">BT1</text>
+<text x="1425" y="441.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#17232f" font-weight="400" text-anchor="middle">512 KiB</text>
+<text x="1110" y="489.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="700" text-anchor="start">6</text>
+<text x="1145" y="488.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="start">BT0</text>
+<text x="1425" y="488.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#17232f" font-weight="400" text-anchor="middle">512 KiB</text>
+<text x="1110" y="536.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#9a5a13" font-weight="700" text-anchor="start">7</text>
+<text x="1145" y="535.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="start">A2（复用 BT0）</text>
+<text x="1425" y="535.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#17232f" font-weight="400" text-anchor="middle">512 KiB</text>
+<text x="1110" y="583.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="700" text-anchor="start">8</text>
+<text x="1145" y="582.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="start">BT1</text>
+<text x="1425" y="582.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#17232f" font-weight="400" text-anchor="middle">512 KiB</text>
+<text x="1110" y="630.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="700" text-anchor="start">9</text>
+<text x="1145" y="629.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="start">BT2</text>
+<text x="1425" y="629.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#17232f" font-weight="400" text-anchor="middle">512 KiB</text>
+<text x="45" y="772.56" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="21" fill="#17232f" font-weight="700" text-anchor="start">（b）第 3 → 4 步：从 C02 转向 C12，只换 A0 → A1，BT2 整块留在缓存</text>
+<rect x="65" y="805" width="610" height="270" rx="12" fill="white" stroke="#677584" stroke-width="2"/>
+<text x="370" y="840.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#17232f" font-weight="700" text-anchor="middle">第 3 步结束：A0 / BT2</text>
+<text x="215" y="878.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="700" text-anchor="middle">A0 缓存</text>
+<text x="520" y="878.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#186b61" font-weight="700" text-anchor="middle">BT2 缓存 · 保留</text>
+<rect x="95" y="897" width="240" height="19" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="215" y="910.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#23608b" font-weight="400" text-anchor="middle">a0  ·  32×2048</text>
+<rect x="400" y="897" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="520" y="910.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt16  ·  32×2048</text>
+<rect x="95" y="916" width="240" height="19" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="215" y="929.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#23608b" font-weight="400" text-anchor="middle">a1  ·  32×2048</text>
+<rect x="400" y="916" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="520" y="929.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt17  ·  32×2048</text>
+<rect x="95" y="935" width="240" height="19" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="215" y="948.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#23608b" font-weight="400" text-anchor="middle">a2  ·  32×2048</text>
+<rect x="400" y="935" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="520" y="948.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt18  ·  32×2048</text>
+<rect x="95" y="954" width="240" height="19" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="215" y="967.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#23608b" font-weight="400" text-anchor="middle">a3  ·  32×2048</text>
+<rect x="400" y="954" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="520" y="967.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt19  ·  32×2048</text>
+<rect x="95" y="973" width="240" height="19" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="215" y="986.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#23608b" font-weight="400" text-anchor="middle">a4  ·  32×2048</text>
+<rect x="400" y="973" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="520" y="986.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt20  ·  32×2048</text>
+<rect x="95" y="992" width="240" height="19" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="215" y="1005.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#23608b" font-weight="400" text-anchor="middle">a5  ·  32×2048</text>
+<rect x="400" y="992" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="520" y="1005.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt21  ·  32×2048</text>
+<rect x="95" y="1011" width="240" height="19" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="215" y="1024.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#23608b" font-weight="400" text-anchor="middle">a6  ·  32×2048</text>
+<rect x="400" y="1011" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="520" y="1024.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt22  ·  32×2048</text>
+<rect x="95" y="1030" width="240" height="19" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="215" y="1043.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#23608b" font-weight="400" text-anchor="middle">a7  ·  32×2048</text>
+<rect x="400" y="1030" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="520" y="1043.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt23  ·  32×2048</text>
+<rect x="845" y="805" width="610" height="270" rx="12" fill="white" stroke="#677584" stroke-width="2"/>
+<text x="1150" y="840.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#17232f" font-weight="700" text-anchor="middle">第 4 步：A1 条带陆续载入 / BT2 保留</text>
+<text x="995" y="878.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#9a5a13" font-weight="700" text-anchor="middle">A1 缓存</text>
+<text x="1300" y="878.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#186b61" font-weight="700" text-anchor="middle">BT2 缓存 · 保留</text>
+<rect x="875" y="897" width="240" height="19" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="995" y="910.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#9a5a13" font-weight="400" text-anchor="middle">a8  ·  32×2048</text>
+<rect x="1180" y="897" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1300" y="910.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt16  ·  32×2048</text>
+<rect x="875" y="916" width="240" height="19" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="995" y="929.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#9a5a13" font-weight="400" text-anchor="middle">a9  ·  32×2048</text>
+<rect x="1180" y="916" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1300" y="929.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt17  ·  32×2048</text>
+<rect x="875" y="935" width="240" height="19" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="995" y="948.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#9a5a13" font-weight="400" text-anchor="middle">a10  ·  32×2048</text>
+<rect x="1180" y="935" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1300" y="948.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt18  ·  32×2048</text>
+<rect x="875" y="954" width="240" height="19" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="995" y="967.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#9a5a13" font-weight="400" text-anchor="middle">a11  ·  32×2048</text>
+<rect x="1180" y="954" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1300" y="967.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt19  ·  32×2048</text>
+<rect x="875" y="973" width="240" height="19" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="995" y="986.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#9a5a13" font-weight="400" text-anchor="middle">a12  ·  32×2048</text>
+<rect x="1180" y="973" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1300" y="986.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt20  ·  32×2048</text>
+<rect x="875" y="992" width="240" height="19" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="995" y="1005.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#9a5a13" font-weight="400" text-anchor="middle">a13  ·  32×2048</text>
+<rect x="1180" y="992" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1300" y="1005.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt21  ·  32×2048</text>
+<rect x="875" y="1011" width="240" height="19" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="995" y="1024.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#9a5a13" font-weight="400" text-anchor="middle">a14  ·  32×2048</text>
+<rect x="1180" y="1011" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1300" y="1024.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt22  ·  32×2048</text>
+<rect x="875" y="1030" width="240" height="19" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="995" y="1043.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#9a5a13" font-weight="400" text-anchor="middle">a15  ·  32×2048</text>
+<rect x="1180" y="1030" width="240" height="19" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1300" y="1043.32" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="12" fill="#186b61" font-weight="400" text-anchor="middle">bt23  ·  32×2048</text>
+<polyline points="690,947 825,947" fill="none" stroke="#9a5a13" stroke-width="3"/>
+<polygon points="825,947 815.0950818741205,951.7846208752235 815.0950818741205,942.2153791247765" fill="#9a5a13"/>
+<text x="757" y="991.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#9a5a13" font-weight="400" text-anchor="middle">只读新 A1</text>
+<text x="757" y="1015.4399999999999" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#9a5a13" font-weight="400" text-anchor="middle">512 KiB</text>
+<text x="760" y="1117.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#17232f" font-weight="700" text-anchor="middle">A1 的 32 行条带陆续写入后，可与已驻留的 BT2 条带开始计算；不必等 A1 的 256 行全部装满</text>
+<rect x="65" y="1150" width="1390" height="65" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="760.0" y="1190.06" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="21" fill="#186b61" font-weight="700" text-anchor="middle">输入流量：逐行回到首列 6 MiB → 蛇形 5 MiB，少读 1 MiB（16.67%）</text>
+<text x="760" y="1243.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#526274" font-weight="400" text-anchor="middle">此处为冷缓存单核示例的输入字节推导；C 写回同为 2.25 MiB；并非实测时延或加速比</text>
+</svg>

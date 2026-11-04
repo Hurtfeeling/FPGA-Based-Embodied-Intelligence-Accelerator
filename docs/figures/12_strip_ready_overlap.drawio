@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="12_strip_ready_overlap" name="条带就绪与加载计算重叠">
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" arrows="1" page="1" pageScale="1" pageWidth="1320" pageHeight="740" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="item0" parent="1" vertex="1" value="条带就绪与加载计算重叠" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=27;fontColor=#17232f;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="506.5" y="11.100000000000001" width="307.0" height="40.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item1" parent="1" vertex="1" value="示意事件顺序，横向宽度不表示实测周期；K=2048 时一条输入为 32×2048 = 64 KiB" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#526274;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="351.5" y="54.8" width="617.0" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item2" parent="1" vertex="1" value="AXI 读引擎" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#17232f;fontStyle=1;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="56" y="151.0" width="111.5" height="30.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item3" parent="1" vertex="1" value="片上 ready" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#17232f;fontStyle=1;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="56" y="316.0" width="112.5" height="30.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item4" parent="1" vertex="1" value="计算阵列" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#17232f;fontStyle=1;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="56" y="466.0" width="90.0" height="30.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item5" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="245" y="125" width="175" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="item6" parent="1" vertex="1" value="A 条带 a0" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#23608b;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="286.5" y="154.9" width="92.0" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item7" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#526274;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="167" as="sourcePoint" />
+            <mxPoint x="435" y="167" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item8" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="445" y="125" width="175" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="item9" parent="1" vertex="1" value="BT 条带 bt0" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#186b61;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="476.75390625" y="154.9" width="111.4921875" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item10" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#526274;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="167" as="sourcePoint" />
+            <mxPoint x="635" y="167" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item11" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="645" y="125" width="175" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="item12" parent="1" vertex="1" value="A 条带 a1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#23608b;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="686.5" y="154.9" width="92.0" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item13" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#526274;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="820" y="167" as="sourcePoint" />
+            <mxPoint x="835" y="167" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item14" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="845" y="125" width="175" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="item15" parent="1" vertex="1" value="BT 条带 bt1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#186b61;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="876.75390625" y="154.9" width="111.4921875" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item16" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#526274;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020" y="167" as="sourcePoint" />
+            <mxPoint x="1035" y="167" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item17" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="1045" y="125" width="175" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="item18" parent="1" vertex="1" value="后续条带 …" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#23608b;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="1080.0" y="154.9" width="105.0" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item19" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="245" y="280" width="175" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="item20" parent="1" vertex="1" value="a0 完整提交" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#23608b;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="278.0" y="295.4" width="109.0" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item21" parent="1" vertex="1" value="a0_ready = 1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="278.25" y="334.8" width="108.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item22" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="445" y="280" width="175" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="item23" parent="1" vertex="1" value="bt0 完整提交" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#186b61;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="473.5" y="295.4" width="118.0" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item24" parent="1" vertex="1" value="bt0_ready = 1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="474.75" y="334.8" width="115.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item25" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="680" y="280" width="520" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="item26" parent="1" vertex="1" value="a1、bt1 等陆续提交" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#677584;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="852.25" y="295.4" width="175.5" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item27" parent="1" vertex="1" value="仅实际写入存储后才发布可计算状态" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="807.0" y="334.8" width="266.0" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item28" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#526274;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="332" y="210" as="sourcePoint" />
+            <mxPoint x="332" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item29" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#526274;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="532" y="210" as="sourcePoint" />
+            <mxPoint x="532" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item30" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#fff4e3;strokeColor=#9a5a13;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="445" y="440" width="410" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="item31" parent="1" vertex="1" value="a0 × bt0^T → 一个 32×32 微块" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#9a5a13;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="509.5" y="455.4" width="281.0" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item32" parent="1" vertex="1" value="两侧输入就绪、输出槽可用时启动" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="525.0" y="497.3" width="250.0" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item33" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#9a5a13;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="532" y="375" as="sourcePoint" />
+            <mxPoint x="532" y="425" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item34" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="910" y="440" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="item35" parent="1" vertex="1" value="继续选取就绪组合" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#23608b;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="978.0" y="455.4" width="154.0" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item36" parent="1" vertex="1" value="已经计算的条带对不重复计算" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="946.0" y="497.3" width="218.0" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item37" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#526274;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="855" y="490" as="sourcePoint" />
+            <mxPoint x="895" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item38" parent="1" vertex="1" value="计算 a0 × bt0^T 时，读引擎仍可加载后续条带，Writer 可回写前面的结果" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=19;fontColor=#17232f;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="335.0" y="601.7" width="650.0" height="28.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item39" parent="1" vertex="1" value="单个读引擎顺序传输 A / BT；输入不必等待整个 256 行宏条带全部装满" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#526274;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="370.5078125" y="652.4" width="578.984375" height="27.0" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

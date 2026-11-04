@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-11-03T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="06_software_flow" name="软件控制与任务执行流程">
+    <mxGraphModel dx="1260" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1260" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="load" value="加载 bit / HWH&lt;br&gt;PYNQ Overlay；驱动解析地址与版本" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="105" width="780" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="prepare" value="准备数据与有效物理内存&lt;br&gt;B 转置为 BT；布局检查；CPU → PL 同步" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="233" width="780" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="select" value="选择核心与配置任务&lt;br&gt;单核 / 按 32 行分区 / 独立任务" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="361" width="780" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="submit" value="提交 START 并登记任务&lt;br&gt;连续启动多个核；保留输入输出内存" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="489" width="780" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="wait" value="查询状态并确认完整写回&lt;br&gt;等待任务结束、队列排空及最终 AXI B 响应" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="617" width="780" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="result" value="同步、校验并回收任务&lt;br&gt;PL → CPU 可见；读取结果与统计；之后再复用" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="745" width="780" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="error" value="错误 / 超时处理&lt;br&gt;停止新依赖任务&lt;br&gt;保留缓冲区&lt;br&gt;确认在途事务并排空&lt;br&gt;必要时按系统流程恢复" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#fff4e3;strokeColor=#9a5a13;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="435" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="load" target="prepare">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="prepare" target="select">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="select" target="submit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="submit" target="wait">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="wait" target="result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="异常 / 超时" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9a5a13;endArrow=block;endFill=1;" edge="1" parent="1" source="submit" target="error">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" value="主机软件检查、RTL 仿真和板端运行分别留存验证记录" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#526274;" vertex="1" parent="1">
+          <mxGeometry x="65" y="900" width="1170" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

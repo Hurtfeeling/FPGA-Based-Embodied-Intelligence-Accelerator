@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="15_softmax_row_pipeline" name="Softmax 的逐行处理与缓存安全回收">
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" arrows="1" page="1" pageScale="1" pageWidth="1320" pageHeight="780" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="item0" parent="1" vertex="1" value="Softmax 的逐行处理与缓存安全回收" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=27;fontColor=#17232f;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="432.25" y="11.100000000000001" width="455.5" height="40.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item1" parent="1" vertex="1" value="四路 FP32 并行；以下为数据依赖流程，不将示意框宽度解释为硬件周期" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#526274;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="399.75" y="54.8" width="520.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item2" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="40" y="150" width="285" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="item3" parent="1" vertex="1" value="LOAD" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#23608b;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="144.0078125" y="161.9" width="76.984375" height="34.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item4" parent="1" vertex="1" value="读入一行 x" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="139.25" y="225.3" width="86.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item5" parent="1" vertex="1" value="四路比较求最大值 m" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="103.75" y="248.98000000000002" width="157.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item6" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#526274;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325" y="230" as="sourcePoint" />
+            <mxPoint x="350" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item7" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="365" y="150" width="285" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="item8" parent="1" vertex="1" value="EXP" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#186b61;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="480.49609375" y="161.9" width="54.0078125" height="34.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item9" parent="1" vertex="1" value="计算 exp(x−m)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="447.75" y="225.3" width="119.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item10" parent="1" vertex="1" value="写指数 e，归约求和 S" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="425.0" y="248.98000000000002" width="165.0" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item11" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#526274;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="230" as="sourcePoint" />
+            <mxPoint x="675" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item12" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="690" y="150" width="285" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="item13" parent="1" vertex="1" value="NORM" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#23608b;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="788.5" y="161.9" width="88.0" height="34.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item14" parent="1" vertex="1" value="每行求一次 1/S" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="772.5" y="225.3" width="120.0" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item15" parent="1" vertex="1" value="四路乘法得到概率 p" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="756.25" y="248.98000000000002" width="152.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item16" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#526274;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="975" y="230" as="sourcePoint" />
+            <mxPoint x="1000" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item17" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="1015" y="150" width="285" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="item18" parent="1" vertex="1" value="STORE" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#186b61;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="1114.2578125" y="161.9" width="86.484375" height="34.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item19" parent="1" vertex="1" value="读出 p 并写入 DDR" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="1083.5" y="225.3" width="148.0" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item20" parent="1" vertex="1" value="等待最后 B 响应" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="1095.0" y="248.98000000000002" width="125.0" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item21" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="85" y="410" width="510" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="item22" parent="1" vertex="1" value="输入行 BRAM 16 KiB" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#23608b;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="235.25" y="424.0" width="209.5" height="30.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item23" parent="1" vertex="1" value="4 × 1024×32 bit bank" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="251.75" y="470.3" width="176.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item24" parent="1" vertex="1" value="旧输入被读返回流水安全接管后可加载下一行" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="175.0" y="493.98" width="330.0" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item25" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="720" y="410" width="510" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="item26" parent="1" vertex="1" value="输出行 BRAM 16 KiB" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#186b61;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="870.25" y="424.0" width="209.5" height="30.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item27" parent="1" vertex="1" value="先存 e，再存 p" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="916.0" y="470.3" width="118.0" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item28" parent="1" vertex="1" value="旧输出安全读出后才允许覆盖对应地址" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="834.0" y="493.98" width="282.0" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item29" parent="1" vertex="1" value="可重叠：EXP(n) 与 LOAD(n+1)；STORE(n) 与满足安全条件的 EXP(n+1)" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=19;fontColor=#17232f;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="333.5078125" y="621.7" width="652.984375" height="28.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item30" parent="1" vertex="1" value="阶段依赖、尾部 lane 和地址回收共同决定实际调度；不是两套完整矩阵 Ping-Pong 缓存" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#526274;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="321.00390625" y="683.1" width="677.9921875" height="25.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="13_c_writeback" name="C 微块的 DDR 行跨度与 burst 写回">
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" arrows="1" page="1" pageScale="1" pageWidth="1320" pageHeight="880" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="item0" parent="1" vertex="1" value="C 微块的 DDR 行跨度与 burst 写回" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=27;fontColor=#17232f;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="437.75" y="11.100000000000001" width="444.5" height="40.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item1" parent="1" vertex="1" value="一个 32×32 INT32 微块共 4 KiB；它在完整 M×N 输出矩阵中通常不是一段连续的 4 KiB" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#526274;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="340.75" y="54.8" width="638.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item2" parent="1" vertex="1" value="片上一个输出槽：32×32 INT32" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#23608b;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="114.0" y="126.0" width="302.0" height="30.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item3" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="70" y="190" width="390" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="item4" parent="1" vertex="1" value="32 个 INT32 = 128 B" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#23608b;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="178.25" y="200.1" width="173.5" height="25.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item5" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="70" y="235" width="390" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="item6" parent="1" vertex="1" value="32 个 INT32 = 128 B" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#23608b;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="178.25" y="245.1" width="173.5" height="25.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item7" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="70" y="280" width="390" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="item8" parent="1" vertex="1" value="32 个 INT32 = 128 B" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#23608b;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="178.25" y="290.1" width="173.5" height="25.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item9" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="70" y="325" width="390" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="item10" parent="1" vertex="1" value="…" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#23608b;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="253.0" y="335.1" width="24.0" height="25.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item11" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="70" y="370" width="390" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="item12" parent="1" vertex="1" value="…" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#23608b;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="253.0" y="380.1" width="24.0" height="25.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item13" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="70" y="415" width="390" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="item14" parent="1" vertex="1" value="…" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#23608b;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="253.0" y="425.1" width="24.0" height="25.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item15" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="70" y="460" width="390" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="item16" parent="1" vertex="1" value="…" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#23608b;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="253.0" y="470.1" width="24.0" height="25.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item17" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="70" y="505" width="390" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="item18" parent="1" vertex="1" value="共 32 行" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#23608b;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="228.0" y="515.1" width="74.0" height="25.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item19" parent="1" vertex="1" value="DDR 中的 C：每行跨度 N×4 字节" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#186b61;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="826.0" y="126.0" width="318.0" height="30.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item20" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="720" y="190" width="540" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item21" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="830" y="190" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item22" parent="1" vertex="1" value="本微块的 128 B" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#186b61;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="859.25" y="198.8" width="121.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item23" parent="1" vertex="1" value="0" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=15;fontColor=#526274;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="681.5" y="199.5" width="19.0" height="22.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item24" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="720" y="253" width="540" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item25" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="830" y="253" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item26" parent="1" vertex="1" value="本微块的 128 B" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#186b61;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="859.25" y="261.8" width="121.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item27" parent="1" vertex="1" value="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=15;fontColor=#526274;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="681.5" y="262.5" width="19.0" height="22.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item28" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="720" y="316" width="540" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item29" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="830" y="316" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item30" parent="1" vertex="1" value="本微块的 128 B" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#186b61;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="859.25" y="324.8" width="121.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item31" parent="1" vertex="1" value="2" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=15;fontColor=#526274;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="681.5" y="325.5" width="19.0" height="22.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item32" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="720" y="379" width="540" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item33" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="830" y="379" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item34" parent="1" vertex="1" value="本微块的 128 B" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#186b61;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="859.25" y="387.8" width="121.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item35" parent="1" vertex="1" value="3" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=15;fontColor=#526274;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="681.5" y="388.5" width="19.0" height="22.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item36" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="720" y="442" width="540" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item37" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="830" y="442" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item38" parent="1" vertex="1" value="本微块的 128 B" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#186b61;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="859.25" y="450.8" width="121.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item39" parent="1" vertex="1" value="4" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=15;fontColor=#526274;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="681.5" y="451.5" width="19.0" height="22.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item40" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="720" y="505" width="540" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item41" parent="1" vertex="1" style="rounded=0;absoluteArcSize=1;arcSize=0;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="830" y="505" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item42" parent="1" vertex="1" value="本微块的 128 B" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#186b61;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="859.25" y="513.8" width="121.5" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item43" parent="1" vertex="1" value="5" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=15;fontColor=#526274;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="681.5" y="514.5" width="19.0" height="22.5" as="geometry" />
+        </mxCell>
+        <mxCell id="item44" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#526274;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="325" as="sourcePoint" />
+            <mxPoint x="705" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="565" y="325" />
+              <mxPoint x="565" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item45" parent="1" vertex="1" value="逐行写入" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#23608b;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="534.0" y="357.4" width="82.0" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item46" parent="1" vertex="1" value="跨行跳地址" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#23608b;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="525.0" y="384.03999999999996" width="100.0" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item47" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="70" y="625" width="390" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="item48" parent="1" vertex="1" value="每行通常为 8 beat" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#23608b;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="175.25" y="639.0" width="179.5" height="30.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item49" parent="1" vertex="1" value="8 × 16 B = 128 B；页边界可能再拆分" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="124.0" y="682.3" width="282.0" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item50" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=24;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;dashed=0;html=0;">
+          <mxGeometry x="565" y="625" width="695" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="item51" parent="1" vertex="1" value="第 r 行地址 = C_base + ((m0+r)×N+n0)×4" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#186b61;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="723.25" y="640.4" width="378.5" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item52" parent="1" vertex="1" value="AW 发出该行 burst；W 完成数据；收到 B 响应后事务才退休" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="689.25390625" y="682.3" width="446.4921875" height="24.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item53" parent="1" edge="1" style="html=0;rounded=0;strokeColor=#526274;strokeWidth=2;dashed=0;endArrow=block;endFill=1;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="675" as="sourcePoint" />
+            <mxPoint x="550" y="675" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="item54" parent="1" vertex="1" value="环形槽保留绝对坐标，允许下一宏块开始时上一宏块继续写回；未退休的槽不能覆盖" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;fontStyle=1;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="322.0" y="784.4" width="676.0" height="27.0" as="geometry" />
+        </mxCell>
+        <mxCell id="item55" parent="1" vertex="1" value="图示行数作压缩；提前写回受结果水位、输出队列和 AXI READY / 响应共同约束" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#526274;fontStyle=0;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="352.75" y="828.1" width="614.5" height="25.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

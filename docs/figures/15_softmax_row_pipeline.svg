@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="780" viewBox="0 0 1320 780">
+<rect width="100%" height="100%" fill="white"/>
+<text x="660.0" y="39.72" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="27" fill="#17232f" font-weight="700" text-anchor="middle">Softmax 的逐行处理与缓存安全回收</text>
+<text x="660.0" y="71.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#526274" font-weight="400" text-anchor="middle">四路 FP32 并行；以下为数据依赖流程，不将示意框宽度解释为硬件周期</text>
+<rect x="40" y="150" width="285" height="160" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="182.5" y="186.28" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="23" fill="#23608b" font-weight="700" text-anchor="middle">LOAD</text>
+<text x="182.5" y="242.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">读入一行 x</text>
+<text x="182.5" y="265.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">四路比较求最大值 m</text>
+<polyline points="325,230 350,230" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="350,230 340.0950818741206,234.78462087522354 340.0950818741206,225.21537912477646" fill="#526274"/>
+<rect x="365" y="150" width="285" height="160" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="507.5" y="186.28" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="23" fill="#186b61" font-weight="700" text-anchor="middle">EXP</text>
+<text x="507.5" y="242.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">计算 exp(x−m)</text>
+<text x="507.5" y="265.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">写指数 e，归约求和 S</text>
+<polyline points="650,230 675,230" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="675,230 665.0950818741205,234.78462087522354 665.0950818741205,225.21537912477646" fill="#526274"/>
+<rect x="690" y="150" width="285" height="160" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="832.5" y="186.28" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="23" fill="#23608b" font-weight="700" text-anchor="middle">NORM</text>
+<text x="832.5" y="242.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">每行求一次 1/S</text>
+<text x="832.5" y="265.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">四路乘法得到概率 p</text>
+<polyline points="975,230 1000,230" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="1000,230 990.0950818741205,234.78462087522354 990.0950818741205,225.21537912477646" fill="#526274"/>
+<rect x="1015" y="150" width="285" height="160" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1157.5" y="186.28" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="23" fill="#186b61" font-weight="700" text-anchor="middle">STORE</text>
+<text x="1157.5" y="242.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">读出 p 并写入 DDR</text>
+<text x="1157.5" y="265.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">等待最后 B 响应</text>
+<rect x="85" y="410" width="510" height="130" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="340.0" y="445.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">输入行 BRAM 16 KiB</text>
+<text x="340.0" y="487.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">4 × 1024×32 bit bank</text>
+<text x="340.0" y="510.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">旧输入被读返回流水安全接管后可加载下一行</text>
+<rect x="720" y="410" width="510" height="130" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="975.0" y="445.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#186b61" font-weight="700" text-anchor="middle">输出行 BRAM 16 KiB</text>
+<text x="975.0" y="487.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">先存 e，再存 p</text>
+<text x="975.0" y="510.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">旧输出安全读出后才允许覆盖对应地址</text>
+<text x="660" y="641.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#17232f" font-weight="700" text-anchor="middle">可重叠：EXP(n) 与 LOAD(n+1)；STORE(n) 与满足安全条件的 EXP(n+1)</text>
+<text x="660" y="701.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#526274" font-weight="400" text-anchor="middle">阶段依赖、尾部 lane 和地址回收共同决定实际调度；不是两套完整矩阵 Ping-Pong 缓存</text>
+</svg>

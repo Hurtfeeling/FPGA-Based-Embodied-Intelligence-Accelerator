@@ -1,0 +1,4 @@
+# Runtime dependency supplied by the target PYNQ board image.
+# Use the board's existing compatible PYNQ installation.
+# The driver otherwise uses only the Python standard library (Python >= 3.6).
+pynq

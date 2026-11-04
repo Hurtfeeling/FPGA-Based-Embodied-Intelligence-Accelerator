@@ -1,0 +1,5 @@
+{
+  "source": "G:\\smolvla\\smolvla_20261103_wrist_beside_base_200k_3gpu\\200000_w8a8_fp32\\validation_0.npz",
+  "source_sha256": "bde66e0ababee62faff20fe86767b3a093fb7781675b35a1c09be55fd39b5258",
+  "text": "only grab the blue cube and put into the box"
+}

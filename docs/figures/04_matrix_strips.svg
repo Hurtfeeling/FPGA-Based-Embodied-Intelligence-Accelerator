@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="1190" viewBox="0 0 1520 1190">
+<rect width="100%" height="100%" fill="white"/>
+<text x="760.0" y="39.72" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="27" fill="#17232f" font-weight="700" text-anchor="middle">从实际矩阵看宏条带、输入条带与输出微块</text>
+<text x="760.0" y="71.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#526274" font-weight="400" text-anchor="middle">单核示例：A[768,2048] × B[2048,768] = C[768,768]；输入 INT8，输出 INT32</text>
+<text x="35" y="120.56" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="21" fill="#17232f" font-weight="700" text-anchor="start">（a）原始矩阵：A 按行分，B 按列分，C 形成 3×3 个宏块</text>
+<text x="285" y="171.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">A：768 行 × 2048 列</text>
+<text x="830" y="171.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#186b61" font-weight="700" text-anchor="middle">B：2048 行 × 768 列</text>
+<text x="1285" y="211.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#17232f" font-weight="700" text-anchor="middle">C：768 × 768</text>
+<text x="285" y="192.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#526274" font-weight="400" text-anchor="middle">K=2048，横向完整保留</text>
+<text x="830" y="192.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#526274" font-weight="400" text-anchor="middle">每个竖条宽 32 列，纵向为完整 K</text>
+<rect x="110" y="205" width="350" height="15" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="205" width="15" height="360" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="220" width="350" height="15" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="665" y="205" width="15" height="360" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="235" width="350" height="15" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="680" y="205" width="15" height="360" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="250" width="350" height="15" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="695" y="205" width="15" height="360" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="265" width="350" height="15" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="710" y="205" width="15" height="360" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="280" width="350" height="15" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="725" y="205" width="15" height="360" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="295" width="350" height="15" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="740" y="205" width="15" height="360" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="310" width="350" height="15" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="755" y="205" width="15" height="360" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="325" width="350" height="15" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="770" y="205" width="15" height="360" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="340" width="350" height="15" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="785" y="205" width="15" height="360" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="355" width="350" height="15" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="800" y="205" width="15" height="360" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="370" width="350" height="15" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="815" y="205" width="15" height="360" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="385" width="350" height="15" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="830" y="205" width="15" height="360" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="400" width="350" height="15" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="845" y="205" width="15" height="360" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="415" width="350" height="15" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="860" y="205" width="15" height="360" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="430" width="350" height="15" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="875" y="205" width="15" height="360" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="445" width="350" height="15" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="890" y="205" width="15" height="360" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="460" width="350" height="15" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="905" y="205" width="15" height="360" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="475" width="350" height="15" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="920" y="205" width="15" height="360" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="490" width="350" height="15" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="935" y="205" width="15" height="360" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="505" width="350" height="15" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="950" y="205" width="15" height="360" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="520" width="350" height="15" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="965" y="205" width="15" height="360" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="535" width="350" height="15" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="980" y="205" width="15" height="360" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="110" y="550" width="350" height="15" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="995" y="205" width="15" height="360" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<polyline points="110,205 460,205" fill="none" stroke="#23608b" stroke-width="3"/>
+<polyline points="110,325 460,325" fill="none" stroke="#23608b" stroke-width="3"/>
+<text x="68" y="266.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#23608b" font-weight="700" text-anchor="middle">A0</text>
+<text x="285.0" y="267.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="700" text-anchor="middle">A0 = A[0:256, :]</text>
+<text x="710" y="590.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#23608b" font-weight="700" text-anchor="middle">B0</text>
+<polyline points="650,205 650,565" fill="none" stroke="#23608b" stroke-width="3"/>
+<polyline points="770,205 770,565" fill="none" stroke="#23608b" stroke-width="3"/>
+<polyline points="110,325 460,325" fill="none" stroke="#186b61" stroke-width="3"/>
+<polyline points="110,445 460,445" fill="none" stroke="#186b61" stroke-width="3"/>
+<text x="68" y="386.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#186b61" font-weight="700" text-anchor="middle">A1</text>
+<text x="285.0" y="387.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#186b61" font-weight="700" text-anchor="middle">A1 = A[256:512, :]</text>
+<text x="830" y="590.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#186b61" font-weight="700" text-anchor="middle">B1</text>
+<polyline points="770,205 770,565" fill="none" stroke="#186b61" stroke-width="3"/>
+<polyline points="890,205 890,565" fill="none" stroke="#186b61" stroke-width="3"/>
+<polyline points="110,445 460,445" fill="none" stroke="#9a5a13" stroke-width="3"/>
+<polyline points="110,565 460,565" fill="none" stroke="#9a5a13" stroke-width="3"/>
+<text x="68" y="506.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#9a5a13" font-weight="700" text-anchor="middle">A2</text>
+<text x="285.0" y="507.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#9a5a13" font-weight="700" text-anchor="middle">A2 = A[512:768, :]</text>
+<text x="950" y="590.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#9a5a13" font-weight="700" text-anchor="middle">B2</text>
+<polyline points="890,205 890,565" fill="none" stroke="#9a5a13" stroke-width="3"/>
+<polyline points="1010,205 1010,565" fill="none" stroke="#9a5a13" stroke-width="3"/>
+<text x="548" y="399.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="40" fill="#526274" font-weight="700" text-anchor="middle">×</text>
+<text x="1075" y="399.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="40" fill="#526274" font-weight="700" text-anchor="middle">=</text>
+<rect x="1150" y="250" width="90" height="90" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="1195" y="288.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#23608b" font-weight="700" text-anchor="middle">C00</text>
+<text x="1195" y="315.68" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="13" fill="#526274" font-weight="400" text-anchor="middle">256×256</text>
+<rect x="1240" y="250" width="90" height="90" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="1285" y="288.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#23608b" font-weight="700" text-anchor="middle">C01</text>
+<text x="1285" y="315.68" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="13" fill="#526274" font-weight="400" text-anchor="middle">256×256</text>
+<rect x="1330" y="250" width="90" height="90" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="1375" y="288.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#23608b" font-weight="700" text-anchor="middle">C02</text>
+<text x="1375" y="315.68" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="13" fill="#526274" font-weight="400" text-anchor="middle">256×256</text>
+<rect x="1150" y="340" width="90" height="90" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1195" y="378.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#186b61" font-weight="700" text-anchor="middle">C10</text>
+<text x="1195" y="405.68" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="13" fill="#526274" font-weight="400" text-anchor="middle">256×256</text>
+<rect x="1240" y="340" width="90" height="90" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1285" y="378.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#186b61" font-weight="700" text-anchor="middle">C11</text>
+<text x="1285" y="405.68" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="13" fill="#526274" font-weight="400" text-anchor="middle">256×256</text>
+<rect x="1330" y="340" width="90" height="90" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1375" y="378.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#186b61" font-weight="700" text-anchor="middle">C12</text>
+<text x="1375" y="405.68" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="13" fill="#526274" font-weight="400" text-anchor="middle">256×256</text>
+<rect x="1150" y="430" width="90" height="90" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="1195" y="468.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#9a5a13" font-weight="700" text-anchor="middle">C20</text>
+<text x="1195" y="495.68" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="13" fill="#526274" font-weight="400" text-anchor="middle">256×256</text>
+<rect x="1240" y="430" width="90" height="90" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="1285" y="468.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#9a5a13" font-weight="700" text-anchor="middle">C21</text>
+<text x="1285" y="495.68" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="13" fill="#526274" font-weight="400" text-anchor="middle">256×256</text>
+<rect x="1330" y="430" width="90" height="90" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="1375" y="468.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#9a5a13" font-weight="700" text-anchor="middle">C22</text>
+<text x="1375" y="495.68" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="13" fill="#526274" font-weight="400" text-anchor="middle">256×256</text>
+<text x="1285" y="557.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="700" text-anchor="middle">Cij = Ai × Bj = Ai × BTj^T</text>
+<text x="285" y="602.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#526274" font-weight="400" text-anchor="middle">24 条 32×2048 输入条带；每 8 条组成 Ai</text>
+<text x="830" y="619.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#526274" font-weight="400" text-anchor="middle">Bj = B[:, 256j:256(j+1)]，尺寸 2048×256</text>
+<polyline points="50,632 1470,632" fill="none" stroke="#dbe2e8" stroke-width="2"/>
+<text x="35" y="677.56" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="21" fill="#17232f" font-weight="700" text-anchor="start">（b）DDR 中 B 先转置为 BT；每个 256 行宏条带再细分为 8 条 32 行输入</text>
+<text x="285" y="725.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#23608b" font-weight="700" text-anchor="middle">A0：256×2048 = 512 KiB</text>
+<rect x="110" y="752" width="350" height="30" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="285" y="772.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#23608b" font-weight="400" text-anchor="middle">a0  ·  A[0:32, :]  ·  64 KiB</text>
+<rect x="110" y="782" width="350" height="30" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="285" y="802.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#23608b" font-weight="400" text-anchor="middle">a1  ·  A[32:64, :]  ·  64 KiB</text>
+<rect x="110" y="812" width="350" height="30" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="285" y="832.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#23608b" font-weight="400" text-anchor="middle">a2  ·  A[64:96, :]  ·  64 KiB</text>
+<rect x="110" y="842" width="350" height="30" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="285" y="862.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#23608b" font-weight="400" text-anchor="middle">a3  ·  A[96:128, :]  ·  64 KiB</text>
+<rect x="110" y="872" width="350" height="30" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="285" y="892.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#9a5a13" font-weight="400" text-anchor="middle">a4  ·  A[128:160, :]  ·  64 KiB</text>
+<rect x="110" y="902" width="350" height="30" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="285" y="922.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#9a5a13" font-weight="400" text-anchor="middle">a5  ·  A[160:192, :]  ·  64 KiB</text>
+<rect x="110" y="932" width="350" height="30" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="285" y="952.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#9a5a13" font-weight="400" text-anchor="middle">a6  ·  A[192:224, :]  ·  64 KiB</text>
+<rect x="110" y="962" width="350" height="30" rx="0" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="285" y="982.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#9a5a13" font-weight="400" text-anchor="middle">a7  ·  A[224:256, :]  ·  64 KiB</text>
+<text x="285" y="1031.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#23608b" font-weight="400" text-anchor="middle">前 4 条 → 256 KiB BRAM</text>
+<text x="285" y="1059.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#9a5a13" font-weight="400" text-anchor="middle">后 4 条 → 256 KiB URAM</text>
+<text x="830" y="725.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#186b61" font-weight="700" text-anchor="middle">BT = B^T：768×2048</text>
+<rect x="650" y="752" width="360" height="10" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="762" width="360" height="10" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="772" width="360" height="10" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="782" width="360" height="10" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="792" width="360" height="10" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="802" width="360" height="10" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="812" width="360" height="10" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="822" width="360" height="10" rx="0" fill="#eaf3fa" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="832" width="360" height="10" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="842" width="360" height="10" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="852" width="360" height="10" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="862" width="360" height="10" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="872" width="360" height="10" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="882" width="360" height="10" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="892" width="360" height="10" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="902" width="360" height="10" rx="0" fill="#eaf5f0" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="912" width="360" height="10" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="922" width="360" height="10" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="932" width="360" height="10" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="942" width="360" height="10" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="952" width="360" height="10" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="962" width="360" height="10" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="972" width="360" height="10" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<rect x="650" y="982" width="360" height="10" rx="0" fill="#fff4e3" stroke="#c4d1dc" stroke-width="2"/>
+<polyline points="650,752 1010,752" fill="none" stroke="#23608b" stroke-width="3"/>
+<polyline points="650,832 1010,832" fill="none" stroke="#23608b" stroke-width="3"/>
+<text x="830" y="798.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="700" text-anchor="middle">BT0 = BT[0:256, :]</text>
+<polyline points="650,832 1010,832" fill="none" stroke="#186b61" stroke-width="3"/>
+<polyline points="650,912 1010,912" fill="none" stroke="#186b61" stroke-width="3"/>
+<text x="830" y="878.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#186b61" font-weight="700" text-anchor="middle">BT1 = BT[256:512, :]</text>
+<polyline points="650,912 1010,912" fill="none" stroke="#9a5a13" stroke-width="3"/>
+<polyline points="650,992 1010,992" fill="none" stroke="#9a5a13" stroke-width="3"/>
+<text x="830" y="958.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#9a5a13" font-weight="700" text-anchor="middle">BT2 = BT[512:768, :]</text>
+<text x="830" y="1031.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#526274" font-weight="400" text-anchor="middle">BTj 为 Bj 的转置：256×2048 = 512 KiB</text>
+<text x="830" y="1059.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#526274" font-weight="400" text-anchor="middle">每个 BTj 也含 8 条 32×2048 输入</text>
+<text x="1285" y="725.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#17232f" font-weight="700" text-anchor="middle">放大 C00：8×8 个输出微块</text>
+<rect x="1165" y="752" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1195" y="752" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1225" y="752" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1255" y="752" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1285" y="752" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1315" y="752" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1345" y="752" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1375" y="752" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1165" y="782" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1195" y="782" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1225" y="782" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1255" y="782" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1285" y="782" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1315" y="782" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1345" y="782" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1375" y="782" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1165" y="812" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1195" y="812" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1225" y="812" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1255" y="812" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1285" y="812" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1315" y="812" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1345" y="812" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1375" y="812" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1165" y="842" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1195" y="842" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1225" y="842" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1255" y="842" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1285" y="842" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1315" y="842" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1345" y="842" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1375" y="842" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1165" y="872" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1195" y="872" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1225" y="872" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1255" y="872" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1285" y="872" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1315" y="872" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1345" y="872" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1375" y="872" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1165" y="902" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1195" y="902" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1225" y="902" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1255" y="902" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1285" y="902" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1315" y="902" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1345" y="902" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1375" y="902" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1165" y="932" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1195" y="932" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1225" y="932" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1255" y="932" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1285" y="932" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1315" y="932" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1345" y="932" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1375" y="932" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1165" y="962" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1195" y="962" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1225" y="962" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1255" y="962" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1285" y="962" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1315" y="962" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1345" y="962" width="30" height="30" rx="0" fill="white" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1375" y="962" width="30" height="30" rx="0" fill="#eaf5f0" stroke="#8ab4a3" stroke-width="2"/>
+<rect x="1165" y="752" width="30" height="30" rx="0" fill="#23608b" stroke="#23608b" stroke-width="2"/>
+<text x="1285" y="1031.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#526274" font-weight="400" text-anchor="middle">一个小方格 = 32×32 INT32 = 4 KiB</text>
+<text x="1285" y="1059.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#23608b" font-weight="400" text-anchor="middle">a0 × bt0^T → 左上角一个微块</text>
+<text x="760" y="1126.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#17232f" font-weight="700" text-anchor="middle">一个 Cij 宏块包含 64 个微块；9 个宏块共 576 个微块，计算量和最终输出位置均不因遍历改变</text>
+<text x="760" y="1165.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#526274" font-weight="400" text-anchor="middle">绘图按分块关系示意，非矩阵长宽等比例；K=2048 时每个输入缓存恰好容纳 256 行</text>
+</svg>

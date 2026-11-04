@@ -1,0 +1,3040 @@
+{
+  "after_micro_cma": {
+    "CmaFree_kib": 125384,
+    "CmaTotal_kib": 131072
+  },
+  "clock": {
+    "cpu_mhz": 1049.9895,
+    "cpuinfo_cur_freq_khz": 1049999,
+    "pl_mhz": 249.9975,
+    "scaling_cur_freq_khz": 1199999,
+    "scaling_max_freq_khz": 1199999,
+    "scaling_min_freq_khz": 1199999
+  },
+  "configurations": [
+    {
+      "cache_mib": 64,
+      "name": "native64",
+      "shared": false,
+      "softmax": "cpu4"
+    },
+    {
+      "cache_mib": 80,
+      "name": "native80",
+      "shared": true,
+      "softmax": "cpu4"
+    },
+    {
+      "cache_mib": 88,
+      "name": "native88",
+      "shared": true,
+      "softmax": "cpu4"
+    }
+  ],
+  "cpu_baseline": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cpu.npy",
+  "fastest": {
+    "config": {
+      "cache_mib": 80,
+      "name": "native80",
+      "shared": true,
+      "softmax": "cpu4"
+    },
+    "max_output_error": 0.0,
+    "median_seconds": 34.16759428099613,
+    "seconds": [
+      34.69026760300039,
+      34.10161487599544,
+      34.16759428099613
+    ],
+    "softmax_median_seconds": 0.0
+  },
+  "fastest_exact": {
+    "config": {
+      "cache_mib": 80,
+      "name": "native80",
+      "shared": true,
+      "softmax": "cpu4"
+    },
+    "max_output_error": 0.0,
+    "median_seconds": 34.16759428099613,
+    "seconds": [
+      34.69026760300039,
+      34.10161487599544,
+      34.16759428099613
+    ],
+    "softmax_median_seconds": 0.0
+  },
+  "idle_cma": {
+    "CmaFree_kib": 125384,
+    "CmaTotal_kib": 131072
+  },
+  "inputs_sha256": "bde66e0ababee62faff20fe86767b3a093fb7781675b35a1c09be55fd39b5258",
+  "micro_results_source": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_softmax_sweep_v2_20261104.json",
+  "micro_selected_policies": {
+    "(1, 12, 1024, 1024)": {
+      "fraction": 0.5,
+      "name": "split0.5_t3",
+      "pipeline": true,
+      "threads": 3
+    },
+    "(1, 15, 177, 177)": {
+      "fraction": 1.0,
+      "name": "cpu4",
+      "pipeline": false,
+      "threads": 4
+    },
+    "(1, 15, 50, 177)": {
+      "fraction": 1.0,
+      "name": "cpu4",
+      "pipeline": false,
+      "threads": 4
+    },
+    "(1, 15, 50, 227)": {
+      "fraction": 1.0,
+      "name": "cpu4",
+      "pipeline": false,
+      "threads": 4
+    }
+  },
+  "microbenchmark": [
+    {
+      "median_seconds": 0.054125062000821345,
+      "policy": {
+        "fraction": 1.0,
+        "name": "cpu4",
+        "pipeline": false,
+        "threads": 4
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 3,
+        "cpu_rows": 36864,
+        "cpu_seconds": 0.16561488699517213,
+        "interval_records": [
+          {
+            "cpu_interval": [
+              72530.647033513,
+              72530.700806864
+            ],
+            "cpu_rows": 12288,
+            "cpu_seconds": 0.053773350999108516,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": null,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.053873160999501124
+          },
+          {
+            "cpu_interval": [
+              72530.701167626,
+              72530.754398934
+            ],
+            "cpu_rows": 12288,
+            "cpu_seconds": 0.053231308003887534,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": null,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.05333252799755428
+          },
+          {
+            "cpu_interval": [
+              72530.754760936,
+              72530.813371164
+            ],
+            "cpu_rows": 12288,
+            "cpu_seconds": 0.05861022799217608,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": null,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.05871272900549229
+          }
+        ],
+        "mixed_calls": 0,
+        "overlap_seconds": 0.0,
+        "pipeline_calls": 0,
+        "pipeline_tasks": 0,
+        "pl_calls": 0,
+        "pl_rows": 0,
+        "pl_seconds": 0.0,
+        "shape_metrics": {
+          "(1, 12, 1024, 1024)": {
+            "calls": 3,
+            "cpu_rows": 36864,
+            "cpu_seconds": 0.16561488699517213,
+            "overlap_seconds": 0.0,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "wall_seconds": 0.1659184180025477
+          }
+        },
+        "wall_seconds": 0.1659184180025477
+      },
+      "shape": [
+        1,
+        12,
+        1024,
+        1024
+      ],
+      "times": [
+        0.054125062000821345,
+        0.053591229996527545,
+        0.058969250007066876
+      ],
+      "vs_ort_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      }
+    },
+    {
+      "median_seconds": 0.10211461900325958,
+      "policy": {
+        "fraction": 0.0,
+        "name": "pl_seq",
+        "pipeline": false,
+        "threads": 1
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 0,
+        "cpu_rows": 0,
+        "cpu_seconds": 0.0,
+        "interval_records": [
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72531.518409914,
+              72531.619610348
+            ],
+            "pl_rows": 12288,
+            "pl_seconds": 0.10120043400092982,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.10129255401261616
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72531.6199391,
+              72531.721725827
+            ],
+            "pl_rows": 12288,
+            "pl_seconds": 0.10178672699839808,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.10188147799635772
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72531.722056479,
+              72531.823909726
+            ],
+            "pl_rows": 12288,
+            "pl_seconds": 0.10185324698977638,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.10194622800918296
+          }
+        ],
+        "mixed_calls": 0,
+        "overlap_seconds": 0.0,
+        "pipeline_calls": 0,
+        "pipeline_tasks": 0,
+        "pl_calls": 3,
+        "pl_rows": 36864,
+        "pl_seconds": 0.3048404079891043,
+        "shape_metrics": {
+          "(1, 12, 1024, 1024)": {
+            "calls": 3,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pl_rows": 36864,
+            "pl_seconds": 0.3048404079891043,
+            "wall_seconds": 0.30512026001815684
+          }
+        },
+        "wall_seconds": 0.30512026001815684
+      },
+      "shape": [
+        1,
+        12,
+        1024,
+        1024
+      ],
+      "times": [
+        0.10152236599242315,
+        0.10211461900325958,
+        0.10222704899206292
+      ],
+      "vs_ort_cpu": {
+        "mae": 1.4256255089282244e-10,
+        "max_abs": 1.5497207641601562e-06
+      }
+    },
+    {
+      "median_seconds": 0.07347021398891229,
+      "policy": {
+        "fraction": 0.0,
+        "name": "pl_pipeline",
+        "pipeline": true,
+        "threads": 1
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 0,
+        "cpu_rows": 0,
+        "cpu_seconds": 0.0,
+        "interval_records": [
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": true,
+            "pl_path_interval": [
+              72532.489637643,
+              72532.562799044
+            ],
+            "pl_rows": 12288,
+            "pl_seconds": 0.07316140100010671,
+            "pl_tasks": 12,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.07325622200733051
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": true,
+            "pl_path_interval": [
+              72532.563127046,
+              72532.636270977
+            ],
+            "pl_rows": 12288,
+            "pl_seconds": 0.07314393100386951,
+            "pl_tasks": 12,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.07323953200830147
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": true,
+            "pl_path_interval": [
+              72532.636601459,
+              72532.70973487
+            ],
+            "pl_rows": 12288,
+            "pl_seconds": 0.07313341100234538,
+            "pl_tasks": 12,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.07323097200423945
+          }
+        ],
+        "mixed_calls": 0,
+        "overlap_seconds": 0.0,
+        "pipeline_calls": 3,
+        "pipeline_tasks": 36,
+        "pl_calls": 3,
+        "pl_rows": 36864,
+        "pl_seconds": 0.2194387430063216,
+        "shape_metrics": {
+          "(1, 12, 1024, 1024)": {
+            "calls": 3,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pl_rows": 36864,
+            "pl_seconds": 0.2194387430063216,
+            "wall_seconds": 0.21972672601987142
+          }
+        },
+        "wall_seconds": 0.21972672601987142
+      },
+      "shape": [
+        1,
+        12,
+        1024,
+        1024
+      ],
+      "times": [
+        0.07348638300027233,
+        0.07347021398891229,
+        0.0734671030077152
+      ],
+      "vs_ort_cpu": {
+        "mae": 1.4256255089282244e-10,
+        "max_abs": 1.5497207641601562e-06
+      }
+    },
+    {
+      "median_seconds": 0.059578842992777936,
+      "policy": {
+        "fraction": 0.25,
+        "name": "split0.25_t2",
+        "pipeline": true,
+        "threads": 2
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 3,
+        "cpu_rows": 9216,
+        "cpu_seconds": 0.08027818099071737,
+        "interval_records": [
+          {
+            "cpu_interval": [
+              72533.3646121,
+              72533.391228913
+            ],
+            "cpu_rows": 3072,
+            "cpu_seconds": 0.02661681298923213,
+            "overlap_seconds": 0.02661681298923213,
+            "pipelined": true,
+            "pl_path_interval": [
+              72533.363820126,
+              72533.422823305
+            ],
+            "pl_rows": 9216,
+            "pl_seconds": 0.05900317899067886,
+            "pl_tasks": 9,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.05931497100391425
+          },
+          {
+            "cpu_interval": [
+              72533.424217583,
+              72533.451185068
+            ],
+            "cpu_rows": 3072,
+            "cpu_seconds": 0.02696748499874957,
+            "overlap_seconds": 0.02696748499874957,
+            "pipelined": true,
+            "pl_path_interval": [
+              72533.423415148,
+              72533.482318077
+            ],
+            "pl_rows": 9216,
+            "pl_seconds": 0.05890292899857741,
+            "pl_tasks": 9,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.05922109000675846
+          },
+          {
+            "cpu_interval": [
+              72533.483665255,
+              72533.510359138
+            ],
+            "cpu_rows": 3072,
+            "cpu_seconds": 0.026693883002735674,
+            "overlap_seconds": 0.026693883002735674,
+            "pipelined": true,
+            "pl_path_interval": [
+              72533.48291013,
+              72533.541902059
+            ],
+            "pl_rows": 9216,
+            "pl_seconds": 0.05899192900687922,
+            "pl_tasks": 9,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.05930227100907359
+          }
+        ],
+        "mixed_calls": 3,
+        "overlap_seconds": 0.08027818099071737,
+        "pipeline_calls": 3,
+        "pipeline_tasks": 27,
+        "pl_calls": 3,
+        "pl_rows": 27648,
+        "pl_seconds": 0.1768980369961355,
+        "shape_metrics": {
+          "(1, 12, 1024, 1024)": {
+            "calls": 3,
+            "cpu_rows": 9216,
+            "cpu_seconds": 0.08027818099071737,
+            "overlap_seconds": 0.08027818099071737,
+            "pl_rows": 27648,
+            "pl_seconds": 0.1768980369961355,
+            "wall_seconds": 0.1778383320197463
+          }
+        },
+        "wall_seconds": 0.1778383320197463
+      },
+      "shape": [
+        1,
+        12,
+        1024,
+        1024
+      ],
+      "times": [
+        0.059586082003079355,
+        0.05949736200273037,
+        0.059578842992777936
+      ],
+      "vs_ort_cpu": {
+        "mae": 1.0625279530844663e-10,
+        "max_abs": 1.5497207641601562e-06
+      }
+    },
+    {
+      "median_seconds": 0.05424008199770469,
+      "policy": {
+        "fraction": 0.5,
+        "name": "split0.5_t2",
+        "pipeline": true,
+        "threads": 2
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 3,
+        "cpu_rows": 18432,
+        "cpu_seconds": 0.158002147989464,
+        "interval_records": [
+          {
+            "cpu_interval": [
+              72534.189744524,
+              72534.242214616
+            ],
+            "cpu_rows": 6144,
+            "cpu_seconds": 0.05247009199229069,
+            "overlap_seconds": 0.04284778599685524,
+            "pipelined": true,
+            "pl_path_interval": [
+              72534.188967689,
+              72534.23259231
+            ],
+            "pl_rows": 6144,
+            "pl_seconds": 0.04362462100107223,
+            "pl_tasks": 6,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.0537164189881878
+          },
+          {
+            "cpu_interval": [
+              72534.243758994,
+              72534.296459907
+            ],
+            "cpu_rows": 6144,
+            "cpu_seconds": 0.05270091300189961,
+            "overlap_seconds": 0.04258241500065196,
+            "pipelined": true,
+            "pl_path_interval": [
+              72534.24297525,
+              72534.286341409
+            ],
+            "pl_rows": 6144,
+            "pl_seconds": 0.04336615899228491,
+            "pl_tasks": 6,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.05395279001095332
+          },
+          {
+            "cpu_interval": [
+              72534.297989586,
+              72534.350820729
+            ],
+            "cpu_rows": 6144,
+            "cpu_seconds": 0.052831142995273694,
+            "overlap_seconds": 0.04344112898979802,
+            "pipelined": true,
+            "pl_path_interval": [
+              72534.297214631,
+              72534.341430715
+            ],
+            "pl_rows": 6144,
+            "pl_seconds": 0.04421608398843091,
+            "pl_tasks": 6,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.05407520099834073
+          }
+        ],
+        "mixed_calls": 3,
+        "overlap_seconds": 0.12887132998730522,
+        "pipeline_calls": 3,
+        "pipeline_tasks": 18,
+        "pl_calls": 3,
+        "pl_rows": 18432,
+        "pl_seconds": 0.13120686398178805,
+        "shape_metrics": {
+          "(1, 12, 1024, 1024)": {
+            "calls": 3,
+            "cpu_rows": 18432,
+            "cpu_seconds": 0.158002147989464,
+            "overlap_seconds": 0.12887132998730522,
+            "pl_rows": 18432,
+            "pl_seconds": 0.13120686398178805,
+            "wall_seconds": 0.16174440999748185
+          }
+        },
+        "wall_seconds": 0.16174440999748185
+      },
+      "shape": [
+        1,
+        12,
+        1024,
+        1024
+      ],
+      "times": [
+        0.05400143000588287,
+        0.05424008199770469,
+        0.054363101997296326
+      ],
+      "vs_ort_cpu": {
+        "mae": 7.05531351701738e-11,
+        "max_abs": 1.5497207641601562e-06
+      }
+    },
+    {
+      "median_seconds": 0.0787031020008726,
+      "policy": {
+        "fraction": 0.75,
+        "name": "split0.75_t2",
+        "pipeline": true,
+        "threads": 2
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 3,
+        "cpu_rows": 27648,
+        "cpu_seconds": 0.2316600590129383,
+        "interval_records": [
+          {
+            "cpu_interval": [
+              72535.025619482,
+              72535.102775745
+            ],
+            "cpu_rows": 9216,
+            "cpu_seconds": 0.07715626301069278,
+            "overlap_seconds": 0.021068041009129956,
+            "pipelined": true,
+            "pl_path_interval": [
+              72535.024835158,
+              72535.046687523
+            ],
+            "pl_rows": 3072,
+            "pl_seconds": 0.021852365011000074,
+            "pl_tasks": 3,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.07841827000083867
+          },
+          {
+            "cpu_interval": [
+              72535.104395135,
+              72535.181255246
+            ],
+            "cpu_rows": 9216,
+            "cpu_seconds": 0.07686011100304313,
+            "overlap_seconds": 0.021075690994621255,
+            "pipelined": true,
+            "pl_path_interval": [
+              72535.10353941,
+              72535.125470826
+            ],
+            "pl_rows": 3072,
+            "pl_seconds": 0.02193141599127557,
+            "pl_tasks": 3,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.0781950779928593
+          },
+          {
+            "cpu_interval": [
+              72535.182807865,
+              72535.26045155
+            ],
+            "cpu_rows": 9216,
+            "cpu_seconds": 0.07764368499920238,
+            "overlap_seconds": 0.021118760996614583,
+            "pipelined": true,
+            "pl_path_interval": [
+              72535.18202713,
+              72535.203926626
+            ],
+            "pl_rows": 3072,
+            "pl_seconds": 0.021899496001424268,
+            "pl_tasks": 3,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.0788979630015092
+          }
+        ],
+        "mixed_calls": 3,
+        "overlap_seconds": 0.0632624930003658,
+        "pipeline_calls": 3,
+        "pipeline_tasks": 9,
+        "pl_calls": 3,
+        "pl_rows": 9216,
+        "pl_seconds": 0.06568327700369991,
+        "shape_metrics": {
+          "(1, 12, 1024, 1024)": {
+            "calls": 3,
+            "cpu_rows": 27648,
+            "cpu_seconds": 0.2316600590129383,
+            "overlap_seconds": 0.0632624930003658,
+            "pl_rows": 9216,
+            "pl_seconds": 0.06568327700369991,
+            "wall_seconds": 0.23551131099520717
+          }
+        },
+        "wall_seconds": 0.23551131099520717
+      },
+      "shape": [
+        1,
+        12,
+        1024,
+        1024
+      ],
+      "times": [
+        0.0787031020008726,
+        0.07848542000283487,
+        0.07919016500818543
+      ],
+      "vs_ort_cpu": {
+        "mae": 3.549054748061503e-11,
+        "max_abs": 1.5497207641601562e-06
+      }
+    },
+    {
+      "median_seconds": 0.059651902003679425,
+      "policy": {
+        "fraction": 0.25,
+        "name": "split0.25_t3",
+        "pipeline": true,
+        "threads": 3
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 3,
+        "cpu_rows": 9216,
+        "cpu_seconds": 0.055827009986387566,
+        "interval_records": [
+          {
+            "cpu_interval": [
+              72535.911177179,
+              72535.929802866
+            ],
+            "cpu_rows": 3072,
+            "cpu_seconds": 0.018625686992891133,
+            "overlap_seconds": 0.018625686992891133,
+            "pipelined": true,
+            "pl_path_interval": [
+              72535.910412755,
+              72535.969932486
+            ],
+            "pl_rows": 9216,
+            "pl_seconds": 0.0595197310030926,
+            "pl_tasks": 9,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.05983502299932297
+          },
+          {
+            "cpu_interval": [
+              72535.971282094,
+              72535.989877841
+            ],
+            "cpu_rows": 3072,
+            "cpu_seconds": 0.018595746994833462,
+            "overlap_seconds": 0.018595746994833462,
+            "pipelined": true,
+            "pl_path_interval": [
+              72535.970524,
+              72536.029583448
+            ],
+            "pl_rows": 9216,
+            "pl_seconds": 0.05905944800178986,
+            "pl_tasks": 9,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.0593740809999872
+          },
+          {
+            "cpu_interval": [
+              72536.030942286,
+              72536.049547862
+            ],
+            "cpu_rows": 3072,
+            "cpu_seconds": 0.01860557599866297,
+            "overlap_seconds": 0.01860557599866297,
+            "pipelined": true,
+            "pl_path_interval": [
+              72536.030179701,
+              72536.08922336
+            ],
+            "pl_rows": 9216,
+            "pl_seconds": 0.0590436589991441,
+            "pl_tasks": 9,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.059357880003517494
+          }
+        ],
+        "mixed_calls": 3,
+        "overlap_seconds": 0.055827009986387566,
+        "pipeline_calls": 3,
+        "pipeline_tasks": 27,
+        "pl_calls": 3,
+        "pl_rows": 27648,
+        "pl_seconds": 0.17762283800402656,
+        "shape_metrics": {
+          "(1, 12, 1024, 1024)": {
+            "calls": 3,
+            "cpu_rows": 9216,
+            "cpu_seconds": 0.055827009986387566,
+            "overlap_seconds": 0.055827009986387566,
+            "pl_rows": 27648,
+            "pl_seconds": 0.17762283800402656,
+            "wall_seconds": 0.17856698400282767
+          }
+        },
+        "wall_seconds": 0.17856698400282767
+      },
+      "shape": [
+        1,
+        12,
+        1024,
+        1024
+      ],
+      "times": [
+        0.060111425002105534,
+        0.059651902003679425,
+        0.05963444100052584
+      ],
+      "vs_ort_cpu": {
+        "mae": 1.0625279530844663e-10,
+        "max_abs": 1.5497207641601562e-06
+      }
+    },
+    {
+      "median_seconds": 0.04853658800129779,
+      "policy": {
+        "fraction": 0.5,
+        "name": "split0.5_t3",
+        "pipeline": true,
+        "threads": 3
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 3,
+        "cpu_rows": 18432,
+        "cpu_seconds": 0.10914384499483276,
+        "interval_records": [
+          {
+            "cpu_interval": [
+              72536.725916014,
+              72536.762217752
+            ],
+            "cpu_rows": 6144,
+            "cpu_seconds": 0.03630173800047487,
+            "overlap_seconds": 0.03630173800047487,
+            "pipelined": true,
+            "pl_path_interval": [
+              72536.72516306,
+              72536.769988277
+            ],
+            "pl_rows": 6144,
+            "pl_seconds": 0.04482521700265352,
+            "pl_tasks": 6,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.04513349800254218
+          },
+          {
+            "cpu_interval": [
+              72536.771337664,
+              72536.807786953
+            ],
+            "cpu_rows": 6144,
+            "cpu_seconds": 0.03644928899302613,
+            "overlap_seconds": 0.03644928899302613,
+            "pipelined": true,
+            "pl_path_interval": [
+              72536.77057837,
+              72536.818526324
+            ],
+            "pl_rows": 6144,
+            "pl_seconds": 0.047947954008122906,
+            "pl_tasks": 6,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.048260826006298885
+          },
+          {
+            "cpu_interval": [
+              72536.819869472,
+              72536.85626229
+            ],
+            "cpu_rows": 6144,
+            "cpu_seconds": 0.03639281800133176,
+            "overlap_seconds": 0.03639281800133176,
+            "pipelined": true,
+            "pl_path_interval": [
+              72536.819116918,
+              72536.867636365
+            ],
+            "pl_rows": 6144,
+            "pl_seconds": 0.048519446994760074,
+            "pl_tasks": 6,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.04883255901222583
+          }
+        ],
+        "mixed_calls": 3,
+        "overlap_seconds": 0.10914384499483276,
+        "pipeline_calls": 3,
+        "pipeline_tasks": 18,
+        "pl_calls": 3,
+        "pl_rows": 18432,
+        "pl_seconds": 0.1412926180055365,
+        "shape_metrics": {
+          "(1, 12, 1024, 1024)": {
+            "calls": 3,
+            "cpu_rows": 18432,
+            "cpu_seconds": 0.10914384499483276,
+            "overlap_seconds": 0.10914384499483276,
+            "pl_rows": 18432,
+            "pl_seconds": 0.1412926180055365,
+            "wall_seconds": 0.1422268830210669
+          }
+        },
+        "wall_seconds": 0.1422268830210669
+      },
+      "shape": [
+        1,
+        12,
+        1024,
+        1024
+      ],
+      "times": [
+        0.0454058699979214,
+        0.04853658800129779,
+        0.04911262099631131
+      ],
+      "vs_ort_cpu": {
+        "mae": 7.05531351701738e-11,
+        "max_abs": 1.5497207641601562e-06
+      }
+    },
+    {
+      "median_seconds": 0.05469001299934462,
+      "policy": {
+        "fraction": 0.75,
+        "name": "split0.75_t3",
+        "pipeline": true,
+        "threads": 3
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 3,
+        "cpu_rows": 27648,
+        "cpu_seconds": 0.159533852012828,
+        "interval_records": [
+          {
+            "cpu_interval": [
+              72537.518386427,
+              72537.57154449
+            ],
+            "cpu_rows": 9216,
+            "cpu_seconds": 0.05315806300495751,
+            "overlap_seconds": 0.02315842200187035,
+            "pipelined": true,
+            "pl_path_interval": [
+              72537.517611092,
+              72537.541544849
+            ],
+            "pl_rows": 3072,
+            "pl_seconds": 0.0239337569946656,
+            "pl_tasks": 3,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.054406520997872576
+          },
+          {
+            "cpu_interval": [
+              72537.573125949,
+              72537.626210353
+            ],
+            "cpu_rows": 9216,
+            "cpu_seconds": 0.05308440400403924,
+            "overlap_seconds": 0.023180062999017537,
+            "pipelined": true,
+            "pl_path_interval": [
+              72537.572343535,
+              72537.596306012
+            ],
+            "pl_rows": 3072,
+            "pl_seconds": 0.02396247700380627,
+            "pl_tasks": 3,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.05433413000719156
+          },
+          {
+            "cpu_interval": [
+              72537.627748721,
+              72537.681040106
+            ],
+            "cpu_rows": 9216,
+            "cpu_seconds": 0.05329138500383124,
+            "overlap_seconds": 0.023134532995754853,
+            "pipelined": true,
+            "pl_path_interval": [
+              72537.626968177,
+              72537.650883254
+            ],
+            "pl_rows": 3072,
+            "pl_seconds": 0.02391507699212525,
+            "pl_tasks": 3,
+            "shape": [
+              1,
+              12,
+              1024,
+              1024
+            ],
+            "wall_seconds": 0.054548590997001156
+          }
+        ],
+        "mixed_calls": 3,
+        "overlap_seconds": 0.06947301799664274,
+        "pipeline_calls": 3,
+        "pipeline_tasks": 9,
+        "pl_calls": 3,
+        "pl_rows": 9216,
+        "pl_seconds": 0.07181131099059712,
+        "shape_metrics": {
+          "(1, 12, 1024, 1024)": {
+            "calls": 3,
+            "cpu_rows": 27648,
+            "cpu_seconds": 0.159533852012828,
+            "overlap_seconds": 0.06947301799664274,
+            "pl_rows": 9216,
+            "pl_seconds": 0.07181131099059712,
+            "wall_seconds": 0.1632892420020653
+          }
+        },
+        "wall_seconds": 0.1632892420020653
+      },
+      "shape": [
+        1,
+        12,
+        1024,
+        1024
+      ],
+      "times": [
+        0.05469001299934462,
+        0.05462471200735308,
+        0.054838512995047495
+      ],
+      "vs_ort_cpu": {
+        "mae": 3.549054748061503e-11,
+        "max_abs": 1.5497207641601562e-06
+      }
+    },
+    {
+      "median_seconds": 0.0029149659967515618,
+      "policy": {
+        "fraction": 1.0,
+        "name": "cpu4",
+        "pipeline": false,
+        "threads": 4
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 3,
+        "cpu_rows": 7965,
+        "cpu_seconds": 0.007675993983866647,
+        "interval_records": [
+          {
+            "cpu_interval": [
+              72538.430030553,
+              72538.432631138
+            ],
+            "cpu_rows": 2655,
+            "cpu_seconds": 0.002600584994070232,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": null,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              177,
+              177
+            ],
+            "wall_seconds": 0.002701195000554435
+          },
+          {
+            "cpu_interval": [
+              72538.43298675,
+              72538.435499184
+            ],
+            "cpu_rows": 2655,
+            "cpu_seconds": 0.002512433988158591,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": null,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              177,
+              177
+            ],
+            "wall_seconds": 0.0026136649976251647
+          },
+          {
+            "cpu_interval": [
+              72538.435853366,
+              72538.438416341
+            ],
+            "cpu_rows": 2655,
+            "cpu_seconds": 0.002562975001637824,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": null,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              177,
+              177
+            ],
+            "wall_seconds": 0.002662215003510937
+          }
+        ],
+        "mixed_calls": 0,
+        "overlap_seconds": 0.0,
+        "pipeline_calls": 0,
+        "pipeline_tasks": 0,
+        "pl_calls": 0,
+        "pl_rows": 0,
+        "pl_seconds": 0.0,
+        "shape_metrics": {
+          "(1, 15, 177, 177)": {
+            "calls": 3,
+            "cpu_rows": 7965,
+            "cpu_seconds": 0.007675993983866647,
+            "overlap_seconds": 0.0,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "wall_seconds": 0.007977075001690537
+          }
+        },
+        "wall_seconds": 0.007977075001690537
+      },
+      "shape": [
+        1,
+        15,
+        177,
+        177
+      ],
+      "times": [
+        0.002949437010101974,
+        0.0028650269960053265,
+        0.0029149659967515618
+      ],
+      "vs_ort_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      }
+    },
+    {
+      "median_seconds": 0.006875588995171711,
+      "policy": {
+        "fraction": 0.0,
+        "name": "pl_seq",
+        "pipeline": false,
+        "threads": 1
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 0,
+        "cpu_rows": 0,
+        "cpu_seconds": 0.0,
+        "interval_records": [
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.475708804,
+              72538.482264041
+            ],
+            "pl_rows": 2655,
+            "pl_seconds": 0.006555236992426217,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              177,
+              177
+            ],
+            "wall_seconds": 0.006638138002017513
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.482547103,
+              72538.48913547
+            ],
+            "pl_rows": 2655,
+            "pl_seconds": 0.006588366988580674,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              177,
+              177
+            ],
+            "wall_seconds": 0.006671278999419883
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.489424962,
+              72538.495967159
+            ],
+            "pl_rows": 2655,
+            "pl_seconds": 0.006542197006638162,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              177,
+              177
+            ],
+            "wall_seconds": 0.006700227997498587
+          }
+        ],
+        "mixed_calls": 0,
+        "overlap_seconds": 0.0,
+        "pipeline_calls": 0,
+        "pipeline_tasks": 0,
+        "pl_calls": 3,
+        "pl_rows": 7965,
+        "pl_seconds": 0.019685800987645052,
+        "shape_metrics": {
+          "(1, 15, 177, 177)": {
+            "calls": 3,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pl_rows": 7965,
+            "pl_seconds": 0.019685800987645052,
+            "wall_seconds": 0.020009644998935983
+          }
+        },
+        "wall_seconds": 0.020009644998935983
+      },
+      "shape": [
+        1,
+        15,
+        177,
+        177
+      ],
+      "times": [
+        0.006836919012130238,
+        0.006875588995171711,
+        0.006907739996677265
+      ],
+      "vs_ort_cpu": {
+        "mae": 5.224618461372461e-10,
+        "max_abs": 3.5762786865234375e-07
+      }
+    },
+    {
+      "median_seconds": 0.0065604770061327145,
+      "policy": {
+        "fraction": 0.0,
+        "name": "pl_pipeline",
+        "pipeline": true,
+        "threads": 1
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 0,
+        "cpu_rows": 0,
+        "cpu_seconds": 0.0,
+        "interval_records": [
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.524052219,
+              72538.530285315
+            ],
+            "pl_rows": 2655,
+            "pl_seconds": 0.006233096006326377,
+            "pl_tasks": 1,
+            "shape": [
+              1,
+              15,
+              177,
+              177
+            ],
+            "wall_seconds": 0.006361175997881219
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.530572887,
+              72538.536898353
+            ],
+            "pl_rows": 2655,
+            "pl_seconds": 0.006325466005364433,
+            "pl_tasks": 1,
+            "shape": [
+              1,
+              15,
+              177,
+              177
+            ],
+            "wall_seconds": 0.006410257003153674
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.537191934,
+              72538.54339094
+            ],
+            "pl_rows": 2655,
+            "pl_seconds": 0.0061990060057723895,
+            "pl_tasks": 1,
+            "shape": [
+              1,
+              15,
+              177,
+              177
+            ],
+            "wall_seconds": 0.006283356007770635
+          }
+        ],
+        "mixed_calls": 0,
+        "overlap_seconds": 0.0,
+        "pipeline_calls": 0,
+        "pipeline_tasks": 3,
+        "pl_calls": 3,
+        "pl_rows": 7965,
+        "pl_seconds": 0.0187575680174632,
+        "shape_metrics": {
+          "(1, 15, 177, 177)": {
+            "calls": 3,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pl_rows": 7965,
+            "pl_seconds": 0.0187575680174632,
+            "wall_seconds": 0.01905478900880553
+          }
+        },
+        "wall_seconds": 0.01905478900880553
+      },
+      "shape": [
+        1,
+        15,
+        177,
+        177
+      ],
+      "times": [
+        0.0065604770061327145,
+        0.006615618010982871,
+        0.006490197003586218
+      ],
+      "vs_ort_cpu": {
+        "mae": 5.224618461372461e-10,
+        "max_abs": 3.5762786865234375e-07
+      }
+    },
+    {
+      "median_seconds": 0.001050656006555073,
+      "policy": {
+        "fraction": 1.0,
+        "name": "cpu4",
+        "pipeline": false,
+        "threads": 4
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 3,
+        "cpu_rows": 2250,
+        "cpu_seconds": 0.0024986450152937323,
+        "interval_records": [
+          {
+            "cpu_interval": [
+              72538.632181416,
+              72538.633022281
+            ],
+            "cpu_rows": 750,
+            "cpu_seconds": 0.0008408650028286502,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": null,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              50,
+              177
+            ],
+            "wall_seconds": 0.0009035849943757057
+          },
+          {
+            "cpu_interval": [
+              72538.633245272,
+              72538.634074197
+            ],
+            "cpu_rows": 750,
+            "cpu_seconds": 0.0008289250108646229,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": null,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              50,
+              177
+            ],
+            "wall_seconds": 0.0008880850073182955
+          },
+          {
+            "cpu_interval": [
+              72538.634295668,
+              72538.635124523
+            ],
+            "cpu_rows": 750,
+            "cpu_seconds": 0.0008288550016004592,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": null,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              50,
+              177
+            ],
+            "wall_seconds": 0.0008888449956430122
+          }
+        ],
+        "mixed_calls": 0,
+        "overlap_seconds": 0.0,
+        "pipeline_calls": 0,
+        "pipeline_tasks": 0,
+        "pl_calls": 0,
+        "pl_rows": 0,
+        "pl_seconds": 0.0,
+        "shape_metrics": {
+          "(1, 15, 50, 177)": {
+            "calls": 3,
+            "cpu_rows": 2250,
+            "cpu_seconds": 0.0024986450152937323,
+            "overlap_seconds": 0.0,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "wall_seconds": 0.0026805149973370135
+          }
+        },
+        "wall_seconds": 0.0026805149973370135
+      },
+      "shape": [
+        1,
+        15,
+        50,
+        177
+      ],
+      "times": [
+        0.0010653659992385656,
+        0.001047805999405682,
+        0.001050656006555073
+      ],
+      "vs_ort_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      }
+    },
+    {
+      "median_seconds": 0.0028709770122077316,
+      "policy": {
+        "fraction": 0.0,
+        "name": "pl_seq",
+        "pipeline": false,
+        "threads": 1
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 0,
+        "cpu_rows": 0,
+        "cpu_seconds": 0.0,
+        "interval_records": [
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.645941865,
+              72538.64865229
+            ],
+            "pl_rows": 750,
+            "pl_seconds": 0.0027104249893454835,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              50,
+              177
+            ],
+            "wall_seconds": 0.0027780450036516413
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.648890002,
+              72538.651499736
+            ],
+            "pl_rows": 750,
+            "pl_seconds": 0.0026097340014530346,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              50,
+              177
+            ],
+            "wall_seconds": 0.0026764759968500584
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.651735478,
+              72538.654370633
+            ],
+            "pl_rows": 750,
+            "pl_seconds": 0.0026351550040999427,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              50,
+              177
+            ],
+            "wall_seconds": 0.002701354998862371
+          }
+        ],
+        "mixed_calls": 0,
+        "overlap_seconds": 0.0,
+        "pipeline_calls": 0,
+        "pipeline_tasks": 0,
+        "pl_calls": 3,
+        "pl_rows": 2250,
+        "pl_seconds": 0.00795531399489846,
+        "shape_metrics": {
+          "(1, 15, 50, 177)": {
+            "calls": 3,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pl_rows": 2250,
+            "pl_seconds": 0.00795531399489846,
+            "wall_seconds": 0.00815587599936407
+          }
+        },
+        "wall_seconds": 0.00815587599936407
+      },
+      "shape": [
+        1,
+        15,
+        50,
+        177
+      ],
+      "times": [
+        0.0029496370116248727,
+        0.00284341600490734,
+        0.0028709770122077316
+      ],
+      "vs_ort_cpu": {
+        "mae": 5.184009599569279e-10,
+        "max_abs": 2.980232238769531e-07
+      }
+    },
+    {
+      "median_seconds": 0.002909987000748515,
+      "policy": {
+        "fraction": 0.0,
+        "name": "pl_pipeline",
+        "pipeline": true,
+        "threads": 1
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 0,
+        "cpu_rows": 0,
+        "cpu_seconds": 0.0,
+        "interval_records": [
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.665160224,
+              72538.667805169
+            ],
+            "pl_rows": 750,
+            "pl_seconds": 0.0026449449942447245,
+            "pl_tasks": 1,
+            "shape": [
+              1,
+              15,
+              50,
+              177
+            ],
+            "wall_seconds": 0.002712286004680209
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.668089941,
+              72538.670729316
+            ],
+            "pl_rows": 750,
+            "pl_seconds": 0.0026393750013085082,
+            "pl_tasks": 1,
+            "shape": [
+              1,
+              15,
+              50,
+              177
+            ],
+            "wall_seconds": 0.0027555350097827613
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.670962867,
+              72538.673639213
+            ],
+            "pl_rows": 750,
+            "pl_seconds": 0.002676345990039408,
+            "pl_tasks": 1,
+            "shape": [
+              1,
+              15,
+              50,
+              177
+            ],
+            "wall_seconds": 0.0027434460062067956
+          }
+        ],
+        "mixed_calls": 0,
+        "overlap_seconds": 0.0,
+        "pipeline_calls": 0,
+        "pipeline_tasks": 3,
+        "pl_calls": 3,
+        "pl_rows": 2250,
+        "pl_seconds": 0.007960665985592641,
+        "shape_metrics": {
+          "(1, 15, 50, 177)": {
+            "calls": 3,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pl_rows": 2250,
+            "pl_seconds": 0.007960665985592641,
+            "wall_seconds": 0.008211267020669766
+          }
+        },
+        "wall_seconds": 0.008211267020669766
+      },
+      "shape": [
+        1,
+        15,
+        50,
+        177
+      ],
+      "times": [
+        0.0028827360074501485,
+        0.002921127001172863,
+        0.002909987000748515
+      ],
+      "vs_ort_cpu": {
+        "mae": 5.184009599569279e-10,
+        "max_abs": 2.980232238769531e-07
+      }
+    },
+    {
+      "median_seconds": 0.001312267006142065,
+      "policy": {
+        "fraction": 1.0,
+        "name": "cpu4",
+        "pipeline": false,
+        "threads": 4
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 3,
+        "cpu_rows": 2250,
+        "cpu_seconds": 0.003217969002434984,
+        "interval_records": [
+          {
+            "cpu_interval": [
+              72538.765794308,
+              72538.766861305
+            ],
+            "cpu_rows": 750,
+            "cpu_seconds": 0.0010669970070011914,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": null,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              50,
+              227
+            ],
+            "wall_seconds": 0.001134037011070177
+          },
+          {
+            "cpu_interval": [
+              72538.767106006,
+              72538.768203392
+            ],
+            "cpu_rows": 750,
+            "cpu_seconds": 0.0010973860044032335,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": null,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              50,
+              227
+            ],
+            "wall_seconds": 0.001163556007668376
+          },
+          {
+            "cpu_interval": [
+              72538.768446454,
+              72538.76950004
+            ],
+            "cpu_rows": 750,
+            "cpu_seconds": 0.001053585991030559,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": null,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              50,
+              227
+            ],
+            "wall_seconds": 0.0011182570015080273
+          }
+        ],
+        "mixed_calls": 0,
+        "overlap_seconds": 0.0,
+        "pipeline_calls": 0,
+        "pipeline_tasks": 0,
+        "pl_calls": 0,
+        "pl_rows": 0,
+        "pl_seconds": 0.0,
+        "shape_metrics": {
+          "(1, 15, 50, 227)": {
+            "calls": 3,
+            "cpu_rows": 2250,
+            "cpu_seconds": 0.003217969002434984,
+            "overlap_seconds": 0.0,
+            "pl_rows": 0,
+            "pl_seconds": 0.0,
+            "wall_seconds": 0.0034158500202465802
+          }
+        },
+        "wall_seconds": 0.0034158500202465802
+      },
+      "shape": [
+        1,
+        15,
+        50,
+        227
+      ],
+      "times": [
+        0.001312267006142065,
+        0.0013388179941102862,
+        0.0012939370062667876
+      ],
+      "vs_ort_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      }
+    },
+    {
+      "median_seconds": 0.003569331005564891,
+      "policy": {
+        "fraction": 0.0,
+        "name": "pl_seq",
+        "pipeline": false,
+        "threads": 1
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 0,
+        "cpu_rows": 0,
+        "cpu_seconds": 0.0,
+        "interval_records": [
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.782310233,
+              72538.785600901
+            ],
+            "pl_rows": 750,
+            "pl_seconds": 0.0032906679989537224,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              50,
+              227
+            ],
+            "wall_seconds": 0.003377139990334399
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.785889603,
+              72538.789092661
+            ],
+            "pl_rows": 750,
+            "pl_seconds": 0.003203058004146442,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              50,
+              227
+            ],
+            "wall_seconds": 0.003287879007984884
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.789384003,
+              72538.792664072
+            ],
+            "pl_rows": 750,
+            "pl_seconds": 0.0032800689950818196,
+            "pl_tasks": null,
+            "shape": [
+              1,
+              15,
+              50,
+              227
+            ],
+            "wall_seconds": 0.0033649989927653223
+          }
+        ],
+        "mixed_calls": 0,
+        "overlap_seconds": 0.0,
+        "pipeline_calls": 0,
+        "pipeline_tasks": 0,
+        "pl_calls": 3,
+        "pl_rows": 2250,
+        "pl_seconds": 0.009773794998181984,
+        "shape_metrics": {
+          "(1, 15, 50, 227)": {
+            "calls": 3,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pl_rows": 2250,
+            "pl_seconds": 0.009773794998181984,
+            "wall_seconds": 0.010030017991084605
+          }
+        },
+        "wall_seconds": 0.010030017991084605
+      },
+      "shape": [
+        1,
+        15,
+        50,
+        227
+      ],
+      "times": [
+        0.0035803299979306757,
+        0.0034922399936476722,
+        0.003569331005564891
+      ],
+      "vs_ort_cpu": {
+        "mae": 4.555123062270507e-10,
+        "max_abs": 3.5762786865234375e-07
+      }
+    },
+    {
+      "median_seconds": 0.0038335120043484494,
+      "policy": {
+        "fraction": 0.0,
+        "name": "pl_pipeline",
+        "pipeline": true,
+        "threads": 1
+      },
+      "router_metrics": {
+        "calls": 3,
+        "cpu_calls": 0,
+        "cpu_rows": 0,
+        "cpu_seconds": 0.0,
+        "interval_records": [
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.805479435,
+              72538.808979845
+            ],
+            "pl_rows": 750,
+            "pl_seconds": 0.003500409991829656,
+            "pl_tasks": 1,
+            "shape": [
+              1,
+              15,
+              50,
+              227
+            ],
+            "wall_seconds": 0.00359854000271298
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.809344557,
+              72538.812868207
+            ],
+            "pl_rows": 750,
+            "pl_seconds": 0.0035236499970778823,
+            "pl_tasks": 1,
+            "shape": [
+              1,
+              15,
+              50,
+              227
+            ],
+            "wall_seconds": 0.003622060001362115
+          },
+          {
+            "cpu_interval": null,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pipelined": false,
+            "pl_path_interval": [
+              72538.813181969,
+              72538.816493638
+            ],
+            "pl_rows": 750,
+            "pl_seconds": 0.0033116690028691664,
+            "pl_tasks": 1,
+            "shape": [
+              1,
+              15,
+              50,
+              227
+            ],
+            "wall_seconds": 0.0034042000042973086
+          }
+        ],
+        "mixed_calls": 0,
+        "overlap_seconds": 0.0,
+        "pipeline_calls": 0,
+        "pipeline_tasks": 3,
+        "pl_calls": 3,
+        "pl_rows": 2250,
+        "pl_seconds": 0.010335728991776705,
+        "shape_metrics": {
+          "(1, 15, 50, 227)": {
+            "calls": 3,
+            "cpu_rows": 0,
+            "cpu_seconds": 0.0,
+            "overlap_seconds": 0.0,
+            "pl_rows": 2250,
+            "pl_seconds": 0.010335728991776705,
+            "wall_seconds": 0.010624800008372404
+          }
+        },
+        "wall_seconds": 0.010624800008372404
+      },
+      "shape": [
+        1,
+        15,
+        50,
+        227
+      ],
+      "times": [
+        0.0038335120043484494,
+        0.003856071998598054,
+        0.003625291006756015
+      ],
+      "vs_ort_cpu": {
+        "mae": 4.555123062270507e-10,
+        "max_abs": 3.5762786865234375e-07
+      }
+    }
+  ],
+  "model": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/smolvla_selective_pynq_resident88.onnx",
+  "model_sha256": "5483892e6f734e089e0fa1b9f1da19a101feaac0ea6dce0c9d75e020d3e952f6",
+  "native_softmax": true,
+  "ort": {
+    "allow_spinning": "1",
+    "execution": "sequential",
+    "graph_opt": "disable",
+    "inter": 1,
+    "intra": 4
+  },
+  "records": [
+    {
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "cma": {
+        "CmaFree_kib": 14792,
+        "CmaTotal_kib": 131072
+      },
+      "config": "native64",
+      "gemm_callbacks": 1121,
+      "operators": {
+        "cpu_gemm_calls": 0,
+        "cpu_gemm_seconds": 0.0,
+        "gemm_calls": 1121,
+        "gemm_core_jobs": 3621,
+        "gemm_groups": 1481,
+        "gemm_seconds": 8.556516055657994,
+        "gemm_tasks": 1481,
+        "logical_gemm_ops": 575091062784,
+        "resident_weight_cache_bytes_copied": 64880640,
+        "resident_weight_cache_fills": 44,
+        "resident_weight_cache_hits": 396,
+        "resident_weight_cache_syncs": 44,
+        "shared_scratch_switches": 0,
+        "shared_scratch_sync_bytes": 0,
+        "shared_scratch_sync_seconds": 0.0,
+        "softmax_calls": 0,
+        "softmax_seconds": 0.0,
+        "softmax_tasks": 0,
+        "weight_transpose_cache_hits": 0,
+        "weight_transpose_cache_misses": 633
+      },
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_native_sweep_20261104.native64_round00_warmup.npy",
+      "phase": "warmup",
+      "repeat": 0,
+      "routers": {},
+      "seconds": 34.623976539005525,
+      "softmax_callbacks": 0,
+      "softmax_seconds": 0.0,
+      "softmax_shapes": {},
+      "vs_board_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      },
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "cma": {
+        "CmaFree_kib": 14792,
+        "CmaTotal_kib": 131072
+      },
+      "config": "native64",
+      "gemm_callbacks": 1121,
+      "operators": {
+        "cpu_gemm_calls": 0,
+        "cpu_gemm_seconds": 0.0,
+        "gemm_calls": 1121,
+        "gemm_core_jobs": 3621,
+        "gemm_groups": 1481,
+        "gemm_seconds": 8.517407994775567,
+        "gemm_tasks": 1481,
+        "logical_gemm_ops": 575091062784,
+        "resident_weight_cache_bytes_copied": 0,
+        "resident_weight_cache_fills": 0,
+        "resident_weight_cache_hits": 440,
+        "resident_weight_cache_syncs": 0,
+        "shared_scratch_switches": 0,
+        "shared_scratch_sync_bytes": 0,
+        "shared_scratch_sync_seconds": 0.0,
+        "softmax_calls": 0,
+        "softmax_seconds": 0.0,
+        "softmax_tasks": 0,
+        "weight_transpose_cache_hits": 0,
+        "weight_transpose_cache_misses": 633
+      },
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_native_sweep_20261104.native64_round01_measure.npy",
+      "phase": "measure",
+      "repeat": 1,
+      "routers": {},
+      "seconds": 34.5154074220045,
+      "softmax_callbacks": 0,
+      "softmax_seconds": 0.0,
+      "softmax_shapes": {},
+      "vs_board_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      },
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "cma": {
+        "CmaFree_kib": 14792,
+        "CmaTotal_kib": 131072
+      },
+      "config": "native64",
+      "gemm_callbacks": 1121,
+      "operators": {
+        "cpu_gemm_calls": 0,
+        "cpu_gemm_seconds": 0.0,
+        "gemm_calls": 1121,
+        "gemm_core_jobs": 3621,
+        "gemm_groups": 1481,
+        "gemm_seconds": 8.442711328068981,
+        "gemm_tasks": 1481,
+        "logical_gemm_ops": 575091062784,
+        "resident_weight_cache_bytes_copied": 0,
+        "resident_weight_cache_fills": 0,
+        "resident_weight_cache_hits": 440,
+        "resident_weight_cache_syncs": 0,
+        "shared_scratch_switches": 0,
+        "shared_scratch_sync_bytes": 0,
+        "shared_scratch_sync_seconds": 0.0,
+        "softmax_calls": 0,
+        "softmax_seconds": 0.0,
+        "softmax_tasks": 0,
+        "weight_transpose_cache_hits": 0,
+        "weight_transpose_cache_misses": 633
+      },
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_native_sweep_20261104.native64_round02_measure.npy",
+      "phase": "measure",
+      "repeat": 2,
+      "routers": {},
+      "seconds": 35.23710775600921,
+      "softmax_callbacks": 0,
+      "softmax_seconds": 0.0,
+      "softmax_shapes": {},
+      "vs_board_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      },
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "cma": {
+        "CmaFree_kib": 14792,
+        "CmaTotal_kib": 131072
+      },
+      "config": "native64",
+      "gemm_callbacks": 1121,
+      "operators": {
+        "cpu_gemm_calls": 0,
+        "cpu_gemm_seconds": 0.0,
+        "gemm_calls": 1121,
+        "gemm_core_jobs": 3621,
+        "gemm_groups": 1481,
+        "gemm_seconds": 8.424266762827756,
+        "gemm_tasks": 1481,
+        "logical_gemm_ops": 575091062784,
+        "resident_weight_cache_bytes_copied": 0,
+        "resident_weight_cache_fills": 0,
+        "resident_weight_cache_hits": 440,
+        "resident_weight_cache_syncs": 0,
+        "shared_scratch_switches": 0,
+        "shared_scratch_sync_bytes": 0,
+        "shared_scratch_sync_seconds": 0.0,
+        "softmax_calls": 0,
+        "softmax_seconds": 0.0,
+        "softmax_tasks": 0,
+        "weight_transpose_cache_hits": 0,
+        "weight_transpose_cache_misses": 633
+      },
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_native_sweep_20261104.native64_round03_measure.npy",
+      "phase": "measure",
+      "repeat": 3,
+      "routers": {},
+      "seconds": 34.40444296799251,
+      "softmax_callbacks": 0,
+      "softmax_seconds": 0.0,
+      "softmax_shapes": {},
+      "vs_board_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      },
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "cma": {
+        "CmaFree_kib": 14792,
+        "CmaTotal_kib": 131072
+      },
+      "config": "native80",
+      "gemm_callbacks": 1121,
+      "operators": {
+        "cpu_gemm_calls": 0,
+        "cpu_gemm_seconds": 0.0,
+        "gemm_calls": 1121,
+        "gemm_core_jobs": 3621,
+        "gemm_groups": 1481,
+        "gemm_seconds": 8.35230748388858,
+        "gemm_tasks": 1481,
+        "logical_gemm_ops": 575091062784,
+        "resident_weight_cache_bytes_copied": 81492480,
+        "resident_weight_cache_fills": 63,
+        "resident_weight_cache_hits": 567,
+        "resident_weight_cache_syncs": 63,
+        "shared_scratch_switches": 1,
+        "shared_scratch_sync_bytes": 29360128,
+        "shared_scratch_sync_seconds": 0.002550012999563478,
+        "softmax_calls": 0,
+        "softmax_seconds": 0.0,
+        "softmax_tasks": 0,
+        "weight_transpose_cache_hits": 0,
+        "weight_transpose_cache_misses": 443
+      },
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_native_sweep_20261104.native80_round00_warmup.npy",
+      "phase": "warmup",
+      "repeat": 0,
+      "routers": {},
+      "seconds": 34.644122740995954,
+      "softmax_callbacks": 0,
+      "softmax_seconds": 0.0,
+      "softmax_shapes": {},
+      "vs_board_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      },
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "cma": {
+        "CmaFree_kib": 14792,
+        "CmaTotal_kib": 131072
+      },
+      "config": "native80",
+      "gemm_callbacks": 1121,
+      "operators": {
+        "cpu_gemm_calls": 0,
+        "cpu_gemm_seconds": 0.0,
+        "gemm_calls": 1121,
+        "gemm_core_jobs": 3621,
+        "gemm_groups": 1481,
+        "gemm_seconds": 8.208272855132236,
+        "gemm_tasks": 1481,
+        "logical_gemm_ops": 575091062784,
+        "resident_weight_cache_bytes_copied": 0,
+        "resident_weight_cache_fills": 0,
+        "resident_weight_cache_hits": 630,
+        "resident_weight_cache_syncs": 0,
+        "shared_scratch_switches": 0,
+        "shared_scratch_sync_bytes": 0,
+        "shared_scratch_sync_seconds": 0.0,
+        "softmax_calls": 0,
+        "softmax_seconds": 0.0,
+        "softmax_tasks": 0,
+        "weight_transpose_cache_hits": 0,
+        "weight_transpose_cache_misses": 443
+      },
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_native_sweep_20261104.native80_round01_measure.npy",
+      "phase": "measure",
+      "repeat": 1,
+      "routers": {},
+      "seconds": 34.69026760300039,
+      "softmax_callbacks": 0,
+      "softmax_seconds": 0.0,
+      "softmax_shapes": {},
+      "vs_board_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      },
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "cma": {
+        "CmaFree_kib": 14792,
+        "CmaTotal_kib": 131072
+      },
+      "config": "native80",
+      "gemm_callbacks": 1121,
+      "operators": {
+        "cpu_gemm_calls": 0,
+        "cpu_gemm_seconds": 0.0,
+        "gemm_calls": 1121,
+        "gemm_core_jobs": 3621,
+        "gemm_groups": 1481,
+        "gemm_seconds": 8.170112442385289,
+        "gemm_tasks": 1481,
+        "logical_gemm_ops": 575091062784,
+        "resident_weight_cache_bytes_copied": 0,
+        "resident_weight_cache_fills": 0,
+        "resident_weight_cache_hits": 630,
+        "resident_weight_cache_syncs": 0,
+        "shared_scratch_switches": 0,
+        "shared_scratch_sync_bytes": 0,
+        "shared_scratch_sync_seconds": 0.0,
+        "softmax_calls": 0,
+        "softmax_seconds": 0.0,
+        "softmax_tasks": 0,
+        "weight_transpose_cache_hits": 0,
+        "weight_transpose_cache_misses": 443
+      },
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_native_sweep_20261104.native80_round02_measure.npy",
+      "phase": "measure",
+      "repeat": 2,
+      "routers": {},
+      "seconds": 34.10161487599544,
+      "softmax_callbacks": 0,
+      "softmax_seconds": 0.0,
+      "softmax_shapes": {},
+      "vs_board_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      },
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "cma": {
+        "CmaFree_kib": 14792,
+        "CmaTotal_kib": 131072
+      },
+      "config": "native80",
+      "gemm_callbacks": 1121,
+      "operators": {
+        "cpu_gemm_calls": 0,
+        "cpu_gemm_seconds": 0.0,
+        "gemm_calls": 1121,
+        "gemm_core_jobs": 3621,
+        "gemm_groups": 1481,
+        "gemm_seconds": 8.180280984088313,
+        "gemm_tasks": 1481,
+        "logical_gemm_ops": 575091062784,
+        "resident_weight_cache_bytes_copied": 0,
+        "resident_weight_cache_fills": 0,
+        "resident_weight_cache_hits": 630,
+        "resident_weight_cache_syncs": 0,
+        "shared_scratch_switches": 0,
+        "shared_scratch_sync_bytes": 0,
+        "shared_scratch_sync_seconds": 0.0,
+        "softmax_calls": 0,
+        "softmax_seconds": 0.0,
+        "softmax_tasks": 0,
+        "weight_transpose_cache_hits": 0,
+        "weight_transpose_cache_misses": 443
+      },
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_native_sweep_20261104.native80_round03_measure.npy",
+      "phase": "measure",
+      "repeat": 3,
+      "routers": {},
+      "seconds": 34.16759428099613,
+      "softmax_callbacks": 0,
+      "softmax_seconds": 0.0,
+      "softmax_shapes": {},
+      "vs_board_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      },
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "cma": {
+        "CmaFree_kib": 6600,
+        "CmaTotal_kib": 131072
+      },
+      "config": "native88",
+      "gemm_callbacks": 1121,
+      "operators": {
+        "cpu_gemm_calls": 0,
+        "cpu_gemm_seconds": 0.0,
+        "gemm_calls": 1121,
+        "gemm_core_jobs": 3621,
+        "gemm_groups": 1481,
+        "gemm_seconds": 8.213813041977119,
+        "gemm_tasks": 1481,
+        "logical_gemm_ops": 575091062784,
+        "resident_weight_cache_bytes_copied": 89786880,
+        "resident_weight_cache_fills": 75,
+        "resident_weight_cache_hits": 675,
+        "resident_weight_cache_syncs": 75,
+        "shared_scratch_switches": 1,
+        "shared_scratch_sync_bytes": 29360128,
+        "shared_scratch_sync_seconds": 0.0025351219956064597,
+        "softmax_calls": 0,
+        "softmax_seconds": 0.0,
+        "softmax_tasks": 0,
+        "weight_transpose_cache_hits": 0,
+        "weight_transpose_cache_misses": 323
+      },
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_native_sweep_20261104.native88_round00_warmup.npy",
+      "phase": "warmup",
+      "repeat": 0,
+      "routers": {},
+      "seconds": 34.19766900698596,
+      "softmax_callbacks": 0,
+      "softmax_seconds": 0.0,
+      "softmax_shapes": {},
+      "vs_board_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      },
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "cma": {
+        "CmaFree_kib": 6600,
+        "CmaTotal_kib": 131072
+      },
+      "config": "native88",
+      "gemm_callbacks": 1121,
+      "operators": {
+        "cpu_gemm_calls": 0,
+        "cpu_gemm_seconds": 0.0,
+        "gemm_calls": 1121,
+        "gemm_core_jobs": 3621,
+        "gemm_groups": 1481,
+        "gemm_seconds": 8.065589593097684,
+        "gemm_tasks": 1481,
+        "logical_gemm_ops": 575091062784,
+        "resident_weight_cache_bytes_copied": 0,
+        "resident_weight_cache_fills": 0,
+        "resident_weight_cache_hits": 750,
+        "resident_weight_cache_syncs": 0,
+        "shared_scratch_switches": 0,
+        "shared_scratch_sync_bytes": 0,
+        "shared_scratch_sync_seconds": 0.0,
+        "softmax_calls": 0,
+        "softmax_seconds": 0.0,
+        "softmax_tasks": 0,
+        "weight_transpose_cache_hits": 0,
+        "weight_transpose_cache_misses": 323
+      },
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_native_sweep_20261104.native88_round01_measure.npy",
+      "phase": "measure",
+      "repeat": 1,
+      "routers": {},
+      "seconds": 34.65920013099094,
+      "softmax_callbacks": 0,
+      "softmax_seconds": 0.0,
+      "softmax_shapes": {},
+      "vs_board_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      },
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "cma": {
+        "CmaFree_kib": 6600,
+        "CmaTotal_kib": 131072
+      },
+      "config": "native88",
+      "gemm_callbacks": 1121,
+      "operators": {
+        "cpu_gemm_calls": 0,
+        "cpu_gemm_seconds": 0.0,
+        "gemm_calls": 1121,
+        "gemm_core_jobs": 3621,
+        "gemm_groups": 1481,
+        "gemm_seconds": 8.075906242040219,
+        "gemm_tasks": 1481,
+        "logical_gemm_ops": 575091062784,
+        "resident_weight_cache_bytes_copied": 0,
+        "resident_weight_cache_fills": 0,
+        "resident_weight_cache_hits": 750,
+        "resident_weight_cache_syncs": 0,
+        "shared_scratch_switches": 0,
+        "shared_scratch_sync_bytes": 0,
+        "shared_scratch_sync_seconds": 0.0,
+        "softmax_calls": 0,
+        "softmax_seconds": 0.0,
+        "softmax_tasks": 0,
+        "weight_transpose_cache_hits": 0,
+        "weight_transpose_cache_misses": 323
+      },
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_native_sweep_20261104.native88_round02_measure.npy",
+      "phase": "measure",
+      "repeat": 2,
+      "routers": {},
+      "seconds": 34.378327365993755,
+      "softmax_callbacks": 0,
+      "softmax_seconds": 0.0,
+      "softmax_shapes": {},
+      "vs_board_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      },
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "cma": {
+        "CmaFree_kib": 6600,
+        "CmaTotal_kib": 131072
+      },
+      "config": "native88",
+      "gemm_callbacks": 1121,
+      "operators": {
+        "cpu_gemm_calls": 0,
+        "cpu_gemm_seconds": 0.0,
+        "gemm_calls": 1121,
+        "gemm_core_jobs": 3621,
+        "gemm_groups": 1481,
+        "gemm_seconds": 8.132102936098818,
+        "gemm_tasks": 1481,
+        "logical_gemm_ops": 575091062784,
+        "resident_weight_cache_bytes_copied": 0,
+        "resident_weight_cache_fills": 0,
+        "resident_weight_cache_hits": 750,
+        "resident_weight_cache_syncs": 0,
+        "shared_scratch_switches": 0,
+        "shared_scratch_sync_bytes": 0,
+        "shared_scratch_sync_seconds": 0.0,
+        "softmax_calls": 0,
+        "softmax_seconds": 0.0,
+        "softmax_tasks": 0,
+        "weight_transpose_cache_hits": 0,
+        "weight_transpose_cache_misses": 323
+      },
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cma_native_sweep_20261104.native88_round03_measure.npy",
+      "phase": "measure",
+      "repeat": 3,
+      "routers": {},
+      "seconds": 34.45308239098813,
+      "softmax_callbacks": 0,
+      "softmax_seconds": 0.0,
+      "softmax_shapes": {},
+      "vs_board_cpu": {
+        "mae": 0.0,
+        "max_abs": 0.0
+      },
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    }
+  ],
+  "session_load_seconds": 599.2663532789884,
+  "status": "complete",
+  "summaries": [
+    {
+      "config": {
+        "cache_mib": 64,
+        "name": "native64",
+        "shared": false,
+        "softmax": "cpu4"
+      },
+      "max_output_error": 0.0,
+      "median_seconds": 34.5154074220045,
+      "seconds": [
+        34.5154074220045,
+        35.23710775600921,
+        34.40444296799251
+      ],
+      "softmax_median_seconds": 0.0
+    },
+    {
+      "config": {
+        "cache_mib": 80,
+        "name": "native80",
+        "shared": true,
+        "softmax": "cpu4"
+      },
+      "max_output_error": 0.0,
+      "median_seconds": 34.16759428099613,
+      "seconds": [
+        34.69026760300039,
+        34.10161487599544,
+        34.16759428099613
+      ],
+      "softmax_median_seconds": 0.0
+    },
+    {
+      "config": {
+        "cache_mib": 88,
+        "name": "native88",
+        "shared": true,
+        "softmax": "cpu4"
+      },
+      "max_output_error": 0.0,
+      "median_seconds": 34.45308239098813,
+      "seconds": [
+        34.65920013099094,
+        34.378327365993755,
+        34.45308239098813
+      ],
+      "softmax_median_seconds": 0.0
+    }
+  ],
+  "timing_scope": "full smol_run including copies/cache/dispatch/CPU/PL; session load, setup and artifact writes excluded"
+}

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="860" viewBox="0 0 1320 860">
+<rect width="100%" height="100%" fill="white"/>
+<text x="660.0" y="39.72" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="27" fill="#17232f" font-weight="700" text-anchor="middle">A 与 BT 的混合 BRAM URAM 缓存</text>
+<text x="660.0" y="71.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#526274" font-weight="400" text-anchor="middle">以下表示一个 512 KiB 输入缓存；A 和 BT 各有同样一套，片上字宽为 256 位</text>
+<rect x="40" y="130" width="280" height="120" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="180.0" y="165.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">AXI RX / 写入拼接</text>
+<text x="180.0" y="202.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">每个 beat 为 128 位</text>
+<text x="180.0" y="225.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">拼成 256 位逻辑存储字</text>
+<rect x="40" y="330" width="280" height="120" rx="12" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="180.0" y="365.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#9a5a13" font-weight="700" text-anchor="middle">读地址与 bank 选择</text>
+<text x="180.0" y="402.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">独立的读端口</text>
+<text x="180.0" y="425.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">按地址只选中一个 bank</text>
+<rect x="435" y="125" width="365" height="80" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="617.5" y="171.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#23608b" font-weight="700" text-anchor="middle">BRAM bank 0  ·  64 KiB</text>
+<text x="618" y="187.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#23608b" font-weight="400" text-anchor="middle">2048 × 256 bit</text>
+<rect x="435" y="225" width="365" height="80" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="617.5" y="271.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#23608b" font-weight="700" text-anchor="middle">BRAM bank 1  ·  64 KiB</text>
+<text x="618" y="287.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#23608b" font-weight="400" text-anchor="middle">2048 × 256 bit</text>
+<rect x="435" y="325" width="365" height="80" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="617.5" y="371.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#23608b" font-weight="700" text-anchor="middle">BRAM bank 2  ·  64 KiB</text>
+<text x="618" y="387.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#23608b" font-weight="400" text-anchor="middle">2048 × 256 bit</text>
+<rect x="435" y="425" width="365" height="80" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="617.5" y="471.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#23608b" font-weight="700" text-anchor="middle">BRAM bank 3  ·  64 KiB</text>
+<text x="618" y="487.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#23608b" font-weight="400" text-anchor="middle">2048 × 256 bit</text>
+<rect x="880" y="175" width="380" height="120" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1070.0" y="209.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#186b61" font-weight="700" text-anchor="middle">URAM bank 0  ·  128 KiB</text>
+<text x="1070.0" y="259.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">4096 × 256 bit</text>
+<rect x="880" y="375" width="380" height="120" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1070.0" y="409.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#186b61" font-weight="700" text-anchor="middle">URAM bank 1  ·  128 KiB</text>
+<text x="1070.0" y="459.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">4096 × 256 bit</text>
+<text x="618" y="561.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#23608b" font-weight="700" text-anchor="middle">低半区：4×64 KiB = 256 KiB</text>
+<text x="1070" y="561.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#186b61" font-weight="700" text-anchor="middle">高半区：2×128 KiB = 256 KiB</text>
+<polyline points="320,190 380,190 380,160 420,160" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="420,160 410.0950818741206,164.78462087522354 410.0950818741206,155.21537912477646" fill="#526274"/>
+<polyline points="320,390 385,390 385,610 1070,610" fill="none" stroke="#9a5a13" stroke-width="2"/>
+<polygon points="1070,610 1060.0950818741205,614.7846208752235 1060.0950818741205,605.2153791247765" fill="#9a5a13"/>
+<rect x="70" y="665" width="245" height="90" rx="12" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<text x="192.5" y="716.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#677584" font-weight="700" text-anchor="middle">拍 0</text>
+<text x="192.5" y="744.96" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#677584" font-weight="700" text-anchor="middle">请求地址</text>
+<polyline points="315,710 355,710" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="355,710 345.0950818741206,714.7846208752235 345.0950818741206,705.2153791247765" fill="#526274"/>
+<rect x="375" y="665" width="245" height="90" rx="12" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<text x="497.5" y="716.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#677584" font-weight="700" text-anchor="middle">拍 1</text>
+<text x="497.5" y="744.96" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#677584" font-weight="700" text-anchor="middle">bank 读出</text>
+<polyline points="620,710 660,710" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="660,710 650.0950818741205,714.7846208752235 650.0950818741205,705.2153791247765" fill="#526274"/>
+<rect x="680" y="665" width="245" height="90" rx="12" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<text x="802.5" y="716.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#677584" font-weight="700" text-anchor="middle">拍 2</text>
+<text x="802.5" y="744.96" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#677584" font-weight="700" text-anchor="middle">数据寄存</text>
+<polyline points="925,710 965,710" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="965,710 955.0950818741205,714.7846208752235 955.0950818741205,705.2153791247765" fill="#526274"/>
+<rect x="985" y="665" width="245" height="90" rx="12" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<text x="1107.5" y="716.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#677584" font-weight="700" text-anchor="middle">拍 3</text>
+<text x="1107.5" y="744.96" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#677584" font-weight="700" text-anchor="middle">返回对齐</text>
+<text x="660" y="821.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#526274" font-weight="400" text-anchor="middle">3 拍读取延迟统一数据、bank 选择和 valid；这是一条流水，可连续接受读请求</text>
+</svg>

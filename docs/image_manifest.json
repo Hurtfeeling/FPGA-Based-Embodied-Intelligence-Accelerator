@@ -1,0 +1,152 @@
+[
+  {
+    "name": "01_design_flow",
+    "png": "01_design_flow.png",
+    "kind": "原生可编辑示意图",
+    "svg": "01_design_flow.svg",
+    "drawio": "01_design_flow.drawio"
+  },
+  {
+    "name": "02_system_architecture",
+    "png": "02_system_architecture.png",
+    "kind": "原生可编辑示意图",
+    "svg": "02_system_architecture.svg",
+    "drawio": "02_system_architecture.drawio"
+  },
+  {
+    "name": "03_gemm_datapath",
+    "png": "03_gemm_datapath.png",
+    "kind": "原生可编辑示意图",
+    "svg": "03_gemm_datapath.svg",
+    "drawio": "03_gemm_datapath.drawio"
+  },
+  {
+    "name": "04_matrix_strips",
+    "png": "04_matrix_strips.png",
+    "kind": "原生可编辑示意图",
+    "svg": "04_matrix_strips.svg",
+    "drawio": "04_matrix_strips.drawio"
+  },
+  {
+    "name": "04_snake_schedule",
+    "png": "04_snake_schedule.png",
+    "kind": "原生可编辑示意图",
+    "svg": "04_snake_schedule.svg",
+    "drawio": "04_snake_schedule.drawio"
+  },
+  {
+    "name": "05_softmax_datapath",
+    "png": "05_softmax_datapath.png",
+    "kind": "原生可编辑示意图",
+    "svg": "05_softmax_datapath.svg",
+    "drawio": "05_softmax_datapath.drawio"
+  },
+  {
+    "name": "06_gemm_bus_registers",
+    "png": "06_gemm_bus_registers.png",
+    "kind": "原生可编辑示意图",
+    "svg": "06_gemm_bus_registers.svg",
+    "drawio": "06_gemm_bus_registers.drawio"
+  },
+  {
+    "name": "06_software_flow",
+    "png": "06_software_flow.png",
+    "kind": "原生可编辑示意图",
+    "svg": "06_software_flow.svg",
+    "drawio": "06_software_flow.drawio"
+  },
+  {
+    "name": "07_attention_integration",
+    "png": "07_attention_integration.png",
+    "kind": "原生可编辑示意图",
+    "svg": "07_attention_integration.svg",
+    "drawio": "07_attention_integration.drawio"
+  },
+  {
+    "name": "07_three_core_driver",
+    "png": "07_three_core_driver.png",
+    "kind": "原生可编辑示意图",
+    "svg": "07_three_core_driver.svg",
+    "drawio": "07_three_core_driver.drawio"
+  },
+  {
+    "name": "09_gemm_job_pipeline",
+    "png": "09_gemm_job_pipeline.png",
+    "kind": "原生可编辑示意图",
+    "svg": "09_gemm_job_pipeline.svg",
+    "drawio": "09_gemm_job_pipeline.drawio"
+  },
+  {
+    "name": "10_cache_banks",
+    "png": "10_cache_banks.png",
+    "kind": "原生可编辑示意图",
+    "svg": "10_cache_banks.svg",
+    "drawio": "10_cache_banks.drawio"
+  },
+  {
+    "name": "11_systolic_pe",
+    "png": "11_systolic_pe.png",
+    "kind": "原生可编辑示意图",
+    "svg": "11_systolic_pe.svg",
+    "drawio": "11_systolic_pe.drawio"
+  },
+  {
+    "name": "12_strip_ready_overlap",
+    "png": "12_strip_ready_overlap.png",
+    "kind": "原生可编辑示意图",
+    "svg": "12_strip_ready_overlap.svg",
+    "drawio": "12_strip_ready_overlap.drawio"
+  },
+  {
+    "name": "13_c_writeback",
+    "png": "13_c_writeback.png",
+    "kind": "原生可编辑示意图",
+    "svg": "13_c_writeback.svg",
+    "drawio": "13_c_writeback.drawio"
+  },
+  {
+    "name": "14_axil_job_sequence",
+    "png": "14_axil_job_sequence.png",
+    "kind": "原生可编辑示意图",
+    "svg": "14_axil_job_sequence.svg",
+    "drawio": "14_axil_job_sequence.drawio"
+  },
+  {
+    "name": "15_softmax_row_pipeline",
+    "png": "15_softmax_row_pipeline.png",
+    "kind": "原生可编辑示意图",
+    "svg": "15_softmax_row_pipeline.svg",
+    "drawio": "15_softmax_row_pipeline.drawio"
+  },
+  {
+    "name": "16_benchmark_scope",
+    "png": "16_benchmark_scope.png",
+    "kind": "原生可编辑示意图",
+    "svg": "16_benchmark_scope.svg",
+    "drawio": "16_benchmark_scope.drawio"
+  },
+  {
+    "name": "17_vivado_block_design",
+    "png": "17_vivado_block_design.png",
+    "kind": "原稿工程截图",
+    "drawio": "17_vivado_block_design.drawio"
+  },
+  {
+    "name": "18_vivado_utilization_chart",
+    "png": "18_vivado_utilization_chart.png",
+    "kind": "原稿工程截图",
+    "drawio": "18_vivado_utilization_chart.drawio"
+  },
+  {
+    "name": "19_vivado_utilization_table",
+    "png": "19_vivado_utilization_table.png",
+    "kind": "原稿工程截图",
+    "drawio": "19_vivado_utilization_table.drawio"
+  },
+  {
+    "name": "20_vivado_floorplan",
+    "png": "20_vivado_floorplan.png",
+    "kind": "原稿工程截图",
+    "drawio": "20_vivado_floorplan.drawio"
+  }
+]

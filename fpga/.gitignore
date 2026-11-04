@@ -1,0 +1,9 @@
+vivado_project/
+*.jou
+*.log
+*.str
+*.cache/
+*.runs/
+*.gen/
+*.hw/
+*.ip_user_files/

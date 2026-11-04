@@ -1,0 +1,294 @@
+{
+  "suite": "aligned32_wide",
+  "repeats": 9,
+  "pl_mhz": 249.9975,
+  "case_pattern": "(m64_n2048_k(128|736)|m96_n2048_k64)_",
+  "cpu_mhz": 1049.9895,
+  "cpu_threads": 4,
+  "cpu_kernel": "native four-thread Cortex-A53 NEON; input packing included",
+  "pl_kernel": "GEMM_V2 up to three cores; staging, cache sync, wait/clear and host output copy included",
+  "weights": "constant_b=True reuses cached BT after first use; constant_b=False retransposes B each run",
+  "original_dimensions_all_aligned32": true,
+  "output_validation": "Each CPU and PL result checked before the next path can overwrite it",
+  "records": [
+    {
+      "name": "aligned32_wide_m64_n2048_k128_cached_b",
+      "shapes_mnk": [
+        [
+          64,
+          2048,
+          128
+        ]
+      ],
+      "shared_b": false,
+      "constant_b": true,
+      "pl_task_groups_per_call": 1,
+      "pl_core_jobs_per_call": 2,
+      "padded_job_ops": [
+        33554432
+      ],
+      "padded_ops": 33554432,
+      "logical_ops": 33554432,
+      "cpu_median_ms": 3.67521899897838,
+      "pl_warm_median_ms": 2.4513459975423757,
+      "cold_pl_ms": 5.790551000245614,
+      "speedup": 1.4992657106189873,
+      "cpu_samples_ms": [
+        3.6621279978135135,
+        3.674958999908995,
+        3.765400000702357,
+        3.6725689969898667,
+        3.67521899897838,
+        3.677009000966791,
+        3.7452000033226795,
+        3.6706190003314987,
+        3.73268899784307
+      ],
+      "pl_warm_samples_ms": [
+        2.463946002535522,
+        2.413574999081902,
+        2.4110859994834755,
+        2.4513459975423757,
+        2.464135999616701,
+        2.4546360000385903,
+        2.4707859993213788,
+        2.4104250005620997,
+        2.4136850006470922
+      ],
+      "eligible_for_single_matrix_threshold": true
+    },
+    {
+      "name": "aligned32_wide_m64_n2048_k128_transpose_b",
+      "shapes_mnk": [
+        [
+          64,
+          2048,
+          128
+        ]
+      ],
+      "shared_b": false,
+      "constant_b": false,
+      "pl_task_groups_per_call": 1,
+      "pl_core_jobs_per_call": 2,
+      "padded_job_ops": [
+        33554432
+      ],
+      "padded_ops": 33554432,
+      "logical_ops": 33554432,
+      "cpu_median_ms": 3.6715690002893098,
+      "pl_warm_median_ms": 3.27600500168046,
+      "cold_pl_ms": 3.291704000730533,
+      "speedup": 1.1207458469709117,
+      "cpu_samples_ms": [
+        3.6606779976864345,
+        3.654058000392979,
+        3.708199001266621,
+        3.6644890024035703,
+        3.7312189997464884,
+        3.6715690002893098,
+        3.7290399995981716,
+        3.6409280000953004,
+        3.733719000592828
+      ],
+      "pl_warm_samples_ms": [
+        3.248915003496222,
+        3.2868850030354224,
+        3.30688500253018,
+        3.27600500168046,
+        3.263383998273639,
+        3.275664999819128,
+        3.2648839987814426,
+        3.2977150003716815,
+        3.304134999780217
+      ],
+      "eligible_for_single_matrix_threshold": false
+    },
+    {
+      "name": "aligned32_wide_m64_n2048_k736_cached_b",
+      "shapes_mnk": [
+        [
+          64,
+          2048,
+          736
+        ]
+      ],
+      "shared_b": false,
+      "constant_b": true,
+      "pl_task_groups_per_call": 1,
+      "pl_core_jobs_per_call": 2,
+      "padded_job_ops": [
+        192937984
+      ],
+      "padded_ops": 192937984,
+      "logical_ops": 192937984,
+      "cpu_median_ms": 16.725855999538908,
+      "pl_warm_median_ms": 3.0482319998554885,
+      "cold_pl_ms": 6.303255999227986,
+      "speedup": 5.487067913574771,
+      "cpu_samples_ms": [
+        21.07916199747706,
+        16.697646999091376,
+        16.69834599670139,
+        16.715585999918403,
+        16.725855999538908,
+        16.74100599848316,
+        16.815216997201787,
+        16.74299600199447,
+        16.688855001120828
+      ],
+      "pl_warm_samples_ms": [
+        3.0661130003863946,
+        3.046802001335891,
+        3.0024909974599723,
+        3.004791000421392,
+        3.0515219987137243,
+        3.0482319998554885,
+        3.0503419984597713,
+        3.0075520007812884,
+        3.0560129998775665
+      ],
+      "eligible_for_single_matrix_threshold": true
+    },
+    {
+      "name": "aligned32_wide_m64_n2048_k736_transpose_b",
+      "shapes_mnk": [
+        [
+          64,
+          2048,
+          736
+        ]
+      ],
+      "shared_b": false,
+      "constant_b": false,
+      "pl_task_groups_per_call": 1,
+      "pl_core_jobs_per_call": 2,
+      "padded_job_ops": [
+        192937984
+      ],
+      "padded_ops": 192937984,
+      "logical_ops": 192937984,
+      "cpu_median_ms": 16.753056999732507,
+      "pl_warm_median_ms": 5.364605996874161,
+      "cold_pl_ms": 5.25893599842675,
+      "speedup": 3.1228867524463397,
+      "cpu_samples_ms": [
+        16.732195999793475,
+        16.864028002601117,
+        16.753056999732507,
+        16.762025999923935,
+        16.853377997904317,
+        16.72368599975016,
+        16.711755997675937,
+        16.69615599894314,
+        16.995818998111645
+      ],
+      "pl_warm_samples_ms": [
+        5.361026000173297,
+        5.262075002974598,
+        5.418507000285899,
+        5.3526869996858295,
+        5.359006998332916,
+        5.364605996874161,
+        5.423426999186631,
+        5.371077000745572,
+        5.376946999604115
+      ],
+      "eligible_for_single_matrix_threshold": false
+    },
+    {
+      "name": "aligned32_wide_m96_n2048_k64_cached_b",
+      "shapes_mnk": [
+        [
+          96,
+          2048,
+          64
+        ]
+      ],
+      "shared_b": false,
+      "constant_b": true,
+      "pl_task_groups_per_call": 1,
+      "pl_core_jobs_per_call": 3,
+      "padded_job_ops": [
+        25165824
+      ],
+      "padded_ops": 25165824,
+      "logical_ops": 25165824,
+      "cpu_median_ms": 3.138282998406794,
+      "pl_warm_median_ms": 2.695898001547903,
+      "cold_pl_ms": 4.087512999831233,
+      "speedup": 1.1640955987967228,
+      "cpu_samples_ms": [
+        3.133933001663536,
+        3.1275729998014867,
+        3.201413001079345,
+        3.0839130013191607,
+        3.1613629980711266,
+        3.138282998406794,
+        3.1189729998004623,
+        3.1563029988319613,
+        3.1798529998923186
+      ],
+      "pl_warm_samples_ms": [
+        2.695898001547903,
+        2.7472389992908575,
+        2.646598000865197,
+        2.6611879984557163,
+        2.6910280030278955,
+        2.704358998016687,
+        2.695958002732368,
+        2.6997989989467897,
+        2.639988000737503
+      ],
+      "eligible_for_single_matrix_threshold": true
+    },
+    {
+      "name": "aligned32_wide_m96_n2048_k64_transpose_b",
+      "shapes_mnk": [
+        [
+          96,
+          2048,
+          64
+        ]
+      ],
+      "shared_b": false,
+      "constant_b": false,
+      "pl_task_groups_per_call": 1,
+      "pl_core_jobs_per_call": 3,
+      "padded_job_ops": [
+        25165824
+      ],
+      "padded_ops": 25165824,
+      "logical_ops": 25165824,
+      "cpu_median_ms": 3.1377929990412667,
+      "pl_warm_median_ms": 3.154703001200687,
+      "cold_pl_ms": 3.440606000367552,
+      "speedup": 0.9946397482891466,
+      "cpu_samples_ms": [
+        3.13324300077511,
+        3.0961729971750174,
+        3.2312040020769928,
+        3.1368929994641803,
+        3.193453998392215,
+        3.1377929990412667,
+        3.1197320022329222,
+        3.161232998536434,
+        3.156703998683952
+      ],
+      "pl_warm_samples_ms": [
+        3.15681299980497,
+        3.09519200163777,
+        3.154703001200687,
+        3.134463000606047,
+        3.1503430000157095,
+        3.1861139977991115,
+        3.108272998360917,
+        3.1634929982828908,
+        3.1563429984089453
+      ],
+      "eligible_for_single_matrix_threshold": false
+    }
+  ],
+  "all_outputs_verified": true,
+  "threshold_rule": "largest padded-op count in a contiguous low-op range where CPU is at least 10% faster; otherwise use PL",
+  "cpu_threshold_ops": 0
+}

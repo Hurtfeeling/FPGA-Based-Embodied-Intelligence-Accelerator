@@ -1,0 +1,4 @@
+[
+  {"name":"baseline_full_clear_v4","cache_mib":80,"shared":true,"softmax":"cpu4","a_pack_mode":"full"},
+  {"name":"adaptive_neon_cma_v4","cache_mib":80,"shared":true,"softmax":"cpu4","a_pack_mode":"adaptive"}
+]

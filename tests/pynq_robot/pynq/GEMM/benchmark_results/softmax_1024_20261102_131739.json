@@ -1,0 +1,277 @@
+{
+  "summary": {
+    "shape": [
+      1024,
+      1024
+    ],
+    "dtype": "FP32",
+    "stride_bytes": 4096,
+    "elements": 1048576,
+    "pl_mhz": 249.9975,
+    "cpu_mhz": 1049.9895,
+    "warmups": 2,
+    "repeats": 8,
+    "input_sha256": "60f26d34d54bb7d6b530c6d7e130d463a7aa98e0bb7d808a8e951c99cdda9049",
+    "cpu": {
+      "median_s": 0.10979718599992339,
+      "mean_s": 0.10967726337548811,
+      "min_s": 0.10922755600040546,
+      "max_s": 0.10996070599503582,
+      "median_melements_per_s": 9.550117249823977
+    },
+    "pl": {
+      "input_copy_s": {
+        "median": 0.001832754998758901,
+        "mean": 0.0018262001249240711,
+        "minimum": 0.0017383400045218877,
+        "maximum": 0.0019357499986654148
+      },
+      "input_cache_sync_s": {
+        "median": 0.000894745495315874,
+        "mean": 0.0009000443751574494,
+        "minimum": 0.0008918010062188841,
+        "maximum": 0.0009397610047017224
+      },
+      "submit_and_wait_s": {
+        "median": 0.0033235659975616727,
+        "mean": 0.0032858873728400795,
+        "minimum": 0.0031403909961227328,
+        "maximum": 0.0033631109981797636
+      },
+      "output_cache_sync_s": {
+        "median": 0.00039364050098811276,
+        "mean": 0.00039373525123664876,
+        "minimum": 0.0003931300016120076,
+        "maximum": 0.0003947910008719191
+      },
+      "output_copy_s": {
+        "median": 0.0019225904979975894,
+        "mean": 0.0019201378754587495,
+        "minimum": 0.0018756610006676055,
+        "maximum": 0.001970700002857484
+      },
+      "total_s": {
+        "median": 0.00832565800010343,
+        "mean": 0.008326004999616998,
+        "minimum": 0.008223713004554156,
+        "maximum": 0.008451921996311285
+      },
+      "driver_elapsed_s": {
+        "median": 0.002790986000036355,
+        "mean": 0.0027523170010681497,
+        "minimum": 0.002616611003759317,
+        "maximum": 0.0028103700024075806
+      },
+      "median_end_to_end_melements_per_s": 125.94512049221497,
+      "median_submit_wait_melements_per_s": 315.4972703323134
+    },
+    "max_abs_error": 4.76837158203125e-07,
+    "max_row_sum_error": 8.926260286479248e-08,
+    "all_verified": true,
+    "timing_scope": "CPU NumPy FP32 stable softmax; PL total includes input copy to CMA, input/output sync, accelerator submit+wait, output copy to host; no PL cycle counter exposed by this driver"
+  },
+  "pl_records": [
+    {
+      "mode": "PL_SOFTMAX",
+      "repeat": 1,
+      "input_copy_s": 0.0017600110004423186,
+      "input_cache_sync_s": 0.000893769996764604,
+      "submit_and_wait_s": 0.0033336409978801385,
+      "output_cache_sync_s": 0.0003947910008719191,
+      "output_copy_s": 0.0019519100023899227,
+      "total_s": 0.008334122998348903,
+      "driver_elapsed_s": 0.0028103700024075806,
+      "max_abs_error": 4.76837158203125e-07,
+      "max_row_sum_error": 8.926260286479248e-08,
+      "src_addr": 2016411648,
+      "dst_addr": 2020605952,
+      "src_coherent": false,
+      "dst_coherent": false,
+      "verified": true
+    },
+    {
+      "mode": "PL_SOFTMAX",
+      "repeat": 2,
+      "input_copy_s": 0.0019357499986654148,
+      "input_cache_sync_s": 0.0008972799987532198,
+      "submit_and_wait_s": 0.0031449009984498844,
+      "output_cache_sync_s": 0.0003936810026061721,
+      "output_copy_s": 0.0018801999976858497,
+      "total_s": 0.00825181199616054,
+      "driver_elapsed_s": 0.0026206199981970713,
+      "max_abs_error": 4.76837158203125e-07,
+      "max_row_sum_error": 8.926260286479248e-08,
+      "src_addr": 2016411648,
+      "dst_addr": 2020605952,
+      "src_coherent": false,
+      "dst_coherent": false,
+      "verified": true
+    },
+    {
+      "mode": "PL_SOFTMAX",
+      "repeat": 3,
+      "input_copy_s": 0.0018690799988689832,
+      "input_cache_sync_s": 0.0008946309972088784,
+      "submit_and_wait_s": 0.00332427099783672,
+      "output_cache_sync_s": 0.00039323999953921884,
+      "output_copy_s": 0.001970700002857484,
+      "total_s": 0.008451921996311285,
+      "driver_elapsed_s": 0.002803880997817032,
+      "max_abs_error": 4.76837158203125e-07,
+      "max_row_sum_error": 8.926260286479248e-08,
+      "src_addr": 2016411648,
+      "dst_addr": 2020605952,
+      "src_coherent": false,
+      "dst_coherent": false,
+      "verified": true
+    },
+    {
+      "mode": "PL_SOFTMAX",
+      "repeat": 4,
+      "input_copy_s": 0.0018998399973497726,
+      "input_cache_sync_s": 0.0008918010062188841,
+      "submit_and_wait_s": 0.003322860997286625,
+      "output_cache_sync_s": 0.0003935999993700534,
+      "output_copy_s": 0.0018756610006676055,
+      "total_s": 0.008383763000892941,
+      "driver_elapsed_s": 0.0027993210023851134,
+      "max_abs_error": 4.76837158203125e-07,
+      "max_row_sum_error": 8.926260286479248e-08,
+      "src_addr": 2016411648,
+      "dst_addr": 2020605952,
+      "src_coherent": false,
+      "dst_coherent": false,
+      "verified": true
+    },
+    {
+      "mode": "PL_SOFTMAX",
+      "repeat": 5,
+      "input_copy_s": 0.0017410700020263903,
+      "input_cache_sync_s": 0.0008948599934228696,
+      "submit_and_wait_s": 0.003352261999680195,
+      "output_cache_sync_s": 0.0003931900064344518,
+      "output_copy_s": 0.0019158099967171438,
+      "total_s": 0.00829719199828105,
+      "driver_elapsed_s": 0.0027892309954040684,
+      "max_abs_error": 4.76837158203125e-07,
+      "max_row_sum_error": 8.926260286479248e-08,
+      "src_addr": 2016411648,
+      "dst_addr": 2020605952,
+      "src_coherent": false,
+      "dst_coherent": false,
+      "verified": true
+    },
+    {
+      "mode": "PL_SOFTMAX",
+      "repeat": 6,
+      "input_copy_s": 0.0018100399975082837,
+      "input_cache_sync_s": 0.0009397610047017224,
+      "submit_and_wait_s": 0.0033056609972845763,
+      "output_cache_sync_s": 0.0003940899987355806,
+      "output_copy_s": 0.0018987700022989884,
+      "total_s": 0.008348322000529151,
+      "driver_elapsed_s": 0.002785761003906373,
+      "max_abs_error": 4.76837158203125e-07,
+      "max_row_sum_error": 8.926260286479248e-08,
+      "src_addr": 2016411648,
+      "dst_addr": 2020605952,
+      "src_coherent": false,
+      "dst_coherent": false,
+      "verified": true
+    },
+    {
+      "mode": "PL_SOFTMAX",
+      "repeat": 7,
+      "input_copy_s": 0.0017383400045218877,
+      "input_cache_sync_s": 0.0008932409982662648,
+      "submit_and_wait_s": 0.0033631109981797636,
+      "output_cache_sync_s": 0.0003931300016120076,
+      "output_copy_s": 0.001929370999278035,
+      "total_s": 0.008317193001857959,
+      "driver_elapsed_s": 0.002792741004668642,
+      "max_abs_error": 4.76837158203125e-07,
+      "max_row_sum_error": 8.926260286479248e-08,
+      "src_addr": 2016411648,
+      "dst_addr": 2020605952,
+      "src_coherent": false,
+      "dst_coherent": false,
+      "verified": true
+    },
+    {
+      "mode": "PL_SOFTMAX",
+      "repeat": 8,
+      "input_copy_s": 0.0018554700000095181,
+      "input_cache_sync_s": 0.000895011005923152,
+      "submit_and_wait_s": 0.0031403909961227328,
+      "output_cache_sync_s": 0.00039416000072378665,
+      "output_copy_s": 0.0019386810017749667,
+      "total_s": 0.008223713004554156,
+      "driver_elapsed_s": 0.002616611003759317,
+      "max_abs_error": 4.76837158203125e-07,
+      "max_row_sum_error": 8.926260286479248e-08,
+      "src_addr": 2016411648,
+      "dst_addr": 2020605952,
+      "src_coherent": false,
+      "dst_coherent": false,
+      "verified": true
+    }
+  ],
+  "cpu_records": [
+    {
+      "mode": "CPU_NUMPY_FP32",
+      "repeat": 1,
+      "compute_s": 0.10981854599958751,
+      "max_abs_error": 0.0,
+      "verified": true
+    },
+    {
+      "mode": "CPU_NUMPY_FP32",
+      "repeat": 2,
+      "compute_s": 0.10996070599503582,
+      "max_abs_error": 0.0,
+      "verified": true
+    },
+    {
+      "mode": "CPU_NUMPY_FP32",
+      "repeat": 3,
+      "compute_s": 0.10922755600040546,
+      "max_abs_error": 0.0,
+      "verified": true
+    },
+    {
+      "mode": "CPU_NUMPY_FP32",
+      "repeat": 4,
+      "compute_s": 0.10994192600628594,
+      "max_abs_error": 0.0,
+      "verified": true
+    },
+    {
+      "mode": "CPU_NUMPY_FP32",
+      "repeat": 5,
+      "compute_s": 0.10934083499887493,
+      "max_abs_error": 0.0,
+      "verified": true
+    },
+    {
+      "mode": "CPU_NUMPY_FP32",
+      "repeat": 6,
+      "compute_s": 0.10977582600025926,
+      "max_abs_error": 0.0,
+      "verified": true
+    },
+    {
+      "mode": "CPU_NUMPY_FP32",
+      "repeat": 7,
+      "compute_s": 0.10985366600652924,
+      "max_abs_error": 0.0,
+      "verified": true
+    },
+    {
+      "mode": "CPU_NUMPY_FP32",
+      "repeat": 8,
+      "compute_s": 0.10949904599692672,
+      "max_abs_error": 0.0,
+      "verified": true
+    }
+  ]
+}

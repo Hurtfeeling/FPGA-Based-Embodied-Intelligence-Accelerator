@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="740" viewBox="0 0 1320 740">
+<rect width="100%" height="100%" fill="white"/>
+<text x="660.0" y="39.72" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="27" fill="#17232f" font-weight="700" text-anchor="middle">条带就绪与加载计算重叠</text>
+<text x="660.0" y="71.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#526274" font-weight="400" text-anchor="middle">示意事件顺序，横向宽度不表示实测周期；K=2048 时一条输入为 32×2048 = 64 KiB</text>
+<text x="60" y="172.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#17232f" font-weight="700" text-anchor="start">AXI 读引擎</text>
+<text x="60" y="337.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#17232f" font-weight="700" text-anchor="start">片上 ready</text>
+<text x="60" y="487.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#17232f" font-weight="700" text-anchor="start">计算阵列</text>
+<rect x="245" y="125" width="175" height="85" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="332.5" y="173.98" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#23608b" font-weight="700" text-anchor="middle">A 条带 a0</text>
+<polyline points="420,167 435,167" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="435,167 425.0950818741206,171.78462087522354 425.0950818741206,162.21537912477646" fill="#526274"/>
+<rect x="445" y="125" width="175" height="85" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="532.5" y="173.98" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#186b61" font-weight="700" text-anchor="middle">BT 条带 bt0</text>
+<polyline points="620,167 635,167" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="635,167 625.0950818741205,171.78462087522354 625.0950818741205,162.21537912477646" fill="#526274"/>
+<rect x="645" y="125" width="175" height="85" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="732.5" y="173.98" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#23608b" font-weight="700" text-anchor="middle">A 条带 a1</text>
+<polyline points="820,167 835,167" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="835,167 825.0950818741205,171.78462087522354 825.0950818741205,162.21537912477646" fill="#526274"/>
+<rect x="845" y="125" width="175" height="85" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="932.5" y="173.98" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#186b61" font-weight="700" text-anchor="middle">BT 条带 bt1</text>
+<polyline points="1020,167 1035,167" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="1035,167 1025.0950818741205,171.78462087522354 1025.0950818741205,162.21537912477646" fill="#526274"/>
+<rect x="1045" y="125" width="175" height="85" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="1132.5" y="173.98" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#23608b" font-weight="700" text-anchor="middle">后续条带 …</text>
+<rect x="245" y="280" width="175" height="95" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="332.5" y="314.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#23608b" font-weight="700" text-anchor="middle">a0 完整提交</text>
+<text x="332.5" y="351.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">a0_ready = 1</text>
+<rect x="445" y="280" width="175" height="95" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="532.5" y="314.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#186b61" font-weight="700" text-anchor="middle">bt0 完整提交</text>
+<text x="532.5" y="351.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">bt0_ready = 1</text>
+<rect x="680" y="280" width="520" height="95" rx="12" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<text x="940.0" y="314.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#677584" font-weight="700" text-anchor="middle">a1、bt1 等陆续提交</text>
+<text x="940.0" y="351.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">仅实际写入存储后才发布可计算状态</text>
+<polyline points="332,210 332,265" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="332,265 327.21537912477646,255.09508187412055 336.78462087522354,255.09508187412055" fill="#526274"/>
+<polyline points="532,210 532,265" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="532,265 527.2153791247765,255.09508187412055 536.7846208752235,255.09508187412055" fill="#526274"/>
+<rect x="445" y="440" width="410" height="100" rx="12" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="650.0" y="474.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#9a5a13" font-weight="700" text-anchor="middle">a0 × bt0^T → 一个 32×32 微块</text>
+<text x="650.0" y="514.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">两侧输入就绪、输出槽可用时启动</text>
+<polyline points="532,375 532,425" fill="none" stroke="#9a5a13" stroke-width="2"/>
+<polygon points="532,425 527.2153791247765,415.0950818741206 536.7846208752235,415.0950818741206" fill="#9a5a13"/>
+<rect x="910" y="440" width="290" height="100" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="1055.0" y="474.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#23608b" font-weight="700" text-anchor="middle">继续选取就绪组合</text>
+<text x="1055.0" y="514.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">已经计算的条带对不重复计算</text>
+<polyline points="855,490 895,490" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="895,490 885.0950818741205,494.78462087522354 885.0950818741205,485.21537912477646" fill="#526274"/>
+<text x="660" y="621.84" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="19" fill="#17232f" font-weight="700" text-anchor="middle">计算 a0 × bt0^T 时，读引擎仍可加载后续条带，Writer 可回写前面的结果</text>
+<text x="660" y="671.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#526274" font-weight="400" text-anchor="middle">单个读引擎顺序传输 A / BT；输入不必等待整个 256 行宏条带全部装满</text>
+</svg>

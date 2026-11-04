@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="760" viewBox="0 0 1360 760">
+<rect width="100%" height="100%" fill="white"/>
+<text x="680.0" y="39.72" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="27" fill="#17232f" font-weight="700" text-anchor="middle">单个 GEMM 核的数据通路</text>
+<text x="680.0" y="71.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#526274" font-weight="400" text-anchor="middle">32×32 脉动阵列、混合输入缓存与结果输出队列</text>
+<rect x="35" y="105" width="1290" height="70" rx="12" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="680.0" y="147.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#9a5a13" font-weight="700" text-anchor="middle">AXI-Lite 参数与控制  地址 / M N K / START / 状态 / 统计</text>
+<rect x="35" y="235" width="220" height="175" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="145.0" y="270.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">128 位 AXI DMA</text>
+<text x="145.0" y="322.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">A / BT burst 读取</text>
+<text x="145.0" y="346.44" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">C burst 写回</text>
+<text x="145.0" y="370.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">响应与边界处理</text>
+<rect x="340" y="225" width="340" height="120" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="510.0" y="260.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#186b61" font-weight="700" text-anchor="middle">A 缓存 512 KiB</text>
+<text x="510.0" y="297.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">256 KiB BRAM + 256 KiB URAM</text>
+<text x="510.0" y="320.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">32×K 行条带</text>
+<rect x="340" y="385" width="340" height="120" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="510.0" y="420.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#186b61" font-weight="700" text-anchor="middle">BT 缓存 512 KiB</text>
+<text x="510.0" y="457.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">256 KiB BRAM + 256 KiB URAM</text>
+<text x="510.0" y="480.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">32×K 列对应条带</text>
+<rect x="780" y="250" width="300" height="220" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="930.0" y="285.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">32×32 脉动阵列</text>
+<text x="930.0" y="360.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">1024 个 PE</text>
+<text x="930.0" y="383.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">INT8 乘法 / INT32 累加</text>
+<text x="930.0" y="407.62" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">统一 3 拍输入缓存读取接口</text>
+<polyline points="255,280 325,280" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="325,280 315.0950818741206,284.78462087522354 315.0950818741206,275.21537912477646" fill="#526274"/>
+<polyline points="255,350 290,350 290,445 325,445" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="325,445 315.0950818741206,449.78462087522354 315.0950818741206,440.21537912477646" fill="#526274"/>
+<polyline points="680,285 725,285 725,315 765,315" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="765,315 755.0950818741205,319.78462087522354 755.0950818741205,310.21537912477646" fill="#526274"/>
+<polyline points="680,445 725,445 725,400 765,400" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="765,400 755.0950818741205,404.78462087522354 755.0950818741205,395.21537912477646" fill="#526274"/>
+<rect x="1130" y="235" width="195" height="240" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1227.5" y="270.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#186b61" font-weight="700" text-anchor="middle">C 缓存</text>
+<text x="1227.5" y="355.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">256 KiB URAM</text>
+<text x="1227.5" y="378.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">64 个输出槽</text>
+<text x="1227.5" y="402.62" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">绝对目标坐标</text>
+<polyline points="1080,360 1115,360" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="1115,360 1105.0950818741205,364.78462087522354 1105.0950818741205,355.21537912477646" fill="#526274"/>
+<rect x="360" y="590" width="720" height="90" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="720.0" y="625.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">宏块调度与输出 Writer</text>
+<text x="720.0" y="659.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">条带就绪即计算；可回写水位触发早写回；B 响应后释放槽</text>
+<polyline points="1225,475 1225,635 1095,635" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="1095,635 1104.9049181258795,630.2153791247765 1104.9049181258795,639.7846208752235" fill="#526274"/>
+<polyline points="360,635 145,635 145,410" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="145,410 149.78462087522354,419.9049181258794 140.21537912477646,419.9049181258794" fill="#526274"/>
+<text x="225" y="605.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#23608b" font-weight="400" text-anchor="middle">C 数据 / 写事务</text>
+<polyline points="760,175 760,210" fill="none" stroke="#9a5a13" stroke-width="2"/>
+<polygon points="760,210 755.2153791247765,200.09508187412055 764.7846208752235,200.09508187412055" fill="#9a5a13"/>
+<text x="680" y="726.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#526274" font-weight="400" text-anchor="middle">数据顺序与任务顺序由水位、缓存命中和在途事务共同约束</text>
+</svg>

@@ -1,0 +1,1475 @@
+{
+  "date": "2026-11-04",
+  "validation": {
+    "python36_robot_files": 22,
+    "offline_mock_tests": 33,
+    "board_tests_after_device_disconnect": false,
+    "motor_movements_executed": false
+  },
+  "files": [
+    {
+      "path": "GEMM/accelerator_driver.py",
+      "bytes": 23641,
+      "sha256": "4c72ca636c3340d72b90a3a4544d93984f5570c32d2ad32122beb98d53207d67",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\accelerator_driver.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/benchmark_gemm_2048.py",
+      "bytes": 10724,
+      "sha256": "4bd36c091f38f569592735c3fdc2e5da041b1ea4f78131e03bb9e02dbc51e757",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\benchmark_gemm_2048.py",
+      "edits": [
+        {
+          "before": "sys.path.append(str(BASE.parent / 'GEMM_V1'))",
+          "after": "sys.path.insert(0, str(BASE / 'runtime'))"
+        }
+      ]
+    },
+    {
+      "path": "GEMM/benchmark_results/gemm_2048_20261102_121548.json",
+      "bytes": 45251,
+      "sha256": "fb7c9a2ca6259fa5133f2fef879c2dd0dee33d6a5954ecb3b259f43d1d84b781",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\benchmark_results\\gemm_2048_20261102_121548.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/benchmark_results/gemm_2048_20261102_123744.json",
+      "bytes": 45237,
+      "sha256": "c96b96fae821d2ab4b5c4d62d0476713a1c02d4c1e0c5cc3ed01ae9c7e7b39f1",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\benchmark_results\\gemm_2048_20261102_123744.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/benchmark_results/gemm_2048_20261102_124224.json",
+      "bytes": 45230,
+      "sha256": "a93aec0a40e9a09b92f6a20f7a718215acb890b4a3199eea0eaf02c58183cdc9",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\benchmark_results\\gemm_2048_20261102_124224.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/benchmark_results/softmax_1024_20261102_131739.json",
+      "bytes": 8669,
+      "sha256": "26fa32c528e9c617aca2b90a543695b3e1c469afd5cb32f3d5082c4e1c91ebba",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\benchmark_results\\softmax_1024_20261102_131739.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_batch/__init__.py",
+      "bytes": 151,
+      "sha256": "a3e238efdaa369cf579953b3836d05075f6a732f700985d9439000f9267d401b",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\dma_batch\\__init__.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_batch/build_batch.py",
+      "bytes": 633,
+      "sha256": "d13f83779bbec97060c80d1550423b78d9e4a7de737d317121b6e2d9df72de1d",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\dma_batch\\build_batch.py",
+      "edits": [
+        {
+          "before": "base.parent.parent/'dma_trial_20261102'",
+          "after": "base.parent/'dma_trial'"
+        },
+        {
+          "before": "Prepare the existing dma_trial_20261102 build first",
+          "after": "Run python3 ../dma_trial/build_trial.py first, or use a matching prepared kernel tree"
+        }
+      ]
+    },
+    {
+      "path": "GEMM/dma_batch/dma_batch.py",
+      "bytes": 2504,
+      "sha256": "26e012c2f5d1f9cc722fa41bb6ad0cec3b42d58061443ebb07bd53ae5a646af4",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\dma_batch\\dma_batch.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_batch/Makefile",
+      "bytes": 24,
+      "sha256": "72b5cbef2488870957dedbb4391a850c1f97f9c4d84031a9ab9718ceab0f4ce1",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\dma_batch\\Makefile",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_batch/ps_dma_batch.c",
+      "bytes": 10055,
+      "sha256": "f5a04109d92a4de7e7a4fb59969e5c7ebdd356ea1ae50d7c4e6486d76ebd89d6",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\dma_batch\\ps_dma_batch.c",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_batch/ps_dma_batch.ko",
+      "bytes": 324832,
+      "sha256": "521bf5d6fbbd737c66c8b51f3c09262225274eabe4ad86fde0ee42a5a06b5e6d",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\dma_batch\\ps_dma_batch.ko",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_batch/ps_dma_batch.mod.c",
+      "bytes": 507,
+      "sha256": "47bd004da47332c30bfe013c39f8fe5ca8a1942cf5c409cd00aac89ac458aaef",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\dma_batch\\ps_dma_batch.mod.c",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_trial/benchmark_directional.py",
+      "bytes": 3899,
+      "sha256": "44e7e77a85a69fe6770a028b3c8be20807c1322af256d562cbd151edcd374e17",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\dma_trial\\benchmark_directional.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_trial/benchmark_dma.py",
+      "bytes": 5188,
+      "sha256": "670390b1344d76de1a540106c9436e98c62340a778a063fc6977078d32e8ef16",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\dma_trial\\benchmark_dma.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_trial/build_trial.py",
+      "bytes": 2126,
+      "sha256": "d7dd04889f73f9c7d8080a42422ed6df9281498950d3691adb48e4fecd0f61b5",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\dma_trial\\build_trial.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_trial/dma_directional_results.json",
+      "bytes": 9578,
+      "sha256": "3d9ba508525a00678f2c892f8590284fd464d7a3f400695dde035bd2cf18d514",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\dma_trial\\dma_directional_results.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_trial/Makefile",
+      "bytes": 115,
+      "sha256": "65fb6f1efd18ed67ac95aacc2e471da156141b5e172b1301bca6a21ec4b9e7c9",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\dma_trial\\Makefile",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_trial/ps_dma_trial.c",
+      "bytes": 9499,
+      "sha256": "21681b3528550a42374792de018e0821f44be793eb9ccd8233f6e822b9b81e7d",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\dma_trial\\ps_dma_trial.c",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_trial/ps_dma_trial.ko",
+      "bytes": 313888,
+      "sha256": "43702c505621a18e4625805f9c9e33b90eb485803652f07325f75826a0db402b",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\dma_trial\\ps_dma_trial.ko",
+      "edits": []
+    },
+    {
+      "path": "GEMM/dma_trial/README.md",
+      "bytes": 3861,
+      "sha256": "7b96c535967106c22bce76a01e5289c211932439eaf5de75537a60509f1d4d1c",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\dma_trial\\README.md",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/__init__.py",
+      "bytes": 100,
+      "sha256": "36bf1df5f44c2489dfd6c481ab79af951fd851dab89aedd258150d442b8f45a5",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\fast_gemm\\__init__.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/benchmark_control_path.py",
+      "bytes": 4014,
+      "sha256": "2fdc41e728825c14ec0803d2d447274ef22fd2515985f9764496408cd47b5f70",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\fast_gemm\\benchmark_control_path.py",
+      "edits": [
+        {
+          "before": "sys.path.append(str(ROOT.parent/'GEMM_V1'))",
+          "after": "sys.path.insert(0, str(ROOT/'runtime'))"
+        }
+      ]
+    },
+    {
+      "path": "GEMM/fast_gemm/benchmark_dispatch_threshold.py",
+      "bytes": 5340,
+      "sha256": "65ecfa81516c3dc4e4f9286b9eaea3db5a0bb4e312ac45509513c011d51cb5e3",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\fast_gemm\\benchmark_dispatch_threshold.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/benchmark_dispatch_threshold_run_20261103_191824.py",
+      "bytes": 7530,
+      "sha256": "b8dfda1f6deae69113115db1b773663d52f41e297c4124a5d11aaf45a80bcb63",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\fast_gemm\\benchmark_dispatch_threshold_run_20261103_191824.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/benchmark_dma_batched_ac.py",
+      "bytes": 8604,
+      "sha256": "727b78dc88b1c37e17c584f65f7b470852a5ba5b073cd80997b208f9090ceabc",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\fast_gemm\\benchmark_dma_batched_ac.py",
+      "edits": [
+        {
+          "before": "sys.path.append(str(ROOT.parent/'GEMM_V1'))",
+          "after": "sys.path.insert(0, str(ROOT/'runtime'))"
+        }
+      ]
+    },
+    {
+      "path": "GEMM/fast_gemm/benchmark_dma_input.py",
+      "bytes": 9379,
+      "sha256": "f474632727711a0a4ebe471959fbda3793e2ae81759afd7cb1417fdf37a32cd3",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\fast_gemm\\benchmark_dma_input.py",
+      "edits": [
+        {
+          "before": "sys.path.append(str(ROOT.parent/'GEMM_V1'))",
+          "after": "sys.path.insert(0, str(ROOT/'runtime'))"
+        }
+      ]
+    },
+    {
+      "path": "GEMM/fast_gemm/benchmark_fast_gemm.py",
+      "bytes": 7520,
+      "sha256": "895e4ee34c2a7bc503a274e6401b2451bd888c2527f5a921c9decee1f5ac5f81",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\fast_gemm\\benchmark_fast_gemm.py",
+      "edits": [
+        {
+          "before": "sys.path.append(str(ROOT.parent/'GEMM_V1'))",
+          "after": "sys.path.insert(0, str(ROOT/'runtime'))"
+        },
+        {
+          "before": "existing sibling GEMM_V1 neon_runtime.py / NEON library",
+          "after": "included runtime/neon_runtime.py / NEON library"
+        }
+      ]
+    },
+    {
+      "path": "GEMM/fast_gemm/control_path_results.json",
+      "bytes": 13956,
+      "sha256": "fc20561021a3b63e33b18d71d1697511b9a4ae1342eab8dbfdb75033df3e6399",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\control_path_results.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/DISPATCH_ALIGNED32.md",
+      "bytes": 4077,
+      "sha256": "ff12e3fcc8f5a4c8d4c3bd85d6db066fe7054d7613f694012048bd283e3223a4",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\DISPATCH_ALIGNED32.md",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/dispatch_aligned32_results_20261103_202348.json",
+      "bytes": 90104,
+      "sha256": "300b3896396cfb7f2a45a054ad8a1490105e8a99a3f5c2f921e6931b25a2771a",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\dispatch_aligned32_results_20261103_202348.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/dispatch_aligned32_results_20261103_202554.json",
+      "bytes": 9802,
+      "sha256": "90f91b264e9de79780add8dce2abea448c91db825e00a007b016bbb6f1841953",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\dispatch_aligned32_results_20261103_202554.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/dispatch_aligned32_wide_results_20261103_203457.json",
+      "bytes": 166320,
+      "sha256": "0a82915b36e75f677a55273ed8ad0c87dcaf04061a43b22b3e59b2fbf3f61ba9",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\dispatch_aligned32_wide_results_20261103_203457.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/dispatch_aligned32_wide_results_20261103_203815.json",
+      "bytes": 7904,
+      "sha256": "4b88527b5d8fa528a8b894fbb506f4d2640915bab6c3a39c024dea720a4a42de",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\dispatch_aligned32_wide_results_20261103_203815.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/DISPATCH_MATRIX_DETAIL.md",
+      "bytes": 16417,
+      "sha256": "8418886d7cd88f153f4c6ed0fc8fa046b6cbee4fbec7de645334dea82c94574e",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\DISPATCH_MATRIX_DETAIL.md",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/DISPATCH_MATRIX_SUMMARY.md",
+      "bytes": 3574,
+      "sha256": "c1a44bcd4b20f5be81e1cb8b98af9a8792fc549fc2adeb6ef89056435811f9bb",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\DISPATCH_MATRIX_SUMMARY.md",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/DISPATCH_THRESHOLD.md",
+      "bytes": 2534,
+      "sha256": "b2cdf3ecf6404e94cadbc8bb026031a4b42189a62110359a1644d560179e60d6",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\DISPATCH_THRESHOLD.md",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/dispatch_threshold_results.json",
+      "bytes": 13740,
+      "sha256": "aa07ea5fd105a244173c938d6e203b6ab5802c574499bff34570add95690f1c0",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\fast_gemm\\dispatch_threshold_results.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/dispatch_threshold_results_20261103_193002.json",
+      "bytes": 33142,
+      "sha256": "5c1cd653435c1b48a00b7c8fa742cfd8b16a56acda5c4407967538a3954b211f",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\dispatch_threshold_results_20261103_193002.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/dispatch_threshold_results_20261103_193831.json",
+      "bytes": 33178,
+      "sha256": "c788208b925ae776f1cf12b9bf2f26ce4a7e9c5f1a95212225e51b1d028dc3fc",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\dispatch_threshold_results_20261103_193831.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/dispatch_threshold_results_20261103_194302.json",
+      "bytes": 34182,
+      "sha256": "7a0cd309f51c5a182d164fc4a761f55ca444720e79254aeef147860a67f37a7f",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\dispatch_threshold_results_20261103_194302.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/DISPATCH_WIDE32.md",
+      "bytes": 4157,
+      "sha256": "6077e17ac792fb2f4e31be47d5274daf349823ce9fc0e49345d58a9105c7a949",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\DISPATCH_WIDE32.md",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/dma_batched_ac_20261103_060110.json",
+      "bytes": 136846,
+      "sha256": "a47ba422d5a94797dd1d7a535dd859dce860eed7eafbf8a969cfaf536259b004",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\dma_batched_ac_20261103_060110.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/dma_batched_ac_20261103_060918.json",
+      "bytes": 169452,
+      "sha256": "3cdc716fac5aedf35ee72613e1008af6325fa4cbca9b5f3ffd5d97386ad96551",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\dma_batched_ac_20261103_060918.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/dma_input_results_20261103_053325.json",
+      "bytes": 70935,
+      "sha256": "39e3f0c6505ed13d35286bfe8913b4ffb993213ef45b93c710c6ab16c82e8ca2",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\dma_input_results_20261103_053325.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/fast_axilite.c",
+      "bytes": 2076,
+      "sha256": "0c88c89fd3f0fc88b40e454543ad1bb5c6751c1da410cf9dff7ddbc36bb45140",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\fast_gemm\\fast_axilite.c",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/fast_gemm.py",
+      "bytes": 18127,
+      "sha256": "51bce60da407f3aef99c309f9aed6f6731ce95e5deda9847807e12afc9808563",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\fast_gemm\\fast_gemm.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/fast_submit_results_20261103_051629.json",
+      "bytes": 49398,
+      "sha256": "84349d4afd6aca6cd7c1a8155bd210990f49080fd876dd2dbbc7cab0f4af41f9",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\fast_submit_results_20261103_051629.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/fast_submit_results_20261103_052046.json",
+      "bytes": 49391,
+      "sha256": "b7db94e634fe03ca841f0043aee9c96e366a4a86d54fe10d281d36ffbbacb84a",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\fast_submit_results_20261103_052046.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/libfast_axilite.so",
+      "bytes": 8032,
+      "sha256": "59fb13c26b44045539b257b34210a157777183caa629bba9de3f679985f09057",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\fast_gemm\\libfast_axilite.so",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/README.md",
+      "bytes": 7099,
+      "sha256": "57e67a5bed4b60f63de7c57e3d1df59707a5630b449d868a6a7a0d1dd55b84f6",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\README.md",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/README_DMA_BATCHED_AC.md",
+      "bytes": 4186,
+      "sha256": "dc98601a43ffba383985887d9f0ebe68c643ebf7b0e2feee2605a53ffade1642",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\README_DMA_BATCHED_AC.md",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/README_DMA_INPUT.md",
+      "bytes": 4831,
+      "sha256": "d2cc3c0f0be6b73743e4d189c3bf4bbcfaf056c1252628c001e15b9bfcf90a01",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\README_DMA_INPUT.md",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/test_fast_gemm.py",
+      "bytes": 8523,
+      "sha256": "6e4fd53231c4b9f5485682011ee4e958e29ba869e0fca98f53f992ab22c0ecac",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\fast_gemm\\test_fast_gemm.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/fast_gemm/validation.json",
+      "bytes": 2005,
+      "sha256": "ce971fe142023fcccc91a95643a313db64445160690278007086b1dc2dc0c7f6",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\fast_gemm\\validation.json",
+      "edits": []
+    },
+    {
+      "path": "GEMM/gemm_2048_benchmark.ipynb",
+      "bytes": 1356,
+      "sha256": "67530d89c109c03bfa519976da8ca356b419c8c2bc59fce81fc3b6f304f35055",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\gemm_2048_benchmark.ipynb",
+      "edits": [
+        "Clear historical outputs; adapt GEMM directory name"
+      ]
+    },
+    {
+      "path": "GEMM/gemm_cpu_pl123_2048.ipynb",
+      "bytes": 9024,
+      "sha256": "829dccff6e4e29dcab4ccdd14df744296e301788c31d422774bfb382f83702cb",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\gemm_cpu_pl123_2048.ipynb",
+      "edits": [
+        "Clear historical outputs; adapt GEMM directory name"
+      ]
+    },
+    {
+      "path": "GEMM/hardware/design_1.bit",
+      "bytes": 28700866,
+      "sha256": "405dfca6e6a85d787b7568828b403c0f3894dba33f5e3bdd5d3f2e834eb2570f",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\hardware\\design_1.bit",
+      "edits": []
+    },
+    {
+      "path": "GEMM/hardware/design_1.hwh",
+      "bytes": 380125,
+      "sha256": "9e39b5e61f43bda6cf14266a8802fd11eb07e54c952dee9bf37bfab1ce802c07",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\hardware\\design_1.hwh",
+      "edits": []
+    },
+    {
+      "path": "GEMM/README.md",
+      "bytes": 3378,
+      "sha256": "ecfc435c546510fc8d22ff78366d12a0a8b2a90307106abe3c231448befa3626",
+      "source": "delivery packaging helper/documentation",
+      "edits": []
+    },
+    {
+      "path": "GEMM/runtime/__init__.py",
+      "bytes": 341,
+      "sha256": "86f86ffff6ff38bc257cbbe552611514750f8c6d149623aa3ac6adebc221ca4d",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\runtime\\__init__.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/runtime/benchmark_softmax_pipeline.py",
+      "bytes": 4746,
+      "sha256": "d0e6e1346c42b6161329b2c4e3bfbe6f4fd6884f704760d0c5eb2ff8e35de2dd",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\runtime\\benchmark_softmax_pipeline.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/runtime/gemm_benchmark_neon.cpp",
+      "bytes": 28453,
+      "sha256": "64043f93fbc0b6bbe6658752a8de912ec1e035fd30f3989a3b1b63f788625579",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\runtime\\gemm_benchmark_neon.cpp",
+      "edits": []
+    },
+    {
+      "path": "GEMM/runtime/libgemm_benchmark_neon.so",
+      "bytes": 21968,
+      "sha256": "2c0977ad09f54aaf39cbce387a7f95b544462dd44f935db70f2e7b117de1aaea",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\runtime\\libgemm_benchmark_neon.so",
+      "edits": []
+    },
+    {
+      "path": "GEMM/runtime/neon_runtime.py",
+      "bytes": 16982,
+      "sha256": "b7aa11ab083e7a7c74abcc364fa0e92278af06288981c5022a20feda5c398e53",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\runtime\\neon_runtime.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/runtime/operators.py",
+      "bytes": 21686,
+      "sha256": "a20d739bc336608686014a54bf94f25591b5c03c399aa67874d0fb25c54d4f3d",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\runtime\\operators.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/runtime/README.md",
+      "bytes": 4893,
+      "sha256": "1d5657cc1f9494a4579e71a00f42057545bca783647c8fda6d743d684850b940",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\runtime\\README.md",
+      "edits": []
+    },
+    {
+      "path": "GEMM/runtime/softmax_parallel.py",
+      "bytes": 9390,
+      "sha256": "9d95dea57133c363ac2a95e03f1f297868f7c91febe972bb1c0d3ae00df77bc3",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\runtime\\softmax_parallel.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/runtime/softmax_pipeline.py",
+      "bytes": 6216,
+      "sha256": "55b8fba4a9024fbc134189379bbabaf49d15b34881a10a6fe69dc2367226665e",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\runtime\\softmax_pipeline.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/runtime/test_softmax_parallel.py",
+      "bytes": 4192,
+      "sha256": "a02447256b5e4c1202e1b301e45143eba896930c2ed7bfdad1a8a7b4c5e91305",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\runtime\\test_softmax_parallel.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/runtime/test_softmax_pipeline.py",
+      "bytes": 4800,
+      "sha256": "1f8a286896de77cd3fa51b3d529094c93f5e719d20f74bba55c12938e7888f63",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\runtime\\test_softmax_pipeline.py",
+      "edits": []
+    },
+    {
+      "path": "GEMM/set_cpu_highest.py",
+      "bytes": 297,
+      "sha256": "fcebe54f691091e7a81ab6fedd758d1e3f3b64135e5788432747f289d620e030",
+      "source": "delivery packaging helper/documentation",
+      "edits": []
+    },
+    {
+      "path": "GEMM/setup_fast_gemm_board.py",
+      "bytes": 1779,
+      "sha256": "636effcb0222f45038b23719aba87e2131977310bbad2a94d4f41fa3734a6073",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\setup_fast_gemm_board.py",
+      "edits": [
+        {
+          "before": "Path('/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/hardware/design_1.bit')",
+          "after": "Path(__file__).resolve().parent / 'hardware/design_1.bit'"
+        }
+      ]
+    },
+    {
+      "path": "ONNX/benchmark_runtime_sweep.py",
+      "bytes": 15821,
+      "sha256": "ea4941197766df6591ed7489b2c2ccfa85e8926327fb72d03ef1b4fbf4064184",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\benchmark_runtime_sweep.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/build_runtime.sh",
+      "bytes": 626,
+      "sha256": "507fb3fa5e703f16babf3bf7e4b9b86436a0066e3a33e3ff3f1f7923b508d4a2",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\build_runtime.sh",
+      "edits": []
+    },
+    {
+      "path": "ONNX/build_softmax_cpu.sh",
+      "bytes": 592,
+      "sha256": "a8cf499305d782866b14108ba2521ae2e12f6fcbdc8c0fdb820137731eb3188c",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\build_softmax_cpu.sh",
+      "edits": []
+    },
+    {
+      "path": "ONNX/cma_native_sweep_20261104.json",
+      "bytes": 82701,
+      "sha256": "3e5fdf1cc6575806511de4da714d99f4254bab7781ede6a0604a79bb27feb601",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\cma_native_sweep_20261104.json",
+      "edits": []
+    },
+    {
+      "path": "ONNX/cma_softmax_sweep_v2_20261104.json",
+      "bytes": 3566278,
+      "sha256": "1cb177f1e79a8ec1598202a7ce4407c4a8dce6d2a9503ebc81215417317f49ce",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\cma_softmax_sweep_v2_20261104.json",
+      "edits": []
+    },
+    {
+      "path": "ONNX/cpu.json",
+      "bytes": 7253,
+      "sha256": "b9738323de60439089407f5e7ad23d3972d4feabcc8ea35450cca79c6076b7d6",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\cpu.json",
+      "edits": []
+    },
+    {
+      "path": "ONNX/cpu.npy",
+      "bytes": 1328,
+      "sha256": "9d324c7c0779b5b4ecc56a28eba4198a6fda153499bab908056f12f0f68ee97f",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\cpu.npy",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/a_pack_micro.json",
+      "bytes": 5198,
+      "sha256": "e3ac9f1f7ee5e3543548673946dd28ac6c9f7ebc277fa6dcc575425391ac97c7",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\a_pack_micro.json",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/a_pack_sweep_v3.json",
+      "bytes": 77654,
+      "sha256": "8448a55f7759582da2fbae2c73b0e8bbe5e4ab0f1bc5d18a91b7f5b03fc7ee34",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\a_pack_sweep_v3.json",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/a_pack_sweep_v4.json",
+      "bytes": 83772,
+      "sha256": "bb2761c609d4a29fe84a9549c7a5380e5cbe343217d32dafc2756490888a03d5",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\a_pack_sweep_v4.json",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/accelerator_driver.py",
+      "bytes": 23641,
+      "sha256": "4c72ca636c3340d72b90a3a4544d93984f5570c32d2ad32122beb98d53207d67",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\accelerator_driver.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/benchmark_graphopt.py",
+      "bytes": 16341,
+      "sha256": "8db73582e123bf40db6dda3be4ac45fea19ca0ef0d7286be1a4d1562d902ad40",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\benchmark_graphopt.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/configs_v4.json",
+      "bytes": 213,
+      "sha256": "d4cf2035d17ea7eb03787789300e2c6eaab754a4a998b57c239a3c074f4102da",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\configs_v4.json",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/dma_batch/__init__.py",
+      "bytes": 151,
+      "sha256": "a3e238efdaa369cf579953b3836d05075f6a732f700985d9439000f9267d401b",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\dma_batch\\__init__.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/dma_batch/dma_batch.py",
+      "bytes": 2504,
+      "sha256": "26e012c2f5d1f9cc722fa41bb6ad0cec3b42d58061443ebb07bd53ae5a646af4",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\dma_batch\\dma_batch.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/fast_gemm/__init__.py",
+      "bytes": 100,
+      "sha256": "36bf1df5f44c2489dfd6c481ab79af951fd851dab89aedd258150d442b8f45a5",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\fast_gemm\\__init__.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/fast_gemm/fast_axilite.c",
+      "bytes": 2076,
+      "sha256": "0c88c89fd3f0fc88b40e454543ad1bb5c6751c1da410cf9dff7ddbc36bb45140",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\fast_gemm\\fast_axilite.c",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/fast_gemm/fast_gemm.py",
+      "bytes": 18127,
+      "sha256": "51bce60da407f3aef99c309f9aed6f6731ce95e5deda9847807e12afc9808563",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\fast_gemm\\fast_gemm.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/fast_gemm/libfast_axilite.so",
+      "bytes": 8032,
+      "sha256": "59fb13c26b44045539b257b34210a157777183caa629bba9de3f679985f09057",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\fast_gemm\\libfast_axilite.so",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/hardware/design_1.hwh",
+      "bytes": 380125,
+      "sha256": "9e39b5e61f43bda6cf14266a8802fd11eb07e54c952dee9bf37bfab1ce802c07",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\hardware\\design_1.hwh",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/infer_board.py",
+      "bytes": 33612,
+      "sha256": "250889fac00cfc460ea88b9ed60e1dba2ac2192175a982df00578cc20dc47731",
+      "source": "G:\\smolvla\\pynq_code_20261104\\pynq\\ONNX\\infer_board.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/README.md",
+      "bytes": 1067,
+      "sha256": "003e043c3f0623d5a4294dcf8173ca841354f412bc679f1095275385649458b9",
+      "source": "delivery packaging helper/documentation",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/__init__.py",
+      "bytes": 341,
+      "sha256": "86f86ffff6ff38bc257cbbe552611514750f8c6d149623aa3ac6adebc221ca4d",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\__init__.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/benchmark_softmax_pipeline.py",
+      "bytes": 4746,
+      "sha256": "d0e6e1346c42b6161329b2c4e3bfbe6f4fd6884f704760d0c5eb2ff8e35de2dd",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\benchmark_softmax_pipeline.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/gemm_benchmark_neon.cpp",
+      "bytes": 28453,
+      "sha256": "64043f93fbc0b6bbe6658752a8de912ec1e035fd30f3989a3b1b63f788625579",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\gemm_benchmark_neon.cpp",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/libgemm_benchmark_neon.so",
+      "bytes": 21968,
+      "sha256": "2c0977ad09f54aaf39cbce387a7f95b544462dd44f935db70f2e7b117de1aaea",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\libgemm_benchmark_neon.so",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/libpack_a_neon.so",
+      "bytes": 13240,
+      "sha256": "6a9ea14f1a96a45e3e736d9431ca208920e7a48f7d93e071446b4d39e9fb1a59",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\libpack_a_neon.so",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/neon_runtime.py",
+      "bytes": 16982,
+      "sha256": "b7aa11ab083e7a7c74abcc364fa0e92278af06288981c5022a20feda5c398e53",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\neon_runtime.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/operators.py",
+      "bytes": 23735,
+      "sha256": "7285be86b3abdb235e24780b76fc127d1d1c738d9933955325d750b99fb5195e",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\operators.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/pack_a_neon.cpp",
+      "bytes": 2207,
+      "sha256": "34b04338aeb388503641aa3cdcb67c3ca1a12046213fae85d334614ae31ec728",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\pack_a_neon.cpp",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/pack_a_neon.py",
+      "bytes": 1908,
+      "sha256": "bb05ce210f659140300b138ad332a46d81573baaf0d1c7ade97bb01a562c4fd6",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\pack_a_neon.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/softmax_parallel.py",
+      "bytes": 9390,
+      "sha256": "9d95dea57133c363ac2a95e03f1f297868f7c91febe972bb1c0d3ae00df77bc3",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\softmax_parallel.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/softmax_pipeline.py",
+      "bytes": 6216,
+      "sha256": "55b8fba4a9024fbc134189379bbabaf49d15b34881a10a6fe69dc2367226665e",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\softmax_pipeline.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/test_softmax_parallel.py",
+      "bytes": 4192,
+      "sha256": "a02447256b5e4c1202e1b301e45143eba896930c2ed7bfdad1a8a7b4c5e91305",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\test_softmax_parallel.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/experimental_neon/runtime/test_softmax_pipeline.py",
+      "bytes": 4800,
+      "sha256": "1f8a286896de77cd3fa51b3d529094c93f5e719d20f74bba55c12938e7888f63",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\experimental_neon\\runtime\\test_softmax_pipeline.py",
+      "edits": []
+    },
+    {
+      "path": "ONNX/infer_board.py",
+      "bytes": 33612,
+      "sha256": "250889fac00cfc460ea88b9ed60e1dba2ac2192175a982df00578cc20dc47731",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\infer_board.py",
+      "edits": [
+        {
+          "before": "default=BASE.parent / 'validation_0.npz'",
+          "after": "default=BASE / 'validation_0.npz'"
+        }
+      ]
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/inspect_robot.py",
+      "bytes": 2137,
+      "sha256": "4fc656c73b269e7c39c531dae759529d7cab37d4bbd7a8b978520a06df58310c"
+    },
+    {
+      "path": "ONNX/libsmolvla_ort_cpu.so",
+      "bytes": 57360,
+      "sha256": "0de196fbbe1e1a33db895f863d4cebbe456f55e7dd92789ff238bd155b57eaa5",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\libsmolvla_ort_cpu.so",
+      "edits": []
+    },
+    {
+      "path": "ONNX/libsmolvla_ort_sweep.so",
+      "bytes": 57344,
+      "sha256": "fdb359cc81488d580532349b5a652f5b7c212304bc5ccdde35c022c085f9d145",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\libsmolvla_ort_sweep.so",
+      "edits": []
+    },
+    {
+      "path": "ONNX/libsmolvla_softmax_cpu.so",
+      "bytes": 24280,
+      "sha256": "87b1b65bc52cdbf2f09fa969edf187da082cab5a4c31b855770bd1e87ec3f6a0",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\libsmolvla_softmax_cpu.so",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/GIT_COMMIT_ID",
+      "bytes": 41,
+      "sha256": "4e2d9396d90fe625371f6167d6a9c3accbb613e4c3d801ac4d862f533610970d",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\onnxruntime-linux-aarch64-1.16.3\\GIT_COMMIT_ID",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/include/cpu_provider_factory.h",
+      "bytes": 397,
+      "sha256": "0de52d129c718c07ee71a16b4953d8d483df019746a11caad77a0650a2f4ed47",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\include\\cpu_provider_factory.h",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/include/onnxruntime_c_api.h",
+      "bytes": 198387,
+      "sha256": "3dec2d05c0fdddc02b131d207c30e8dc0dd9aa8a640f30249d32a52898c687c5",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\include\\onnxruntime_c_api.h",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/include/onnxruntime_cxx_api.h",
+      "bytes": 104555,
+      "sha256": "637d059cd1b9c20500c40c9edf6377dedfd74c09ad2497c0fe963cf4fd6033c2",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\include\\onnxruntime_cxx_api.h",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/include/onnxruntime_cxx_inline.h",
+      "bytes": 69263,
+      "sha256": "919f6287d4b4bfd96e005d78c6c312cce49f4738b1151cc86b4e532a6f796c97",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\include\\onnxruntime_cxx_inline.h",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/include/onnxruntime_float16.h",
+      "bytes": 18154,
+      "sha256": "ecdcb4a53176c8b3bbcf674788fcf5ec923fb2b5c762c3f6cfb56fdb6c259aa1",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\include\\onnxruntime_float16.h",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/include/onnxruntime_run_options_config_keys.h",
+      "bytes": 1622,
+      "sha256": "25b0d8e767fc72d560532541537ac07d404a8bf94dffaf78f3069fc20240b76e",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\include\\onnxruntime_run_options_config_keys.h",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/include/onnxruntime_session_options_config_keys.h",
+      "bytes": 14737,
+      "sha256": "a33934b0ce34ecd98faeb99f1b8ddf4a215e9a0801b0e291cb6dcf7c0726e630",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\include\\onnxruntime_session_options_config_keys.h",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/include/onnxruntime_training_c_api.h",
+      "bytes": 35491,
+      "sha256": "62e71166562f82be485b2d48af31efc6236add1f5c3a9da2b029466a56f4a03e",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\include\\onnxruntime_training_c_api.h",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/include/onnxruntime_training_cxx_api.h",
+      "bytes": 19207,
+      "sha256": "349076bd5579c044ab876d63b39eb8baced0ba910ab771feef9d2024587a8133",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\include\\onnxruntime_training_cxx_api.h",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/include/onnxruntime_training_cxx_inline.h",
+      "bytes": 12851,
+      "sha256": "29f5d16342f7e24dd4602b9eb7d0f7193b9fa282d7f62192ab0cf2964dcb8995",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\include\\onnxruntime_training_cxx_inline.h",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/include/provider_options.h",
+      "bytes": 480,
+      "sha256": "cb7206ffd06ba31b9f7e5f6089a6206f0c720c10c3adcc61db7f829c86691cfc",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\include\\provider_options.h",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/lib/libonnxruntime.so",
+      "bytes": 16200440,
+      "sha256": "ba1ae7bdd9e6402b094a28cdc07f56bd47c47ffc5dff94a116393af3e38725d0",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\lib\\libonnxruntime.so",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/lib/libonnxruntime.so.1.16.3",
+      "bytes": 16200440,
+      "sha256": "ba1ae7bdd9e6402b094a28cdc07f56bd47c47ffc5dff94a116393af3e38725d0",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\onnxruntime-linux-aarch64-1.16.3\\lib\\libonnxruntime.so.1.16.3",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/LICENSE",
+      "bytes": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\onnxruntime-linux-aarch64-1.16.3\\LICENSE",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/Privacy.md",
+      "bytes": 2469,
+      "sha256": "9a15f9fd9d4c7b6dfc35f237f461863f84f8f73cf6189e330818a674d3828871",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\onnxruntime-linux-aarch64-1.16.3\\Privacy.md",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/README.md",
+      "bytes": 6836,
+      "sha256": "37e81194e528ca1b4bceb3b42cdd5627d895a0aad1829158794fa7308d5e6026",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\onnxruntime-linux-aarch64-1.16.3\\README.md",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/ThirdPartyNotices.txt",
+      "bytes": 325358,
+      "sha256": "d7d726424fc23a8395c139bbc7eb2aefa2b5bb2eb3332ec34ad0442d149d2308",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\onnxruntime-linux-aarch64-1.16.3\\ThirdPartyNotices.txt",
+      "edits": []
+    },
+    {
+      "path": "ONNX/onnxruntime-linux-aarch64-1.16.3/VERSION_NUMBER",
+      "bytes": 7,
+      "sha256": "1787e003e8344c29dc21331a8c4fcde6484c1a5ef43e6e7cffd8ce1107b8b8a5",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\onnxruntime-linux-aarch64-1.16.3\\VERSION_NUMBER",
+      "edits": []
+    },
+    {
+      "path": "ONNX/ort_cpu_bridge.cpp",
+      "bytes": 8099,
+      "sha256": "a142a16a036b8e9ce6444a8b5cd5d6894283c6cf5b20a475def01d9c1103dced",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\ort_cpu_bridge.cpp",
+      "edits": []
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/prepare_robot_assets.py",
+      "bytes": 4977,
+      "sha256": "90fbefcb5ccecb0b9c028fbf966bca023fb3a427e663b420c6b3148900e7f114"
+    },
+    {
+      "path": "ONNX/prepare_selective_graph.py",
+      "bytes": 31864,
+      "sha256": "28ba6faa83eb01b62c78e05d89ff218194b218afeffc9d55045e1b7612d22c4f",
+      "source": "G:\\smolvla\\smolvla_20261103_wrist_beside_base_200k_3gpu\\200000_w8a8_fp32\\pynq_eval\\prepare_selective_graph.py",
+      "edits": [
+        {
+          "before": "MODEL_DIR = BASE.parent",
+          "after": "MODEL_DIR = BASE / 'models'"
+        },
+        {
+          "before": "EVIDENCE_DIR = WORKSPACE / \"pynq\" / \"GEMM_V2_test\" / \"fast_gemm\"",
+          "after": "EVIDENCE_DIR = BASE.parent / \"GEMM\" / \"fast_gemm\""
+        },
+        {
+          "before": "default=MODEL_DIR / \"validation_0.npz\"",
+          "after": "default=BASE / \"validation_0.npz\""
+        },
+        {
+          "before": "args.output_manifest = BASE / (\"selective_graph_manifest.json\"\n                                      if variant_name == \"smolvla_selective_pynq\"\n                                      else variant_name + \".manifest.json\")",
+          "after": "args.output_manifest = args.output.with_suffix(\".manifest.json\")"
+        },
+        {
+          "before": "BASE.mkdir(parents=True, exist_ok=True)",
+          "after": "BASE.mkdir(parents=True, exist_ok=True)\n    args.output.parent.mkdir(parents=True, exist_ok=True)\n    args.output_manifest.parent.mkdir(parents=True, exist_ok=True)"
+        }
+      ]
+    },
+    {
+      "path": "ONNX/pynq_custom_ops.h",
+      "bytes": 6001,
+      "sha256": "46c13f6da1e06ec3373a37da6b9fcdf63df2d05eb8b0cf43ee8cc9893386b93f",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\pynq_custom_ops.h",
+      "edits": []
+    },
+    {
+      "path": "ONNX/README.md",
+      "bytes": 4395,
+      "sha256": "b3c198efab511cec9ed807dbaa9019766858cd712ff530fb5325d3cc22951d19",
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ]
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/README_ROBOT.md",
+      "bytes": 6124,
+      "sha256": "4e4655952b4be0585e6a315fe3c7283b933b37537c4308622e4fbebf6c9c876f"
+    },
+    {
+      "path": "ONNX/reorder_camera_weight_pairs.py",
+      "bytes": 12121,
+      "sha256": "aef273bffebdd879c8976cc5cd656e4cc66789eb8261f98d9331b6106c5f1e4b",
+      "source": "G:\\smolvla\\smolvla_20261103_wrist_beside_base_200k_3gpu\\200000_w8a8_fp32\\pynq_eval\\reorder_camera_weight_pairs.py",
+      "edits": []
+    },
+    {
+      "source": "Exact original exported processor tensors and validation language; see stats.json and language.json",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_assets/language.json",
+      "bytes": 262,
+      "sha256": "d735b81fb9bdd2cba19523caddf7a4905f05e04dee71486ba7853a278142e504"
+    },
+    {
+      "source": "Exact original exported processor tensors and validation language; see stats.json and language.json",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_assets/language.npz",
+      "bytes": 974,
+      "sha256": "43b44d82e4a72fe77d1c305cc813229690813b913d77c16b69506aa781dafb1f"
+    },
+    {
+      "source": "Exact original exported processor tensors and validation language; see stats.json and language.json",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_assets/stats.json",
+      "bytes": 1181,
+      "sha256": "74c5673ccf48cbcb609a5324d9b693df2e3b33f0fbea583aaee76c1c8bde08d9"
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_config.json",
+      "bytes": 1834,
+      "sha256": "cac2a4b20a6acbc5868c7bdbcc4b993e328e518ee21b7e564a1864251e255fa5"
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/__init__.py",
+      "bytes": 81,
+      "sha256": "c2715fa137f01c250adfdb5e4157c00603bb150856eb1926a836d03ffa41fffe"
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/cameras.py",
+      "bytes": 23983,
+      "sha256": "26bcd13c3f5c6be250022c948d8015479697a60d777b383651c77597c7f655e4"
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/motors.py",
+      "bytes": 20946,
+      "sha256": "7f77af29fef150edd12cb9663c589cc89be265c82fb7f5a1fb5188be71c2969b"
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/policy.py",
+      "bytes": 8132,
+      "sha256": "3083a3d48ec1d6dbb1732a92d62a6a0dc18bb74dee50b786f3f31cd85beb7c83"
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/preprocessing.py",
+      "bytes": 2550,
+      "sha256": "6da984ffa7011e1f6685e4034049f9697d5b97041935c5ba1f1b96f51a53fe3b"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/__init__.py",
+      "bytes": 75,
+      "sha256": "98b81c7678412fdc5c22ad6fe91bcc61519635b1959bb1997dad79551b3a1a73"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/__init__.py",
+      "bytes": 235,
+      "sha256": "f6e63bc58c3a3e5f92a5461ff9ecad7813be41d1fc0955fb85a5bee7d158a67a"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/group_sync_read.py",
+      "bytes": 5199,
+      "sha256": "5584b160deb8b6b5f3572e06d02a68b00f6c802388937df986a0e272fa23080a"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/group_sync_write.py",
+      "bytes": 1909,
+      "sha256": "a4e4b0644e8c8200238a891a1e2793b902b9011b34b7308261bc30bf84739eee"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/hls.py",
+      "bytes": 4098,
+      "sha256": "d611c5307c0b856a0bee0a1fafe202bb2ef3bcf1fff340eebbb40393559ebd5b"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/imu.py",
+      "bytes": 4359,
+      "sha256": "65da24f6988f14ea43e3c6e2bf28b74da541874e9871271fc9499a001aa729fe"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/LICENSE",
+      "bytes": 1064,
+      "sha256": "79548129370da7abd470cc7085e62629cca9eb930d08f213198701c39ec24431"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/port_handler.py",
+      "bytes": 3085,
+      "sha256": "77c491e2e927235557179c446a08f730ab6e473cab79e63191971f299a8b4b6b"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/protocol_packet_handler.py",
+      "bytes": 18622,
+      "sha256": "60ac1bbb56ff94b2ae26ed26746b03da9c9b812459c34488ea6ca12d8919171c"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/scscl.py",
+      "bytes": 3783,
+      "sha256": "a918e5d3f64cc512c4a887d92af45b2b8b49c9eb8f099ca2b99bd7e9f0900b23"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/scservo_def.py",
+      "bytes": 758,
+      "sha256": "4d424845867b1211bce22dfc3ad8b2c17023066d9d18526248c0271430f02398"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/sms_sts.py",
+      "bytes": 4095,
+      "sha256": "5d148d69b5c0211a8354e5ca376802a2bdb301e92cde3faba57bd37d169d4558"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/SOURCE.md",
+      "bytes": 1639,
+      "sha256": "3f34d4872d95dc326f93d765e3d5211f41175e85b4fbf9b4a8449e00f875a171"
+    },
+    {
+      "source": "Feetech official FTServo_Python commit 9e6e342f6011dc727ba7144fc835bca5357b3ca9; see SOURCE.md",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/robot_io/vendor/scservo_sdk/UPSTREAM_README.md",
+      "bytes": 3385,
+      "sha256": "80554f40fb3a1f605680e386e019a97f3e45cfc911a7cc429c9aa57978b08046"
+    },
+    {
+      "path": "ONNX/run.sh",
+      "bytes": 1580,
+      "sha256": "d9eaa8fb150198c76e82ae2aa9e2cd2c880871978db92f4c590fe2c2b9583a3d",
+      "source": "delivery packaging helper/documentation",
+      "edits": []
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/run_robot.py",
+      "bytes": 12845,
+      "sha256": "a9935234ce7332114119277623db35d25fb27da3c56512a29acf08d03a234e74"
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/run_robot.sh",
+      "bytes": 307,
+      "sha256": "d325af99caac1e7fffc8b74190b1e88b9d0e56c870249a316afc07bd16bd9161"
+    },
+    {
+      "path": "ONNX/runtime_cma80_native_softmax.json",
+      "bytes": 57,
+      "sha256": "3afec546c84be4bb1adae6b814201e935f7be16a6428991dd2cabc42ad93f840",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\runtime_cma80_native_softmax.json",
+      "edits": []
+    },
+    {
+      "path": "ONNX/runtime_cma88_cpu_softmax.json",
+      "bytes": 143,
+      "sha256": "cefd390d92928828f6e9405fe9aacd4a66c85c5935447d46c8ee4dc33bbf447d",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\runtime_cma88_cpu_softmax.json",
+      "edits": []
+    },
+    {
+      "path": "ONNX/runtime_cma88_parallel_softmax.json",
+      "bytes": 245,
+      "sha256": "e0f5d8735aae904dd0469a2352983c155daf5ca8e23ea3943fedf45d9e6ddf91",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\runtime_cma88_parallel_softmax.json",
+      "edits": []
+    },
+    {
+      "path": "ONNX/smolvla_selective_pynq_resident88.manifest.json",
+      "bytes": 3825699,
+      "sha256": "6638fd754976b713575e6534138af5c9ae2ba10a4dc6dfbc5d7233ba8b35a4e6",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\smolvla_selective_pynq_resident88.manifest.json",
+      "edits": []
+    },
+    {
+      "path": "ONNX/smolvla_selective_pynq_softmax_resident88.manifest.json",
+      "bytes": 3825706,
+      "sha256": "f63262829301f0474ada9e398a0b84bee7ef950cac26ff0b04b1e1e891fa62ca",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\smolvla_selective_pynq_softmax_resident88.manifest.json",
+      "edits": []
+    },
+    {
+      "path": "ONNX/softmax_cpu_bridge.cpp",
+      "bytes": 4821,
+      "sha256": "949274e2ad52864d5ed267df4226cbac8e037ca9b91337d7892bdc6e383e9e7e",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\softmax_cpu_bridge.cpp",
+      "edits": []
+    },
+    {
+      "path": "ONNX/softmax_rows.onnx",
+      "bytes": 151,
+      "sha256": "43c9f1e33de32587827860f95c35afdecdbe6d259cedc00f686f9de12b46a0bf",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\softmax_rows.onnx",
+      "edits": []
+    },
+    {
+      "path": "ONNX/summarize_runtime_sweep.py",
+      "bytes": 35040,
+      "sha256": "6d79ea50d6e67096b64af99134e8d1a08a98e8843ea6ac8a9dff8fd6485ae63f",
+      "source": "G:\\smolvla\\smolvla_20261103_wrist_beside_base_200k_3gpu\\200000_w8a8_fp32\\pynq_eval\\summarize_runtime_sweep.py",
+      "edits": []
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/tests/test_motors.py",
+      "bytes": 16179,
+      "sha256": "6b3cffd8bbcd087d1d66e08385bd53000468a20ea748d14720c83cadc484c45b"
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/tests/test_preprocessing.py",
+      "bytes": 2403,
+      "sha256": "fe8e91d65d299faeb7794d0986ea3adeb7480c2f349da5ed92f4754dda8bd142"
+    },
+    {
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ],
+      "path": "ONNX/tests/test_robot_loop.py",
+      "bytes": 7392,
+      "sha256": "a61ca376cda56676e5237fefcd06b5fbc25e252e7f98dad0ad0a39b0abb7820a"
+    },
+    {
+      "path": "ONNX/validation_0.npz",
+      "bytes": 7385552,
+      "sha256": "bde66e0ababee62faff20fe86767b3a093fb7781675b35a1c09be55fd39b5258",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\onnx\\validation_0.npz",
+      "edits": []
+    },
+    {
+      "path": "README.md",
+      "bytes": 2729,
+      "sha256": "f721632aca2067d71a6bf4d3602e13cd44f8f6d3906cdbb7bd9158194ec197ff",
+      "source": "Camera/motor/ONNX integration authored locally on 2026-11-04; no motor actuation",
+      "edits": [
+        "Robot integration update"
+      ]
+    },
+    {
+      "path": "Softmax/benchmark_results/softmax_1024_20261102_131739.json",
+      "bytes": 8669,
+      "sha256": "26fa32c528e9c617aca2b90a543695b3e1c469afd5cb32f3d5082c4e1c91ebba",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\benchmark_results\\softmax_1024_20261102_131739.json",
+      "edits": []
+    },
+    {
+      "path": "Softmax/benchmark_softmax_pipeline.py",
+      "bytes": 4834,
+      "sha256": "d63ab71132dfd9b929fafeb26c865a70fb5f0406ffdef3afae376f33e8329ee7",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\runtime\\benchmark_softmax_pipeline.py",
+      "edits": [
+        {
+          "before": "from .softmax_pipeline import run_softmax_pipeline",
+          "after": "from softmax_pipeline import run_softmax_pipeline"
+        },
+        {
+          "before": "from softmax_pipeline import run_softmax_pipeline",
+          "after": "import sys\nsys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'GEMM'))\nfrom softmax_pipeline import run_softmax_pipeline"
+        },
+        {
+          "before": "parent.parent / 'hardware/design_1.hwh'",
+          "after": "parent.parent / 'GEMM/hardware/design_1.hwh'"
+        }
+      ]
+    },
+    {
+      "path": "Softmax/README.md",
+      "bytes": 1647,
+      "sha256": "463f08c796997d5d695bf210f49c2d0240de64766d166431aab1be54736b4013",
+      "source": "delivery packaging helper/documentation",
+      "edits": []
+    },
+    {
+      "path": "Softmax/softmax_1024_benchmark.py",
+      "bytes": 7115,
+      "sha256": "ea0bed566391f45eecd1a5b714da75100be064555370ab731ae65dae7e510b41",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\softmax_1024_benchmark.py",
+      "edits": [
+        {
+          "before": "Path('/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2')",
+          "after": "Path(__file__).resolve().parent.parent / 'GEMM'"
+        }
+      ]
+    },
+    {
+      "path": "Softmax/softmax_parallel.py",
+      "bytes": 9389,
+      "sha256": "80f24076922bed84e9637921488f5751c3e6babb31fdb5ce66947792dcbd9019",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\runtime\\softmax_parallel.py",
+      "edits": [
+        {
+          "before": "from .softmax_pipeline import run_softmax_pipeline",
+          "after": "from softmax_pipeline import run_softmax_pipeline"
+        }
+      ]
+    },
+    {
+      "path": "Softmax/softmax_pipeline.py",
+      "bytes": 6216,
+      "sha256": "55b8fba4a9024fbc134189379bbabaf49d15b34881a10a6fe69dc2367226665e",
+      "source": "G:\\smolvla\\work\\graphopt_20261104\\board_snapshot\\stable_eval\\runtime\\softmax_pipeline.py",
+      "edits": []
+    },
+    {
+      "path": "Softmax/test_softmax_parallel.py",
+      "bytes": 4192,
+      "sha256": "a02447256b5e4c1202e1b301e45143eba896930c2ed7bfdad1a8a7b4c5e91305",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\runtime\\test_softmax_parallel.py",
+      "edits": []
+    },
+    {
+      "path": "Softmax/test_softmax_pipeline.py",
+      "bytes": 4800,
+      "sha256": "1f8a286896de77cd3fa51b3d529094c93f5e719d20f74bba55c12938e7888f63",
+      "source": "G:\\smolvla\\pynq\\GEMM_V2_test\\runtime\\test_softmax_pipeline.py",
+      "edits": []
+    }
+  ]
+}

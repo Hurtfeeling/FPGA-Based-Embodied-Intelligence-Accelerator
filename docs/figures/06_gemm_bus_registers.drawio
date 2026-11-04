@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-11-03T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="06_gemm_bus_registers" name="GEMM 总线与寄存器">
+    <mxGraphModel dx="1480" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1480" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ps" value="PS 处理系统&lt;br&gt;MMIO / AXI master&lt;br&gt;M_AXI_HPM0_LPD" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="175" width="250" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl" value="AXI-Lite 地址互连&lt;br&gt;32-bit 地址 / 数据&lt;br&gt;按基地址译码" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#fff4e3;strokeColor=#9a5a13;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="175" width="260" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reg0" value="GEMM 0 寄存器组&lt;br&gt;0x80000000&lt;br&gt;窗口 0x200 B" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#fff4e3;strokeColor=#9a5a13;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="175" width="200" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reg1" value="GEMM 1 寄存器组&lt;br&gt;0x80001000&lt;br&gt;窗口 0x200 B" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#fff4e3;strokeColor=#9a5a13;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="175" width="200" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="reg2" value="GEMM 2 寄存器组&lt;br&gt;0x80002000&lt;br&gt;窗口 0x200 B" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#fff4e3;strokeColor=#9a5a13;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="175" width="200" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="core" value="每核：32×32 PE + A / BT / C 本地缓存 + 独立 DMA；核内为单 AXI 读写接口" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="375" y="345" width="1055" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="gemm0" value="GEMM 0&lt;br&gt;128-bit AXI4 master" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="235" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="gemm1" value="GEMM 1&lt;br&gt;128-bit AXI4 master" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="610" width="235" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="gemm2" value="GEMM 2&lt;br&gt;128-bit AXI4 master" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="740" width="235" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="softmax" value="Softmax&lt;br&gt;128-bit AXI4 master" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="375" y="450" width="265" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="smart" value="AXI SmartConnect&lt;br&gt;仲裁四个数据主接口&lt;br&gt;按地址读写 DDR" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=19;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="375" y="590" width="330" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="hp0" value="PS S_AXI_HP0_FPD&lt;br&gt;128-bit HP 端口&lt;br&gt;共享外部存储通路" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=19;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="590" width="250" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ddr" value="DDR&lt;br&gt;A / BT / C&lt;br&gt;共享存储体" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="590" width="240" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="MMIO 控制" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9a5a13;endArrow=block;endFill=1;" edge="1" parent="1" source="ps" target="ctrl">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="读写配置 / 轮询" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9a5a13;endArrow=block;endFill=1;" edge="1" parent="1" source="ctrl" target="reg0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9a5a13;endArrow=block;endFill=1;" edge="1" parent="1" source="ctrl" target="reg1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9a5a13;endArrow=block;endFill=1;" edge="1" parent="1" source="ctrl" target="reg2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="gemm0" target="smart">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="gemm1" target="smart">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="gemm2" target="smart">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="softmax" target="smart">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="AXI4 仲裁" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="smart" target="hp0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="DDR 读 / 写" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="hp0" target="ddr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" value="控制通路：PS 配置三套寄存器，三个核的状态相互独立" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#9a5a13;" vertex="1" parent="1">
+          <mxGeometry x="690" y="100" width="760" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="数据通路：三个 GEMM 可并发发起请求，经 SmartConnect 仲裁后共享 HP0 / DDR 带宽" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#526274;" vertex="1" parent="1">
+          <mxGeometry x="400" y="845" width="1000" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="AXI4：32-bit 地址，128-bit 数据；16 B/beat；burst 不跨 4 KiB 边界" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#526274;" vertex="1" parent="1">
+          <mxGeometry x="400" y="890" width="1000" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

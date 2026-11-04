@@ -1,0 +1,61 @@
+{
+  "mode": "hybrid",
+  "camera_mapping_confirmed": true,
+  "training_mapping_confirmed": false,
+  "models": {
+    "cpu": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/smolvla_w8a8_fp32.onnx",
+    "hybrid": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/smolvla_selective_pynq_resident88.onnx"
+  },
+  "library": "libsmolvla_ort_sweep.so",
+  "runtime_root": "../GEMM",
+  "runtime_config": "runtime_cma80_native_softmax.json",
+  "normalization": "robot_assets/stats.json",
+  "language": "robot_assets/language.npz",
+  "noise_seed": 20261104,
+  "calibration": "follower_calibration.json",
+  "stop_file": "STOP_ROBOT",
+  "cameras": {
+    "camera2": {
+      "device": "/dev/v4l/by-id/usb-icSpring_icspring_camera-video-index0",
+      "width": 640,
+      "height": 480,
+      "fps": 30,
+      "mjpg": true,
+      "rotation": 0,
+      "flip": null,
+      "resize": false
+    },
+    "camera3": {
+      "device": "/dev/v4l/by-id/usb-CN02KX4NLG0004ABK00_USB_Camera_CN02KX4NLG0004ABK00-video-index0",
+      "width": 640,
+      "height": 480,
+      "fps": 30,
+      "mjpg": true,
+      "rotation": 0,
+      "flip": null,
+      "resize": false
+    }
+  },
+  "motors": {
+    "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5AA9024318-if00",
+    "baudrate": 1000000,
+    "joint_order": ["shoulder_pan", "shoulder_lift", "elbow_flex", "wrist_flex", "wrist_roll", "gripper"],
+    "ids": [1, 2, 3, 4, 5, 6],
+    "norm_modes": null,
+    "min": null,
+    "max": null,
+    "max_step": null,
+    "release_on_close": false
+  },
+  "control": {
+    "chunk_steps": 1,
+    "command_hz": 10,
+    "min": null,
+    "max": null,
+    "max_step": null,
+    "max_velocity": null,
+    "max_state_drift": null,
+    "max_observation_age_s": 60,
+    "max_command_lateness_s": 0.2
+  }
+}

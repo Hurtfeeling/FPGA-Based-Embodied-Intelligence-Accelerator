@@ -1,0 +1,56 @@
+{
+  "protocol_tests": 10,
+  "protocol_tests_passed": true,
+  "python_sources_parse": true,
+  "hardware_measured": true,
+  "native_helper_compiled": true,
+  "network": "pynq SSH restored after user reboot",
+  "measured_date": "2026-11-03",
+  "pl_mhz": 249.9975,
+  "cpu_selected_khz": 1199999,
+  "cpu_actual_mhz": 1049.9895,
+  "cpu_reference_threads": 4,
+  "matrix_shape_mnk": [2048, 2048, 2048],
+  "three_core_rows": [704, 672, 672],
+  "hardware_smoke_cores": [1, 2, 3],
+  "formal_measurement_rounds": 72,
+  "all_formal_outputs_exactly_equal_to_cpu": true,
+  "results_file": "fast_submit_results_20261103_052046.json",
+  "control_microbenchmark": "control_path_results.json",
+  "main_board_driver_replaced": false,
+  "dma_input_experiment": {
+    "results_file": "dma_input_results_20261103_053325.json",
+    "formal_rounds": 72,
+    "independent_profile_rounds": 9,
+    "all_outputs_exactly_equal_to_cpu": true,
+    "a_dma_bytes": 4194304,
+    "host_dma_segments": 41,
+    "registration_ms_excluded_from_steady_state": 1.6482209998684993,
+    "three_core_parallel_total_ms": 32.70094599997719,
+    "three_core_parallel_gops": 525.36,
+    "temporary_module_unloaded_after_test": true
+  },
+  "dma_batched_ac_experiment": {
+    "results_file": "dma_batched_ac_20261103_060918.json",
+    "formal_rounds": 144,
+    "independent_profile_rounds": 18,
+    "all_outputs_exactly_equal_to_cpu": true,
+    "a_dma_segments": 71,
+    "c_dma_segments": 201,
+    "batch_limit_segments": 32,
+    "a_c_registration_ms": 12.39248,
+    "three_core_cpu_a_cpu_c_ms": 31.247020499904465,
+    "three_core_batched_dma_a_dma_c_no_redundant_sync_ms": 28.878517500061207,
+    "three_core_batched_dma_a_dma_c_no_redundant_sync_gops": 594.90136,
+    "temporary_module_unloaded_after_test": true
+  },
+  "submission_per_core": {
+    "writes": 6,
+    "reads": 0
+  },
+  "three_core_submission": {
+    "writes": 18,
+    "reads": 0
+  },
+  "cleanup_reads_performance_counters": false
+}

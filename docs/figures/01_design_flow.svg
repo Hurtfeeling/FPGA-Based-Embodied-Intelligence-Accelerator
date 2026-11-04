@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+<rect width="100%" height="100%" fill="white"/>
+<text x="600.0" y="39.72" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="27" fill="#17232f" font-weight="700" text-anchor="middle">设计与验证流程</text>
+<text x="600.0" y="71.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#526274" font-weight="400" text-anchor="middle">以可校验的算子为基础，逐步推进系统与应用集成</text>
+<rect x="30" y="115" width="200" height="110" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="130.0" y="150.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">模型分析</text>
+<text x="130.0" y="194.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">算子与精度需求</text>
+<polyline points="230,170 260,170" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="260,170 250.09508187412055,174.78462087522354 250.09508187412055,165.21537912477646" fill="#526274"/>
+<rect x="265" y="115" width="200" height="110" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="365.0" y="150.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">RTL 设计</text>
+<text x="365.0" y="194.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">计算、缓存与调度</text>
+<polyline points="465,170 495,170" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="495,170 485.0950818741206,174.78462087522354 485.0950818741206,165.21537912477646" fill="#526274"/>
+<rect x="500" y="115" width="200" height="110" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="600.0" y="150.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">功能验证</text>
+<text x="600.0" y="194.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">参考结果与协议</text>
+<polyline points="700,170 730,170" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="730,170 720.0950818741205,174.78462087522354 720.0950818741205,165.21537912477646" fill="#526274"/>
+<rect x="735" y="115" width="200" height="110" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="835.0" y="150.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">实现优化</text>
+<text x="835.0" y="194.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">资源、时序与布线</text>
+<polyline points="935,170 965,170" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="965,170 955.0950818741205,174.78462087522354 955.0950818741205,165.21537912477646" fill="#526274"/>
+<rect x="970" y="115" width="200" height="110" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="1070.0" y="150.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">软件接入</text>
+<text x="1070.0" y="194.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">驱动与任务接口</text>
+<polyline points="470,288 730,288" fill="none" stroke="#677584" stroke-width="2" stroke-dasharray="8 6"/>
+<polyline points="730,288 730,373" fill="none" stroke="#677584" stroke-width="2" stroke-dasharray="8 6"/>
+<polyline points="730,373 470,373" fill="none" stroke="#677584" stroke-width="2" stroke-dasharray="8 6"/>
+<polyline points="470,373 470,288" fill="none" stroke="#677584" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="470" y="288" width="260" height="85" rx="12" fill="#f2f4f6" stroke="#677584" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="600.0" y="323.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#677584" font-weight="700" text-anchor="middle">板端与应用联调</text>
+<text x="600.0" y="354.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">真实 DDR、模型、机械臂</text>
+<polyline points="1070,225 1070,330 745,330" fill="none" stroke="#526274" stroke-width="2" stroke-dasharray="8 6"/>
+<polygon points="745,330 754.9049181258795,325.21537912477646 754.9049181258795,334.78462087522354" fill="#526274"/>
+<text x="245" y="335.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#526274" font-weight="400" text-anchor="middle">当前已形成算子、实现与驱动证据</text>
+<text x="600" y="401.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#677584" font-weight="400" text-anchor="middle">虚线阶段：板端性能与完整应用闭环仍需补齐</text>
+</svg>

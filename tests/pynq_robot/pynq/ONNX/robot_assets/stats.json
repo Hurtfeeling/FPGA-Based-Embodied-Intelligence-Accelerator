@@ -1,0 +1,46 @@
+{
+  "eps": 1e-08,
+  "state_mean": [
+    -6.563590049743652,
+    -1.089989423751831,
+    -7.835640907287598,
+    76.23908233642578,
+    -90.87577819824219,
+    68.13605499267578
+  ],
+  "state_std": [
+    22.531631469726562,
+    59.47683334350586,
+    60.07495880126953,
+    4.346725940704346,
+    0.1745253950357437,
+    30.226951599121094
+  ],
+  "action_mean": [
+    -6.393108367919922,
+    -2.330458402633667,
+    -9.206443786621094,
+    76.06784057617188,
+    -90.70893859863281,
+    62.991172790527344
+  ],
+  "action_std": [
+    22.618383407592773,
+    59.177066802978516,
+    60.810874938964844,
+    4.388200283050537,
+    0.13638532161712646,
+    38.59740447998047
+  ],
+  "joint_order": null,
+  "joint_units": null,
+  "training_mapping_confirmed": false,
+  "formula": {
+    "state": "(x-mean)/(std+eps)",
+    "action": "y*std+mean"
+  },
+  "sources": {
+    "policy_preprocessor_step_5_normalizer_processor.safetensors": "dc1c03c8612511634d43f2cf38ff2c54062a310bb2c3fdb867b81d7bed2fd6e4",
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "f9d5245fd88617560b32d4e9a808ab381afb060281faf612194f5d0edb4b5e6d"
+  }
+}

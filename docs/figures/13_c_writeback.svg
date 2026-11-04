@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="880" viewBox="0 0 1320 880">
+<rect width="100%" height="100%" fill="white"/>
+<text x="660.0" y="39.72" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="27" fill="#17232f" font-weight="700" text-anchor="middle">C 微块的 DDR 行跨度与 burst 写回</text>
+<text x="660.0" y="71.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#526274" font-weight="400" text-anchor="middle">一个 32×32 INT32 微块共 4 KiB；它在完整 M×N 输出矩阵中通常不是一段连续的 4 KiB</text>
+<text x="265" y="147.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">片上一个输出槽：32×32 INT32</text>
+<rect x="70" y="190" width="390" height="45" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="265" y="218.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="400" text-anchor="middle">32 个 INT32 = 128 B</text>
+<rect x="70" y="235" width="390" height="45" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="265" y="263.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="400" text-anchor="middle">32 个 INT32 = 128 B</text>
+<rect x="70" y="280" width="390" height="45" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="265" y="308.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="400" text-anchor="middle">32 个 INT32 = 128 B</text>
+<rect x="70" y="325" width="390" height="45" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="265" y="353.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="400" text-anchor="middle">…</text>
+<rect x="70" y="370" width="390" height="45" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="265" y="398.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="400" text-anchor="middle">…</text>
+<rect x="70" y="415" width="390" height="45" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="265" y="443.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="400" text-anchor="middle">…</text>
+<rect x="70" y="460" width="390" height="45" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="265" y="488.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="400" text-anchor="middle">…</text>
+<rect x="70" y="505" width="390" height="45" rx="0" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="265" y="533.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="400" text-anchor="middle">共 32 行</text>
+<text x="985" y="147.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#186b61" font-weight="700" text-anchor="middle">DDR 中的 C：每行跨度 N×4 字节</text>
+<rect x="720" y="190" width="540" height="40" rx="0" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<rect x="830" y="190" width="180" height="40" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="920" y="215.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#186b61" font-weight="400" text-anchor="middle">本微块的 128 B</text>
+<text x="691" y="215.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#526274" font-weight="400" text-anchor="middle">0</text>
+<rect x="720" y="253" width="540" height="40" rx="0" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<rect x="830" y="253" width="180" height="40" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="920" y="278.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#186b61" font-weight="400" text-anchor="middle">本微块的 128 B</text>
+<text x="691" y="278.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#526274" font-weight="400" text-anchor="middle">1</text>
+<rect x="720" y="316" width="540" height="40" rx="0" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<rect x="830" y="316" width="180" height="40" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="920" y="341.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#186b61" font-weight="400" text-anchor="middle">本微块的 128 B</text>
+<text x="691" y="341.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#526274" font-weight="400" text-anchor="middle">2</text>
+<rect x="720" y="379" width="540" height="40" rx="0" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<rect x="830" y="379" width="180" height="40" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="920" y="404.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#186b61" font-weight="400" text-anchor="middle">本微块的 128 B</text>
+<text x="691" y="404.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#526274" font-weight="400" text-anchor="middle">3</text>
+<rect x="720" y="442" width="540" height="40" rx="0" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<rect x="830" y="442" width="180" height="40" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="920" y="467.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#186b61" font-weight="400" text-anchor="middle">本微块的 128 B</text>
+<text x="691" y="467.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#526274" font-weight="400" text-anchor="middle">4</text>
+<rect x="720" y="505" width="540" height="40" rx="0" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<rect x="830" y="505" width="180" height="40" rx="0" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="920" y="530.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#186b61" font-weight="400" text-anchor="middle">本微块的 128 B</text>
+<text x="691" y="530.4" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="15" fill="#526274" font-weight="400" text-anchor="middle">5</text>
+<polyline points="460,325 565,325 565,210 705,210" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="705,210 695.0950818741205,214.78462087522354 695.0950818741205,205.21537912477646" fill="#526274"/>
+<text x="575" y="376.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#23608b" font-weight="400" text-anchor="middle">逐行写入</text>
+<text x="575" y="403.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#23608b" font-weight="400" text-anchor="middle">跨行跳地址</text>
+<rect x="70" y="625" width="390" height="100" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="265.0" y="660.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">每行通常为 8 beat</text>
+<text x="265.0" y="699.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">8 × 16 B = 128 B；页边界可能再拆分</text>
+<rect x="565" y="625" width="695" height="100" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="912.5" y="659.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#186b61" font-weight="700" text-anchor="middle">第 r 行地址 = C_base + ((m0+r)×N+n0)×4</text>
+<text x="912.5" y="699.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">AW 发出该行 burst；W 完成数据；收到 B 响应后事务才退休</text>
+<polyline points="460,675 550,675" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="550,675 540.0950818741205,679.7846208752235 540.0950818741205,670.2153791247765" fill="#526274"/>
+<text x="660" y="803.48" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="18" fill="#17232f" font-weight="700" text-anchor="middle">环形槽保留绝对坐标，允许下一宏块开始时上一宏块继续写回；未退休的槽不能覆盖</text>
+<text x="660" y="846.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#526274" font-weight="400" text-anchor="middle">图示行数作压缩；提前写回受结果水位、输出队列和 AXI READY / 响应共同约束</text>
+</svg>

@@ -1,0 +1,104 @@
+{
+  "packaged_date": "2026-11-02",
+  "description": "Three GEMM cores and one FP32 Softmax; no matrix memory allocation",
+  "python": ">=3.6",
+  "external_runtime_dependencies": [
+    "pynq (target board installation)"
+  ],
+  "hardware": {
+    "gemm": [
+      {
+        "kind": "gemm",
+        "name": "gemm_accelerator_top_0",
+        "base": 2147483648,
+        "length": 512,
+        "ddr_ranges": [
+          [
+            0,
+            2147483648
+          ]
+        ]
+      },
+      {
+        "kind": "gemm",
+        "name": "gemm_accelerator_top_1",
+        "base": 2147487744,
+        "length": 512,
+        "ddr_ranges": [
+          [
+            0,
+            2147483648
+          ]
+        ]
+      },
+      {
+        "kind": "gemm",
+        "name": "gemm_accelerator_top_2",
+        "base": 2147491840,
+        "length": 512,
+        "ddr_ranges": [
+          [
+            0,
+            2147483648
+          ]
+        ]
+      }
+    ],
+    "softmax": {
+      "kind": "softmax",
+      "name": "softmax_accelerator_0",
+      "base": 2415919104,
+      "length": 512,
+      "ddr_ranges": [
+        [
+          0,
+          2147483648
+        ]
+      ]
+    }
+  },
+  "bitstream_header": {
+    "design": "design_1_wrapper",
+    "part": "xczu15eg-ffvb1156-2-i",
+    "date": "2026/11/02",
+    "time": "19:40:53"
+  },
+  "validation": {
+    "driver_host_tests_previously_passed": 21,
+    "new_rtl_simulation": false,
+    "new_bitstream_build": false,
+    "board_execution": false
+  },
+  "files": {
+    "accelerator_driver.py": {
+      "source": "software/accelerator_driver.py",
+      "bytes": 23641,
+      "sha256": "4c72ca636c3340d72b90a3a4544d93984f5570c32d2ad32122beb98d53207d67"
+    },
+    "hardware/design_1.bit": {
+      "source": "15eg/prj/15eg.runs/impl_1/design_1_wrapper.bit",
+      "bytes": 28700866,
+      "sha256": "405dfca6e6a85d787b7568828b403c0f3894dba33f5e3bdd5d3f2e834eb2570f"
+    },
+    "hardware/design_1.hwh": {
+      "source": "15eg/prj/15eg.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh",
+      "bytes": 380125,
+      "sha256": "9e39b5e61f43bda6cf14266a8802fd11eb07e54c952dee9bf37bfab1ce802c07"
+    },
+    "README.md": {
+      "source": "package documentation",
+      "bytes": 3282,
+      "sha256": "9338263496294b34e9e8323cb75bacd5399fec9a059327860879cd0fe46d3396"
+    },
+    "requirements.txt": {
+      "source": "package documentation",
+      "bytes": 202,
+      "sha256": "45f7391c8704ecf04c56b8a111d78b643f0fd4cc9becbd243337baf4a4d54698"
+    },
+    "USAGE.md": {
+      "source": "software/ACCELERATOR_DRIVER.md (adapted)",
+      "bytes": 7672,
+      "sha256": "20c5be528135396c99997a46e435c8f5075a4c316c1c92191250b33294e26c25"
+    }
+  }
+}

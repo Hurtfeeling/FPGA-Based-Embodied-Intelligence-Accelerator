@@ -1,0 +1,367 @@
+{
+  "bytes": 4194304,
+  "registrations": [
+    {
+      "direction": "host_to_cma",
+      "both_register_ms": 1.647670000238577
+    },
+    {
+      "direction": "cma_to_host",
+      "both_register_ms": 1.6333410021616146
+    }
+  ],
+  "summary": {
+    "CPU_host_to_cma": {
+      "median_wall_ms": 2.4159269996744115,
+      "median_cpu_ms": 2.417859999999994,
+      "median_copy_and_presync_ms": 1.8674929997359868
+    },
+    "DMA_host_to_cma": {
+      "median_wall_ms": 1.8841229975805618,
+      "median_cpu_ms": 1.1355449999999045,
+      "median_kernel_ms": 1.834414,
+      "median_sync_ms": 1.0108535,
+      "median_transfer_wait_ms": 0.814955,
+      "median_dma_segments": 6.0,
+      "median_bytes": 4194304.0
+    },
+    "CPU_cma_to_host": {
+      "median_wall_ms": 2.248233000500477,
+      "median_cpu_ms": 2.2506300000002533,
+      "median_copy_and_presync_ms": 2.2392280006897636
+    },
+    "DMA_cma_to_host": {
+      "median_wall_ms": 2.0320809999248013,
+      "median_cpu_ms": 1.314335000000444,
+      "median_kernel_ms": 1.982322,
+      "median_sync_ms": 1.0292880000000002,
+      "median_transfer_wait_ms": 0.9521634999999999,
+      "median_dma_segments": 24.0,
+      "median_bytes": 4194304.0
+    }
+  },
+  "records": [
+    {
+      "direction": "host_to_cma",
+      "method": "CPU",
+      "repeat": 1,
+      "wall_ms": 2.4247410001407843,
+      "cpu_ms": 2.425449999999607,
+      "copy_and_presync_ms": 1.8737479986157268
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "DMA",
+      "repeat": 1,
+      "wall_ms": 1.8875779969675932,
+      "cpu_ms": 1.1362799999998785,
+      "kernel_ms": 1.836649,
+      "sync_ms": 1.010708,
+      "transfer_wait_ms": 0.825941,
+      "dma_segments": 6,
+      "bytes": 4194304
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "DMA",
+      "repeat": 2,
+      "wall_ms": 1.8806679981935304,
+      "cpu_ms": 1.1326099999999784,
+      "kernel_ms": 1.832179,
+      "sync_ms": 1.011758,
+      "transfer_wait_ms": 0.820421,
+      "dma_segments": 6,
+      "bytes": 4194304
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "CPU",
+      "repeat": 2,
+      "wall_ms": 2.3699919984210283,
+      "cpu_ms": 2.3736400000000657,
+      "copy_and_presync_ms": 1.8663880000531208
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "CPU",
+      "repeat": 3,
+      "wall_ms": 2.369321999140084,
+      "cpu_ms": 2.3735099999999676,
+      "copy_and_presync_ms": 1.8666180003492627
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "DMA",
+      "repeat": 3,
+      "wall_ms": 1.8671580000955146,
+      "cpu_ms": 1.1281800000002562,
+      "kernel_ms": 1.821388,
+      "sync_ms": 1.010448,
+      "transfer_wait_ms": 0.81094,
+      "dma_segments": 6,
+      "bytes": 4194304
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "DMA",
+      "repeat": 4,
+      "wall_ms": 1.8880569987231866,
+      "cpu_ms": 1.1376599999999293,
+      "kernel_ms": 1.836819,
+      "sync_ms": 1.010899,
+      "transfer_wait_ms": 0.82592,
+      "dma_segments": 6,
+      "bytes": 4194304
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "CPU",
+      "repeat": 4,
+      "wall_ms": 2.4217709978984203,
+      "cpu_ms": 2.422450000000076,
+      "copy_and_presync_ms": 1.9174669978383463
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "CPU",
+      "repeat": 5,
+      "wall_ms": 2.4152719997800887,
+      "cpu_ms": 2.4179200000000733,
+      "copy_and_presync_ms": 1.8668480006454047
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "DMA",
+      "repeat": 5,
+      "wall_ms": 1.8789679998008069,
+      "cpu_ms": 1.1348099999999306,
+      "kernel_ms": 1.829778,
+      "sync_ms": 1.010808,
+      "transfer_wait_ms": 0.81897,
+      "dma_segments": 6,
+      "bytes": 4194304
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "DMA",
+      "repeat": 6,
+      "wall_ms": 1.8643680014065467,
+      "cpu_ms": 1.1263499999998317,
+      "kernel_ms": 1.818048,
+      "sync_ms": 1.010127,
+      "transfer_wait_ms": 0.807921,
+      "dma_segments": 6,
+      "bytes": 4194304
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "CPU",
+      "repeat": 6,
+      "wall_ms": 2.368082001339644,
+      "cpu_ms": 2.372229999999753,
+      "copy_and_presync_ms": 1.864238001871854
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "CPU",
+      "repeat": 7,
+      "wall_ms": 2.4599210009910166,
+      "cpu_ms": 2.4605700000002173,
+      "copy_and_presync_ms": 1.957967000635108
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "DMA",
+      "repeat": 7,
+      "wall_ms": 1.9146180020470638,
+      "cpu_ms": 1.1743499999998797,
+      "kernel_ms": 1.858238,
+      "sync_ms": 1.050357,
+      "transfer_wait_ms": 0.807881,
+      "dma_segments": 6,
+      "bytes": 4194304
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "DMA",
+      "repeat": 8,
+      "wall_ms": 1.9296270002087113,
+      "cpu_ms": 1.152089999999717,
+      "kernel_ms": 1.856458,
+      "sync_ms": 1.050207,
+      "transfer_wait_ms": 0.806251,
+      "dma_segments": 6,
+      "bytes": 4194304
+    },
+    {
+      "direction": "host_to_cma",
+      "method": "CPU",
+      "repeat": 8,
+      "wall_ms": 2.4165819995687343,
+      "cpu_ms": 2.4177999999999145,
+      "copy_and_presync_ms": 1.868137998826569
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "CPU",
+      "repeat": 1,
+      "wall_ms": 2.1940149999863934,
+      "cpu_ms": 2.2013899999997477,
+      "copy_and_presync_ms": 2.185684999858495
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "DMA",
+      "repeat": 1,
+      "wall_ms": 1.9921370003430638,
+      "cpu_ms": 1.2886000000005282,
+      "kernel_ms": 1.948567,
+      "sync_ms": 1.015278,
+      "transfer_wait_ms": 0.933289,
+      "dma_segments": 24,
+      "bytes": 4194304
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "DMA",
+      "repeat": 2,
+      "wall_ms": 2.013985998928547,
+      "cpu_ms": 1.2919599999996478,
+      "kernel_ms": 1.970337,
+      "sync_ms": 1.015308,
+      "transfer_wait_ms": 0.955029,
+      "dma_segments": 24,
+      "bytes": 4194304
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "CPU",
+      "repeat": 2,
+      "wall_ms": 2.2463540008175187,
+      "cpu_ms": 2.24939000000024,
+      "copy_and_presync_ms": 2.2373640022124164
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "CPU",
+      "repeat": 3,
+      "wall_ms": 2.246302999992622,
+      "cpu_ms": 2.2494200000000575,
+      "copy_and_presync_ms": 2.237303000583779
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "DMA",
+      "repeat": 3,
+      "wall_ms": 2.0207360030326527,
+      "cpu_ms": 1.305010000000273,
+      "kernel_ms": 1.969736,
+      "sync_ms": 1.014938,
+      "transfer_wait_ms": 0.954798,
+      "dma_segments": 24,
+      "bytes": 4194304
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "DMA",
+      "repeat": 4,
+      "wall_ms": 2.029695999226533,
+      "cpu_ms": 1.323660000000615,
+      "kernel_ms": 1.980777,
+      "sync_ms": 1.043268,
+      "transfer_wait_ms": 0.937509,
+      "dma_segments": 24,
+      "bytes": 4194304
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "CPU",
+      "repeat": 4,
+      "wall_ms": 2.2493430005852133,
+      "cpu_ms": 2.2517000000004117,
+      "copy_and_presync_ms": 2.2401730020646937
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "CPU",
+      "repeat": 5,
+      "wall_ms": 2.2518539990414865,
+      "cpu_ms": 2.2532100000001165,
+      "copy_and_presync_ms": 2.2421940011554398
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "DMA",
+      "repeat": 5,
+      "wall_ms": 2.055995002592681,
+      "cpu_ms": 1.337399999999711,
+      "kernel_ms": 2.004757,
+      "sync_ms": 1.053929,
+      "transfer_wait_ms": 0.950828,
+      "dma_segments": 24,
+      "bytes": 4194304
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "DMA",
+      "repeat": 6,
+      "wall_ms": 2.0344660006230697,
+      "cpu_ms": 1.3316200000001999,
+      "kernel_ms": 1.983867,
+      "sync_ms": 1.053728,
+      "transfer_wait_ms": 0.930139,
+      "dma_segments": 24,
+      "bytes": 4194304
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "CPU",
+      "repeat": 6,
+      "wall_ms": 2.2471230004157405,
+      "cpu_ms": 2.249560000000095,
+      "copy_and_presync_ms": 2.2382829993148334
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "CPU",
+      "repeat": 7,
+      "wall_ms": 2.249883000331465,
+      "cpu_ms": 2.2523200000001964,
+      "copy_and_presync_ms": 2.241163001599489
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "DMA",
+      "repeat": 7,
+      "wall_ms": 2.068625999527285,
+      "cpu_ms": 0.9429599999997151,
+      "kernel_ms": 2.017936,
+      "sync_ms": 1.064437,
+      "transfer_wait_ms": 0.953499,
+      "dma_segments": 24,
+      "bytes": 4194304
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "DMA",
+      "repeat": 8,
+      "wall_ms": 2.0647760029532947,
+      "cpu_ms": 1.3254600000003336,
+      "kernel_ms": 2.014576,
+      "sync_ms": 1.015268,
+      "transfer_wait_ms": 0.999308,
+      "dma_segments": 24,
+      "bytes": 4194304
+    },
+    {
+      "direction": "cma_to_host",
+      "method": "CPU",
+      "repeat": 8,
+      "wall_ms": 2.256303996546194,
+      "cpu_ms": 2.259670000000824,
+      "copy_and_presync_ms": 2.2469839968835004
+    }
+  ],
+  "all_verified": true,
+  "scope": "ordinary NumPy <-> PYNQ allocate(cacheable=1); directional mapping, full required cache sync included; independent buffers, not full GEMM"
+}

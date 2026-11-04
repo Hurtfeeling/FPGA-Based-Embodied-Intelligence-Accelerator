@@ -1,0 +1,546 @@
+{
+  "records": [
+    {
+      "name": "native_python",
+      "repeat": 1,
+      "submit_ms": 0.13087499996800034,
+      "wait_ms": 13.163553000026695,
+      "total_ms": 13.294427999994696,
+      "raw_submit_ms": 0.023691000023973174,
+      "clear_ms": 0.054191000003811496
+    },
+    {
+      "name": "python_native",
+      "repeat": 1,
+      "submit_ms": 0.3589720000718444,
+      "wait_ms": 12.721788999897399,
+      "total_ms": 13.080760999969243,
+      "raw_submit_ms": 0.2504279999584469,
+      "clear_ms": 0.05217099999299535
+    },
+    {
+      "name": "python_python",
+      "repeat": 1,
+      "submit_ms": 0.3565019999314245,
+      "wait_ms": 12.789321000013842,
+      "total_ms": 13.145822999945267,
+      "raw_submit_ms": 0.24826799995025794,
+      "clear_ms": 0.055321999980151304
+    },
+    {
+      "name": "native_native",
+      "repeat": 1,
+      "submit_ms": 0.13077500000235887,
+      "wait_ms": 13.276885999971455,
+      "total_ms": 13.407660999973814,
+      "raw_submit_ms": 0.024051000082181417,
+      "clear_ms": 0.09882300003027922
+    },
+    {
+      "name": "python_native",
+      "repeat": 2,
+      "submit_ms": 0.44223400004739233,
+      "wait_ms": 12.687427999935608,
+      "total_ms": 13.129661999983,
+      "raw_submit_ms": 0.2868190000526738,
+      "clear_ms": 0.05251100003533793
+    },
+    {
+      "name": "python_python",
+      "repeat": 2,
+      "submit_ms": 0.36352099994019227,
+      "wait_ms": 12.757430000078784,
+      "total_ms": 13.120951000018977,
+      "raw_submit_ms": 0.2517880000141304,
+      "clear_ms": 0.055911999993440986
+    },
+    {
+      "name": "native_native",
+      "repeat": 2,
+      "submit_ms": 0.1348940000980292,
+      "wait_ms": 13.147212999911062,
+      "total_ms": 13.282107000009091,
+      "raw_submit_ms": 0.027200999966225936,
+      "clear_ms": 0.052572000072359515
+    },
+    {
+      "name": "native_python",
+      "repeat": 2,
+      "submit_ms": 0.13103500009492564,
+      "wait_ms": 13.198773999988589,
+      "total_ms": 13.329809000083515,
+      "raw_submit_ms": 0.023770999973748985,
+      "clear_ms": 0.055890999988150725
+    },
+    {
+      "name": "python_python",
+      "repeat": 3,
+      "submit_ms": 0.3585910000083459,
+      "wait_ms": 12.724848999937421,
+      "total_ms": 13.083439999945767,
+      "raw_submit_ms": 0.25091799989240826,
+      "clear_ms": 0.054821999924570264
+    },
+    {
+      "name": "native_native",
+      "repeat": 3,
+      "submit_ms": 0.13118399999711983,
+      "wait_ms": 13.16087299994706,
+      "total_ms": 13.29205699994418,
+      "raw_submit_ms": 0.024080999992293073,
+      "clear_ms": 0.052482000000964035
+    },
+    {
+      "name": "native_python",
+      "repeat": 3,
+      "submit_ms": 0.13128400007644814,
+      "wait_ms": 13.191463999987718,
+      "total_ms": 13.322748000064166,
+      "raw_submit_ms": 0.023940000005495676,
+      "clear_ms": 0.05478100001710118
+    },
+    {
+      "name": "python_native",
+      "repeat": 3,
+      "submit_ms": 0.35802200000034645,
+      "wait_ms": 12.734068999975534,
+      "total_ms": 13.09209099997588,
+      "raw_submit_ms": 0.25052799992408836,
+      "clear_ms": 0.05254200004856102
+    },
+    {
+      "name": "native_native",
+      "repeat": 4,
+      "submit_ms": 0.13119400000505266,
+      "wait_ms": 13.152353000009498,
+      "total_ms": 13.28354700001455,
+      "raw_submit_ms": 0.02388099994732329,
+      "clear_ms": 0.053041999990455224
+    },
+    {
+      "name": "native_python",
+      "repeat": 4,
+      "submit_ms": 0.1328339999417949,
+      "wait_ms": 13.169773000072382,
+      "total_ms": 13.302607000014177,
+      "raw_submit_ms": 0.02405999998700281,
+      "clear_ms": 0.05506200000127137
+    },
+    {
+      "name": "python_native",
+      "repeat": 4,
+      "submit_ms": 0.3565009999419999,
+      "wait_ms": 12.696768000068914,
+      "total_ms": 13.053269000010914,
+      "raw_submit_ms": 0.24794799992378103,
+      "clear_ms": 0.05268200004593382
+    },
+    {
+      "name": "python_python",
+      "repeat": 4,
+      "submit_ms": 0.3585220000559275,
+      "wait_ms": 12.721588999966116,
+      "total_ms": 13.080111000022043,
+      "raw_submit_ms": 0.24960799999007577,
+      "clear_ms": 0.055502000009255426
+    },
+    {
+      "name": "native_python",
+      "repeat": 5,
+      "submit_ms": 0.1312249999045889,
+      "wait_ms": 13.177263000102357,
+      "total_ms": 13.308488000006946,
+      "raw_submit_ms": 0.02340000003187015,
+      "clear_ms": 0.05671200005963328
+    },
+    {
+      "name": "python_native",
+      "repeat": 5,
+      "submit_ms": 0.35662099992350704,
+      "wait_ms": 12.736940000081631,
+      "total_ms": 13.093561000005138,
+      "raw_submit_ms": 0.24931799998739734,
+      "clear_ms": 0.05262199999833683
+    },
+    {
+      "name": "python_python",
+      "repeat": 5,
+      "submit_ms": 0.3565619999790215,
+      "wait_ms": 12.757430000078784,
+      "total_ms": 13.113992000057806,
+      "raw_submit_ms": 0.24788799998987088,
+      "clear_ms": 0.055411999937859946
+    },
+    {
+      "name": "native_native",
+      "repeat": 5,
+      "submit_ms": 0.13217499997608684,
+      "wait_ms": 13.177272999996603,
+      "total_ms": 13.30944799997269,
+      "raw_submit_ms": 0.023940999994920276,
+      "clear_ms": 0.052752000101463636
+    },
+    {
+      "name": "python_native",
+      "repeat": 6,
+      "submit_ms": 0.3736920000392274,
+      "wait_ms": 12.67132699990725,
+      "total_ms": 13.045018999946478,
+      "raw_submit_ms": 0.2662890000237894,
+      "clear_ms": 0.052742000093530805
+    },
+    {
+      "name": "python_python",
+      "repeat": 6,
+      "submit_ms": 0.356171000021277,
+      "wait_ms": 12.742150000008223,
+      "total_ms": 13.0983210000295,
+      "raw_submit_ms": 0.24878800002170465,
+      "clear_ms": 0.055571999951098405
+    },
+    {
+      "name": "native_native",
+      "repeat": 6,
+      "submit_ms": 0.13182500003949826,
+      "wait_ms": 13.136052000049858,
+      "total_ms": 13.267877000089356,
+      "raw_submit_ms": 0.02397099990503193,
+      "clear_ms": 0.052471000003606605
+    },
+    {
+      "name": "native_python",
+      "repeat": 6,
+      "submit_ms": 0.13074399998913577,
+      "wait_ms": 13.208384999984446,
+      "total_ms": 13.339128999973582,
+      "raw_submit_ms": 0.02349100009269023,
+      "clear_ms": 0.054512000019713014
+    },
+    {
+      "name": "python_python",
+      "repeat": 7,
+      "submit_ms": 0.3573610000557892,
+      "wait_ms": 12.72974999994858,
+      "total_ms": 13.08711100000437,
+      "raw_submit_ms": 0.2488479999556148,
+      "clear_ms": 0.05542199994579278
+    },
+    {
+      "name": "native_native",
+      "repeat": 7,
+      "submit_ms": 0.13102399998388137,
+      "wait_ms": 13.18760399999519,
+      "total_ms": 13.318627999979071,
+      "raw_submit_ms": 0.023920999979054614,
+      "clear_ms": 0.05309200003011938
+    },
+    {
+      "name": "native_python",
+      "repeat": 7,
+      "submit_ms": 0.13190399999984947,
+      "wait_ms": 13.20081400001527,
+      "total_ms": 13.33271800001512,
+      "raw_submit_ms": 0.02382100001341314,
+      "clear_ms": 0.05489199998010008
+    },
+    {
+      "name": "python_native",
+      "repeat": 7,
+      "submit_ms": 0.3562710001006053,
+      "wait_ms": 12.719758999992337,
+      "total_ms": 13.076030000092942,
+      "raw_submit_ms": 0.24906800001645024,
+      "clear_ms": 0.052242000037949765
+    },
+    {
+      "name": "native_native",
+      "repeat": 8,
+      "submit_ms": 0.13226399994437088,
+      "wait_ms": 13.185324000005494,
+      "total_ms": 13.317587999949865,
+      "raw_submit_ms": 0.023721000047771668,
+      "clear_ms": 0.05292200000894809
+    },
+    {
+      "name": "native_python",
+      "repeat": 8,
+      "submit_ms": 0.13045400010014419,
+      "wait_ms": 13.23650499989526,
+      "total_ms": 13.366958999995404,
+      "raw_submit_ms": 0.023870999939390458,
+      "clear_ms": 0.05543199995372561
+    },
+    {
+      "name": "python_native",
+      "repeat": 8,
+      "submit_ms": 0.3563110000186498,
+      "wait_ms": 12.723099000027105,
+      "total_ms": 13.079410000045755,
+      "raw_submit_ms": 0.24915799997415888,
+      "clear_ms": 0.052402000051188224
+    },
+    {
+      "name": "python_python",
+      "repeat": 8,
+      "submit_ms": 0.35587100001066574,
+      "wait_ms": 12.739070000066022,
+      "total_ms": 13.094941000076687,
+      "raw_submit_ms": 0.24877799990008498,
+      "clear_ms": 0.055411000062122184
+    }
+  ],
+  "profiles": [
+    {
+      "name": "native_native",
+      "rows": [
+        [
+          0,
+          0,
+          704
+        ],
+        [
+          1,
+          704,
+          672
+        ],
+        [
+          2,
+          1376,
+          672
+        ]
+      ],
+      "job_ids": [
+        170,
+        139,
+        108
+      ],
+      "counters": {
+        "0": {
+          "compute_cycles": 2977920,
+          "load_cycles": 1331789,
+          "store_cycles": 3041608,
+          "read_bytes": 12451840,
+          "write_bytes": 5767168,
+          "cycles": 3251510,
+          "saturated": false
+        },
+        "1": {
+          "compute_cycles": 2842560,
+          "load_cycles": 1592875,
+          "store_cycles": 2905774,
+          "read_bytes": 12124160,
+          "write_bytes": 5505024,
+          "cycles": 3114270,
+          "saturated": false
+        },
+        "2": {
+          "compute_cycles": 2842560,
+          "load_cycles": 1519755,
+          "store_cycles": 2907385,
+          "read_bytes": 12124160,
+          "write_bytes": 5505024,
+          "cycles": 3158180,
+          "saturated": false
+        }
+      },
+      "hardware_error_cores": []
+    },
+    {
+      "name": "native_python",
+      "rows": [
+        [
+          0,
+          0,
+          704
+        ],
+        [
+          1,
+          704,
+          672
+        ],
+        [
+          2,
+          1376,
+          672
+        ]
+      ],
+      "job_ids": [
+        171,
+        140,
+        109
+      ],
+      "counters": {
+        "0": {
+          "compute_cycles": 2977920,
+          "load_cycles": 1330931,
+          "store_cycles": 3041508,
+          "read_bytes": 12451840,
+          "write_bytes": 5767168,
+          "cycles": 3251396,
+          "saturated": false
+        },
+        "1": {
+          "compute_cycles": 2842560,
+          "load_cycles": 1592136,
+          "store_cycles": 2905869,
+          "read_bytes": 12124160,
+          "write_bytes": 5505024,
+          "cycles": 3114122,
+          "saturated": false
+        },
+        "2": {
+          "compute_cycles": 2842560,
+          "load_cycles": 1519539,
+          "store_cycles": 2907513,
+          "read_bytes": 12124160,
+          "write_bytes": 5505024,
+          "cycles": 3158267,
+          "saturated": false
+        }
+      },
+      "hardware_error_cores": []
+    },
+    {
+      "name": "python_native",
+      "rows": [
+        [
+          0,
+          0,
+          704
+        ],
+        [
+          1,
+          704,
+          672
+        ],
+        [
+          2,
+          1376,
+          672
+        ]
+      ],
+      "job_ids": [
+        172,
+        141,
+        110
+      ],
+      "counters": {
+        "0": {
+          "compute_cycles": 2977920,
+          "load_cycles": 1253566,
+          "store_cycles": 3041691,
+          "read_bytes": 12451840,
+          "write_bytes": 5767168,
+          "cycles": 3167585,
+          "saturated": false
+        },
+        "1": {
+          "compute_cycles": 2842560,
+          "load_cycles": 1248477,
+          "store_cycles": 2903878,
+          "read_bytes": 12124160,
+          "write_bytes": 5505024,
+          "cycles": 3079543,
+          "saturated": false
+        },
+        "2": {
+          "compute_cycles": 2842560,
+          "load_cycles": 1145242,
+          "store_cycles": 2904120,
+          "read_bytes": 12124160,
+          "write_bytes": 5505024,
+          "cycles": 3141094,
+          "saturated": false
+        }
+      },
+      "hardware_error_cores": []
+    },
+    {
+      "name": "python_python",
+      "rows": [
+        [
+          0,
+          0,
+          704
+        ],
+        [
+          1,
+          704,
+          672
+        ],
+        [
+          2,
+          1376,
+          672
+        ]
+      ],
+      "job_ids": [
+        173,
+        142,
+        111
+      ],
+      "counters": {
+        "0": {
+          "compute_cycles": 2977920,
+          "load_cycles": 1253073,
+          "store_cycles": 3041627,
+          "read_bytes": 12451840,
+          "write_bytes": 5767168,
+          "cycles": 3167392,
+          "saturated": false
+        },
+        "1": {
+          "compute_cycles": 2842560,
+          "load_cycles": 1248502,
+          "store_cycles": 2903767,
+          "read_bytes": 12124160,
+          "write_bytes": 5505024,
+          "cycles": 3079671,
+          "saturated": false
+        },
+        "2": {
+          "compute_cycles": 2842560,
+          "load_cycles": 1145418,
+          "store_cycles": 2904075,
+          "read_bytes": 12124160,
+          "write_bytes": 5505024,
+          "cycles": 3141210,
+          "saturated": false
+        }
+      },
+      "hardware_error_cores": []
+    }
+  ],
+  "summary": {
+    "native_native": {
+      "submit_ms": 0.13150950002227546,
+      "wait_ms": 13.169072999971831,
+      "total_ms": 13.300752499958435,
+      "raw_submit_ms": 0.023955999949976103,
+      "clear_ms": 0.05283700005520586
+    },
+    "native_python": {
+      "submit_ms": 0.13112999999975727,
+      "wait_ms": 13.195118999988154,
+      "total_ms": 13.32627850007384,
+      "raw_submit_ms": 0.023795999993581063,
+      "clear_ms": 0.054976999990685727
+    },
+    "python_native": {
+      "submit_ms": 0.35732149996192675,
+      "wait_ms": 12.720773999944868,
+      "total_ms": 13.080085500007499,
+      "raw_submit_ms": 0.24987299997292212,
+      "clear_ms": 0.052526500041949475
+    },
+    "python_python": {
+      "submit_ms": 0.35696150001740534,
+      "wait_ms": 12.740610000037123,
+      "total_ms": 13.096631000053094,
+      "raw_submit_ms": 0.24881799998865972,
+      "clear_ms": 0.05541699994182636
+    }
+  },
+  "pl_mhz": 249.9975,
+  "cpu_mhz": 1049.9895
+}

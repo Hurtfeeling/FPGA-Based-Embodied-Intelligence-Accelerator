@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-11-03T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="05_softmax_datapath" name="四路 FP32 Softmax 数据通路">
+    <mxGraphModel dx="1380" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1380" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="input" value="DDR 输入&lt;br&gt;128 位 / beat&lt;br&gt;4 个 FP32 元素" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="120" width="230" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="inram" value="输入行 BRAM 16 KiB&lt;br&gt;4 个 1024×32 位 bank&lt;br&gt;加载同时更新最大值 m" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="335" y="120" width="320" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="exp" value="4 路减法与指数流水&lt;br&gt;z = x − m；exp(z)&lt;br&gt;log2(e) 乘法 + 1024 段 ROM 线性插值" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="745" y="120" width="570" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="outram" value="输出行 BRAM 16 KiB&lt;br&gt;先写入指数 e；归一化后保存概率 p&lt;br&gt;4 个 1024×32 位 bank" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="745" y="330" width="570" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="sum" value="4 路对齐与进位保存求和&lt;br&gt;UQ16.48 → CSA 归约 → 行末完整加法&lt;br&gt;S = Σ exp(x − m)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="330" width="570" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="recip" value="每行一次倒数&lt;br&gt;r = 1 / S" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=19;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="540" width="285" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="normalize" value="4 路 FP32 归一化&lt;br&gt;p = e × r&lt;br&gt;归一化后写回输出行缓存" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="415" y="540" width="430" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="writer" value="TX 队列与 AXI 写回&lt;br&gt;读出概率 p&lt;br&gt;最终等待 B 响应" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="540" width="285" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="FP32 输入" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="input" target="inram">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="计算 x−m" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="inram" target="exp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="保存 e" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="exp" target="outram">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="指数归约流" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="exp" target="sum">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="行和 S" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="sum" target="recip">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="倒数 r" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="recip" target="normalize">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="读取 e" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="outram" target="normalize">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="覆写为 p" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#186b61;endArrow=block;endFill=1;" edge="1" parent="1" source="normalize" target="outram">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="输出概率" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="outram" target="writer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" value="行间重叠：EXP(n) 与 LOAD(n+1)；STORE(n) 可与 EXP(n+1) 重叠" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#526274;" vertex="1" parent="1">
+          <mxGeometry x="100" y="720" width="1190" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="地址安全读出后才允许覆盖；模块阶段并非全部同拍启动" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#526274;" vertex="1" parent="1">
+          <mxGeometry x="100" y="765" width="1190" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

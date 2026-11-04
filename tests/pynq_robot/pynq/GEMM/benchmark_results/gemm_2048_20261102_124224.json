@@ -1,0 +1,1585 @@
+{
+  "shape": [
+    2048,
+    2048,
+    2048
+  ],
+  "dtype": "INT8 x INT8 -> INT32",
+  "seed": 1,
+  "repeats": 6,
+  "hardware": {
+    "gemm": [
+      {
+        "kind": "gemm",
+        "name": "gemm_accelerator_top_0",
+        "base": 2147483648,
+        "length": 512,
+        "ddr_ranges": [
+          [
+            0,
+            2147483648
+          ]
+        ]
+      },
+      {
+        "kind": "gemm",
+        "name": "gemm_accelerator_top_1",
+        "base": 2147487744,
+        "length": 512,
+        "ddr_ranges": [
+          [
+            0,
+            2147483648
+          ]
+        ]
+      },
+      {
+        "kind": "gemm",
+        "name": "gemm_accelerator_top_2",
+        "base": 2147491840,
+        "length": 512,
+        "ddr_ranges": [
+          [
+            0,
+            2147483648
+          ]
+        ]
+      }
+    ],
+    "softmax": {
+      "kind": "softmax",
+      "name": "softmax_accelerator_0",
+      "base": 2415919104,
+      "length": 512,
+      "ddr_ranges": [
+        [
+          0,
+          2147483648
+        ]
+      ]
+    }
+  },
+  "records": [
+    {
+      "mode": "CPU",
+      "repeat": 1,
+      "total_s": 1.195304232001945,
+      "output_copy_s": 0.011650822001683991,
+      "profile": {
+        "seconds": 1.183653410000261,
+        "packing_seconds": 0.010541110998019576,
+        "compute_seconds": 1.1728541190022952,
+        "transpose_seconds": 0.00523003599664662,
+        "postprocess_seconds": 1.59599949256517e-05,
+        "software_preprocess_seconds": 0.005553295006393455,
+        "parallelism": 3.9907372401791767,
+        "plan": {
+          "variant": 2,
+          "mb": 32,
+          "nb": 128,
+          "pad": 0,
+          "mode": 1,
+          "block": 32,
+          "pack_threads": 4
+        },
+        "kernel": "NEON 8x2 MB=32 NB=128 BTpad=0 pack=1x4",
+        "gops": 14.514273383452858
+      },
+      "verified": true
+    },
+    {
+      "mode": "PL1",
+      "repeat": 1,
+      "cores": [
+        0
+      ],
+      "total_s": 0.0588680619985098,
+      "copy_a_s": 0.0020782219944521785,
+      "transpose_call_s": 0.004840455003431998,
+      "transpose_profile": {
+        "seconds": 0.00464790499972878,
+        "transpose_s": 0.004485773999476805,
+        "native_startup_s": 5.082000279799104e-05,
+        "python_wrapper_s": 9.308099834015593e-05,
+        "software_preprocess_s": 0.00014390100113814697,
+        "postprocess_s": 1.8229999113827944e-05
+      },
+      "input_sync_s": 0.0023317829982261173,
+      "submit_s": 0.0008854010011418723,
+      "wait_s": 0.03639854799985187,
+      "output_sync_s": 0.0013867610032320954,
+      "output_copy_s": 0.010946891998173669,
+      "validation_s": 0.45208224299858557,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 2048,
+          "counters": {
+            "cycles": 9035025,
+            "compute_cycles": 8663040,
+            "load_cycles": 2181503,
+            "store_cycles": 8817283,
+            "read_bytes": 34078720,
+            "write_bytes": 16777216,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.03614046140461405,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "PL2",
+      "repeat": 1,
+      "cores": [
+        0,
+        1
+      ],
+      "total_s": 0.04539972799830139,
+      "copy_a_s": 0.002346772998862434,
+      "transpose_call_s": 0.008325838003656827,
+      "transpose_profile": {
+        "seconds": 0.008155767995049246,
+        "transpose_s": 0.004461595002794638,
+        "native_startup_s": 0.003584352998586837,
+        "python_wrapper_s": 9.479999425821006e-05,
+        "software_preprocess_s": 0.0036791529928450473,
+        "postprocess_s": 1.5019999409560114e-05
+      },
+      "input_sync_s": 0.002325472996744793,
+      "submit_s": 0.001339271002507303,
+      "wait_s": 0.018732799995632377,
+      "output_sync_s": 0.0013926910032751039,
+      "output_copy_s": 0.01093688199762255,
+      "validation_s": 0.44983292100369,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 1024,
+          "counters": {
+            "cycles": 4543802,
+            "compute_cycles": 4331520,
+            "load_cycles": 1234808,
+            "store_cycles": 4413295,
+            "read_bytes": 17301504,
+            "write_bytes": 8388608,
+            "saturated": false
+          }
+        },
+        {
+          "core": 1,
+          "start": 1024,
+          "rows": 1024,
+          "counters": {
+            "cycles": 4571171,
+            "compute_cycles": 4331520,
+            "load_cycles": 1235565,
+            "store_cycles": 4413739,
+            "read_bytes": 17301504,
+            "write_bytes": 8388608,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.018284866848668486,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "PL3",
+      "repeat": 1,
+      "cores": [
+        0,
+        1,
+        2
+      ],
+      "total_s": 0.040551541998866014,
+      "copy_a_s": 0.002323432003322523,
+      "transpose_call_s": 0.00868675899982918,
+      "transpose_profile": {
+        "seconds": 0.008517359005054459,
+        "transpose_s": 0.004460225005459506,
+        "native_startup_s": 0.0039474139994126745,
+        "python_wrapper_s": 9.418000263394788e-05,
+        "software_preprocess_s": 0.004041594002046622,
+        "postprocess_s": 1.5539997548330575e-05
+      },
+      "input_sync_s": 0.0023247930002980866,
+      "submit_s": 0.001757070996973198,
+      "wait_s": 0.013158884001313709,
+      "output_sync_s": 0.0013785019982606173,
+      "output_copy_s": 0.0109221009988687,
+      "validation_s": 0.45024089100479614,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 704,
+          "counters": {
+            "cycles": 3219266,
+            "compute_cycles": 2977920,
+            "load_cycles": 1456583,
+            "store_cycles": 3042247,
+            "read_bytes": 12451840,
+            "write_bytes": 5767168,
+            "saturated": false
+          }
+        },
+        {
+          "core": 1,
+          "start": 704,
+          "rows": 672,
+          "counters": {
+            "cycles": 3089668,
+            "compute_cycles": 2842560,
+            "load_cycles": 1293096,
+            "store_cycles": 2904794,
+            "read_bytes": 12124160,
+            "write_bytes": 5505024,
+            "saturated": false
+          }
+        },
+        {
+          "core": 2,
+          "start": 1376,
+          "rows": 672,
+          "counters": {
+            "cycles": 3139048,
+            "compute_cycles": 2842560,
+            "load_cycles": 1361209,
+            "store_cycles": 2907990,
+            "read_bytes": 12124160,
+            "write_bytes": 5505024,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.012877192771927719,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "CPU",
+      "repeat": 2,
+      "total_s": 1.2034508869983256,
+      "output_copy_s": 0.01162509299319936,
+      "profile": {
+        "seconds": 1.1918257940051262,
+        "packing_seconds": 0.00529452499904437,
+        "compute_seconds": 1.18626718899759,
+        "transpose_seconds": 0.005170055002963636,
+        "postprocess_seconds": 3.222000668756664e-05,
+        "software_preprocess_seconds": 0.00035632999788504094,
+        "parallelism": 3.958929964141105,
+        "plan": {
+          "variant": 2,
+          "mb": 32,
+          "nb": 128,
+          "pad": 0,
+          "mode": 1,
+          "block": 32,
+          "pack_threads": 4
+        },
+        "kernel": "NEON 8x2 MB=32 NB=128 BTpad=0 pack=1x4",
+        "gops": 14.414748590284418
+      },
+      "verified": true
+    },
+    {
+      "mode": "PL3",
+      "repeat": 2,
+      "cores": [
+        0,
+        1,
+        2
+      ],
+      "total_s": 0.032799214000988286,
+      "copy_a_s": 0.0019855520004057325,
+      "transpose_call_s": 0.004807514997082762,
+      "transpose_profile": {
+        "seconds": 0.004612955002812669,
+        "transpose_s": 0.004451535001862794,
+        "native_startup_s": 4.888999683316797e-05,
+        "python_wrapper_s": 9.468000644119456e-05,
+        "software_preprocess_s": 0.00014357000327436253,
+        "postprocess_s": 1.7849997675511986e-05
+      },
+      "input_sync_s": 0.002412622001429554,
+      "submit_s": 0.001939472000231035,
+      "wait_s": 0.013117604001308791,
+      "output_sync_s": 0.0015053320021252148,
+      "output_copy_s": 0.007031116998405196,
+      "validation_s": 0.45016195000062,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 704,
+          "counters": {
+            "cycles": 3222051,
+            "compute_cycles": 2977920,
+            "load_cycles": 1467962,
+            "store_cycles": 3041895,
+            "read_bytes": 12451840,
+            "write_bytes": 5767168,
+            "saturated": false
+          }
+        },
+        {
+          "core": 1,
+          "start": 704,
+          "rows": 672,
+          "counters": {
+            "cycles": 3093373,
+            "compute_cycles": 2842560,
+            "load_cycles": 1308804,
+            "store_cycles": 2905111,
+            "read_bytes": 12124160,
+            "write_bytes": 5505024,
+            "saturated": false
+          }
+        },
+        {
+          "core": 2,
+          "start": 1376,
+          "rows": 672,
+          "counters": {
+            "cycles": 3142485,
+            "compute_cycles": 2842560,
+            "load_cycles": 1369255,
+            "store_cycles": 2908081,
+            "read_bytes": 12124160,
+            "write_bytes": 5505024,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.012888332883328833,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "PL2",
+      "repeat": 2,
+      "cores": [
+        0,
+        1
+      ],
+      "total_s": 0.040849242999684066,
+      "copy_a_s": 0.0024581529942224734,
+      "transpose_call_s": 0.007841247999749612,
+      "transpose_profile": {
+        "seconds": 0.007672147999983281,
+        "transpose_s": 0.004510355000093114,
+        "native_startup_s": 0.003047002996027004,
+        "python_wrapper_s": 9.560000034980476e-05,
+        "software_preprocess_s": 0.0031426029963768087,
+        "postprocess_s": 1.9190003513358533e-05
+      },
+      "input_sync_s": 0.0023663020037929527,
+      "submit_s": 0.0012768320011673495,
+      "wait_s": 0.018677868996746838,
+      "output_sync_s": 0.0013774020044365898,
+      "output_copy_s": 0.00685143699956825,
+      "validation_s": 0.4335776519947103,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 1024,
+          "counters": {
+            "cycles": 4544342,
+            "compute_cycles": 4331520,
+            "load_cycles": 1241456,
+            "store_cycles": 4413250,
+            "read_bytes": 17301504,
+            "write_bytes": 8388608,
+            "saturated": false
+          }
+        },
+        {
+          "core": 1,
+          "start": 1024,
+          "rows": 1024,
+          "counters": {
+            "cycles": 4571882,
+            "compute_cycles": 4331520,
+            "load_cycles": 1241696,
+            "store_cycles": 4413992,
+            "read_bytes": 17301504,
+            "write_bytes": 8388608,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.01828771087710877,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "PL1",
+      "repeat": 2,
+      "cores": [
+        0
+      ],
+      "total_s": 0.05790574000275228,
+      "copy_a_s": 0.0021203020005486906,
+      "transpose_call_s": 0.007950687999255024,
+      "transpose_profile": {
+        "seconds": 0.007779008003126364,
+        "transpose_s": 0.0044608250027522445,
+        "native_startup_s": 0.003207452995411586,
+        "python_wrapper_s": 9.560000762576237e-05,
+        "software_preprocess_s": 0.0033030530030373484,
+        "postprocess_s": 1.512999733677134e-05
+      },
+      "input_sync_s": 0.002326952999283094,
+      "submit_s": 0.0008855109990690835,
+      "wait_s": 0.036398488002305385,
+      "output_sync_s": 0.0013773109967587516,
+      "output_copy_s": 0.0068464870055322535,
+      "validation_s": 0.43445206299657,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 2048,
+          "counters": {
+            "cycles": 9034962,
+            "compute_cycles": 8663040,
+            "load_cycles": 2180942,
+            "store_cycles": 8817272,
+            "read_bytes": 34078720,
+            "write_bytes": 16777216,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.036140209402094024,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "CPU",
+      "repeat": 3,
+      "total_s": 1.211007502002758,
+      "output_copy_s": 0.013756833999650553,
+      "profile": {
+        "seconds": 1.1972506680031074,
+        "packing_seconds": 0.007766488000925165,
+        "compute_seconds": 1.1892382399964845,
+        "transpose_seconds": 0.00518293500499567,
+        "postprocess_seconds": 3.434999962337315e-05,
+        "software_preprocess_seconds": 0.002795143002003897,
+        "parallelism": 3.9548096771710783,
+        "plan": {
+          "variant": 2,
+          "mb": 32,
+          "nb": 128,
+          "pad": 0,
+          "mode": 1,
+          "block": 32,
+          "pack_threads": 4
+        },
+        "kernel": "NEON 8x2 MB=32 NB=128 BTpad=0 pack=1x4",
+        "gops": 14.34943378453426
+      },
+      "verified": true
+    },
+    {
+      "mode": "PL1",
+      "repeat": 3,
+      "cores": [
+        0
+      ],
+      "total_s": 0.05862783100019442,
+      "copy_a_s": 0.002012721997743938,
+      "transpose_call_s": 0.004804945005162153,
+      "transpose_profile": {
+        "seconds": 0.004609664996678475,
+        "transpose_s": 0.0044466050021583214,
+        "native_startup_s": 5.1709997933357954e-05,
+        "python_wrapper_s": 9.400999988429248e-05,
+        "software_preprocess_s": 0.00014571999781765044,
+        "postprocess_s": 1.7339996702503413e-05
+      },
+      "input_sync_s": 0.0023682629980612546,
+      "submit_s": 0.0008443209953838959,
+      "wait_s": 0.03638364800281124,
+      "output_sync_s": 0.001426590999471955,
+      "output_copy_s": 0.01078734100155998,
+      "validation_s": 0.452659542002948,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 2048,
+          "counters": {
+            "cycles": 9034924,
+            "compute_cycles": 8663040,
+            "load_cycles": 2181244,
+            "store_cycles": 8817293,
+            "read_bytes": 34078720,
+            "write_bytes": 16777216,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.03614005740057401,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "PL2",
+      "repeat": 3,
+      "cores": [
+        0,
+        1
+      ],
+      "total_s": 0.045364566998614464,
+      "copy_a_s": 0.002439831994706765,
+      "transpose_call_s": 0.008372859003429767,
+      "transpose_profile": {
+        "seconds": 0.008201779004593845,
+        "transpose_s": 0.004468245002499316,
+        "native_startup_s": 0.003621153999119997,
+        "python_wrapper_s": 9.510000381851569e-05,
+        "software_preprocess_s": 0.0037162540029385127,
+        "postprocess_s": 1.7279999156016856e-05
+      },
+      "input_sync_s": 0.0023697119977441616,
+      "submit_s": 0.0012733719995594583,
+      "wait_s": 0.018710609001573175,
+      "output_sync_s": 0.0013780820008832961,
+      "output_copy_s": 0.010820101000717841,
+      "validation_s": 0.4516110499971546,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 1024,
+          "counters": {
+            "cycles": 4544353,
+            "compute_cycles": 4331520,
+            "load_cycles": 1241494,
+            "store_cycles": 4413175,
+            "read_bytes": 17301504,
+            "write_bytes": 8388608,
+            "saturated": false
+          }
+        },
+        {
+          "core": 1,
+          "start": 1024,
+          "rows": 1024,
+          "counters": {
+            "cycles": 4571886,
+            "compute_cycles": 4331520,
+            "load_cycles": 1241766,
+            "store_cycles": 4413689,
+            "read_bytes": 17301504,
+            "write_bytes": 8388608,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.018287726877268772,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "PL3",
+      "repeat": 3,
+      "cores": [
+        0,
+        1,
+        2
+      ],
+      "total_s": 0.036553177997120656,
+      "copy_a_s": 0.0019948219996877015,
+      "transpose_call_s": 0.004819174995645881,
+      "transpose_profile": {
+        "seconds": 0.004623774999345187,
+        "transpose_s": 0.004447314997378271,
+        "native_startup_s": 6.188000406837091e-05,
+        "python_wrapper_s": 9.652999870013446e-05,
+        "software_preprocess_s": 0.00015841000276850536,
+        "postprocess_s": 1.804999919841066e-05
+      },
+      "input_sync_s": 0.0023705519997747615,
+      "submit_s": 0.001716872000542935,
+      "wait_s": 0.013158034002117347,
+      "output_sync_s": 0.0013869109970983118,
+      "output_copy_s": 0.011106812002253719,
+      "validation_s": 0.44995450799615355,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 704,
+          "counters": {
+            "cycles": 3212514,
+            "compute_cycles": 2977920,
+            "load_cycles": 1542237,
+            "store_cycles": 3041883,
+            "read_bytes": 12451840,
+            "write_bytes": 5767168,
+            "saturated": false
+          }
+        },
+        {
+          "core": 1,
+          "start": 704,
+          "rows": 672,
+          "counters": {
+            "cycles": 3095678,
+            "compute_cycles": 2842560,
+            "load_cycles": 1322135,
+            "store_cycles": 2905927,
+            "read_bytes": 12124160,
+            "write_bytes": 5505024,
+            "saturated": false
+          }
+        },
+        {
+          "core": 2,
+          "start": 1376,
+          "rows": 672,
+          "counters": {
+            "cycles": 3159881,
+            "compute_cycles": 2842560,
+            "load_cycles": 1488016,
+            "store_cycles": 2909987,
+            "read_bytes": 12124160,
+            "write_bytes": 5505024,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.01285018450184502,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "CPU",
+      "repeat": 4,
+      "total_s": 1.220991829999548,
+      "output_copy_s": 0.011780492000980303,
+      "profile": {
+        "seconds": 1.2092113379985676,
+        "packing_seconds": 0.00524163600493921,
+        "compute_seconds": 1.2037227409964544,
+        "transpose_seconds": 0.00519845600501867,
+        "postprocess_seconds": 3.789100446738303e-05,
+        "software_preprocess_seconds": 0.00025224999262718484,
+        "parallelism": 3.920747178119402,
+        "plan": {
+          "variant": 2,
+          "mb": 32,
+          "nb": 128,
+          "pad": 0,
+          "mode": 1,
+          "block": 32,
+          "pack_threads": 4
+        },
+        "kernel": "NEON 8x2 MB=32 NB=128 BTpad=0 pack=1x4",
+        "gops": 14.207499255204926
+      },
+      "verified": true
+    },
+    {
+      "mode": "PL3",
+      "repeat": 4,
+      "cores": [
+        0,
+        1,
+        2
+      ],
+      "total_s": 0.032326384003681596,
+      "copy_a_s": 0.0019919920014217496,
+      "transpose_call_s": 0.004804434996913187,
+      "transpose_profile": {
+        "seconds": 0.004611035001289565,
+        "transpose_s": 0.004446355000254698,
+        "native_startup_s": 5.0310001824982464e-05,
+        "python_wrapper_s": 9.658999624662101e-05,
+        "software_preprocess_s": 0.00014689999807160348,
+        "postprocess_s": 1.778000296326354e-05
+      },
+      "input_sync_s": 0.002364543004659936,
+      "submit_s": 0.0017172509978991002,
+      "wait_s": 0.0132514139986597,
+      "output_sync_s": 0.001377732005494181,
+      "output_copy_s": 0.006819016998633742,
+      "validation_s": 0.45110521799506387,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 704,
+          "counters": {
+            "cycles": 3219979,
+            "compute_cycles": 2977920,
+            "load_cycles": 1459554,
+            "store_cycles": 3042215,
+            "read_bytes": 12451840,
+            "write_bytes": 5767168,
+            "saturated": false
+          }
+        },
+        {
+          "core": 1,
+          "start": 704,
+          "rows": 672,
+          "counters": {
+            "cycles": 3090483,
+            "compute_cycles": 2842560,
+            "load_cycles": 1298642,
+            "store_cycles": 2904865,
+            "read_bytes": 12124160,
+            "write_bytes": 5505024,
+            "saturated": false
+          }
+        },
+        {
+          "core": 2,
+          "start": 1376,
+          "rows": 672,
+          "counters": {
+            "cycles": 3139532,
+            "compute_cycles": 2842560,
+            "load_cycles": 1361585,
+            "store_cycles": 2907867,
+            "read_bytes": 12124160,
+            "write_bytes": 5505024,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.012880044800448005,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "PL2",
+      "repeat": 4,
+      "cores": [
+        0,
+        1
+      ],
+      "total_s": 0.04105171200353652,
+      "copy_a_s": 0.0025062420027097687,
+      "transpose_call_s": 0.008001898000657093,
+      "transpose_profile": {
+        "seconds": 0.007832228002371266,
+        "transpose_s": 0.006481536001956556,
+        "native_startup_s": 0.0012365619986667298,
+        "python_wrapper_s": 9.63200000114739e-05,
+        "software_preprocess_s": 0.0013328819986782037,
+        "postprocess_s": 1.781000173650682e-05
+      },
+      "input_sync_s": 0.0023702929975115694,
+      "submit_s": 0.0012745509957312606,
+      "wait_s": 0.018626020006195176,
+      "output_sync_s": 0.0013782210007775575,
+      "output_copy_s": 0.006894486999954097,
+      "validation_s": 0.4376249849956366,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 1024,
+          "counters": {
+            "cycles": 4544466,
+            "compute_cycles": 4331520,
+            "load_cycles": 1241722,
+            "store_cycles": 4413241,
+            "read_bytes": 17301504,
+            "write_bytes": 8388608,
+            "saturated": false
+          }
+        },
+        {
+          "core": 1,
+          "start": 1024,
+          "rows": 1024,
+          "counters": {
+            "cycles": 4571946,
+            "compute_cycles": 4331520,
+            "load_cycles": 1242301,
+            "store_cycles": 4413896,
+            "read_bytes": 17301504,
+            "write_bytes": 8388608,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.018287966879668795,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "PL1",
+      "repeat": 4,
+      "cores": [
+        0
+      ],
+      "total_s": 0.05854140100564109,
+      "copy_a_s": 0.0022471219999715686,
+      "transpose_call_s": 0.008341528999153525,
+      "transpose_profile": {
+        "seconds": 0.008172249006747734,
+        "transpose_s": 0.004490775005251635,
+        "native_startup_s": 0.003571023997210432,
+        "python_wrapper_s": 9.629000851418823e-05,
+        "software_preprocess_s": 0.00366731400572462,
+        "postprocess_s": 1.4159995771478862e-05
+      },
+      "input_sync_s": 0.0023225120021379553,
+      "submit_s": 0.0008858910005073994,
+      "wait_s": 0.03641440800129203,
+      "output_sync_s": 0.0013772710008197464,
+      "output_copy_s": 0.006952668001758866,
+      "validation_s": 0.4358578019964625,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 2048,
+          "counters": {
+            "cycles": 9034926,
+            "compute_cycles": 8663040,
+            "load_cycles": 2181462,
+            "store_cycles": 8817276,
+            "read_bytes": 34078720,
+            "write_bytes": 16777216,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.03614006540065401,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "CPU",
+      "repeat": 5,
+      "total_s": 1.2121111480009858,
+      "output_copy_s": 0.01401944499957608,
+      "profile": {
+        "seconds": 1.1980917030014098,
+        "packing_seconds": 0.006413066999812145,
+        "compute_seconds": 1.1914331059961114,
+        "transpose_seconds": 0.00515859600272961,
+        "postprocess_seconds": 3.825000021606684e-05,
+        "software_preprocess_seconds": 0.0014617510023526847,
+        "parallelism": 3.9481907597885333,
+        "plan": {
+          "variant": 2,
+          "mb": 32,
+          "nb": 128,
+          "pad": 0,
+          "mode": 1,
+          "block": 32,
+          "pack_threads": 4
+        },
+        "kernel": "NEON 8x2 MB=32 NB=128 BTpad=0 pack=1x4",
+        "gops": 14.339360785957954
+      },
+      "verified": true
+    },
+    {
+      "mode": "PL1",
+      "repeat": 5,
+      "cores": [
+        0
+      ],
+      "total_s": 0.058641850999265444,
+      "copy_a_s": 0.0020609420025721192,
+      "transpose_call_s": 0.004811624996364117,
+      "transpose_profile": {
+        "seconds": 0.004612525000993628,
+        "transpose_s": 0.004450325002835598,
+        "native_startup_s": 4.955999611411244e-05,
+        "python_wrapper_s": 9.544000204186887e-05,
+        "software_preprocess_s": 0.0001449999981559813,
+        "postprocess_s": 1.720000000204891e-05
+      },
+      "input_sync_s": 0.0023651720039197244,
+      "submit_s": 0.00084676099504577,
+      "wait_s": 0.036416517999896314,
+      "output_sync_s": 0.0013777409985777922,
+      "output_copy_s": 0.010763092002889607,
+      "validation_s": 0.44971307599917054,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 2048,
+          "counters": {
+            "cycles": 9034990,
+            "compute_cycles": 8663040,
+            "load_cycles": 2181115,
+            "store_cycles": 8817275,
+            "read_bytes": 34078720,
+            "write_bytes": 16777216,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.036140321403214035,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "PL2",
+      "repeat": 5,
+      "cores": [
+        0,
+        1
+      ],
+      "total_s": 0.0428167840000242,
+      "copy_a_s": 0.0020392820006236434,
+      "transpose_call_s": 0.006009406002704054,
+      "transpose_profile": {
+        "seconds": 0.00581260599574307,
+        "transpose_s": 0.0044378449965734035,
+        "native_startup_s": 0.0012560410032165237,
+        "python_wrapper_s": 0.00010143998952116817,
+        "software_preprocess_s": 0.0013574809927376918,
+        "postprocess_s": 1.728000643197447e-05
+      },
+      "input_sync_s": 0.0023619429994141683,
+      "submit_s": 0.0012751210015267134,
+      "wait_s": 0.018616518995258957,
+      "output_sync_s": 0.0013776019986835308,
+      "output_copy_s": 0.011136911001813132,
+      "validation_s": 0.44917716600321,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 1024,
+          "counters": {
+            "cycles": 4544274,
+            "compute_cycles": 4331520,
+            "load_cycles": 1241147,
+            "store_cycles": 4413239,
+            "read_bytes": 17301504,
+            "write_bytes": 8388608,
+            "saturated": false
+          }
+        },
+        {
+          "core": 1,
+          "start": 1024,
+          "rows": 1024,
+          "counters": {
+            "cycles": 4571855,
+            "compute_cycles": 4331520,
+            "load_cycles": 1241887,
+            "store_cycles": 4413744,
+            "read_bytes": 17301504,
+            "write_bytes": 8388608,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.01828760287602876,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "PL3",
+      "repeat": 5,
+      "cores": [
+        0,
+        1,
+        2
+      ],
+      "total_s": 0.04091876299935393,
+      "copy_a_s": 0.0022819929945399053,
+      "transpose_call_s": 0.00909597900317749,
+      "transpose_profile": {
+        "seconds": 0.00853799899778096,
+        "transpose_s": 0.004462604993022978,
+        "native_startup_s": 0.00396282400470227,
+        "python_wrapper_s": 9.442000009585172e-05,
+        "software_preprocess_s": 0.004057244004798122,
+        "postprocess_s": 1.8149999959859997e-05
+      },
+      "input_sync_s": 0.0023267529977601953,
+      "submit_s": 0.0017538710017106496,
+      "wait_s": 0.013213414000347257,
+      "output_sync_s": 0.0013773410028079525,
+      "output_copy_s": 0.010869411999010481,
+      "validation_s": 0.45026416600012453,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 704,
+          "counters": {
+            "cycles": 3222926,
+            "compute_cycles": 2977920,
+            "load_cycles": 1525833,
+            "store_cycles": 3041708,
+            "read_bytes": 12451840,
+            "write_bytes": 5767168,
+            "saturated": false
+          }
+        },
+        {
+          "core": 1,
+          "start": 704,
+          "rows": 672,
+          "counters": {
+            "cycles": 3104728,
+            "compute_cycles": 2842560,
+            "load_cycles": 1336646,
+            "store_cycles": 2907712,
+            "read_bytes": 12124160,
+            "write_bytes": 5505024,
+            "saturated": false
+          }
+        },
+        {
+          "core": 2,
+          "start": 1376,
+          "rows": 672,
+          "counters": {
+            "cycles": 3156449,
+            "compute_cycles": 2842560,
+            "load_cycles": 1438212,
+            "store_cycles": 2908362,
+            "read_bytes": 12124160,
+            "write_bytes": 5505024,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.012891832918329182,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "CPU",
+      "repeat": 6,
+      "total_s": 1.2247309180092998,
+      "output_copy_s": 0.011758242006180808,
+      "profile": {
+        "seconds": 1.212972676003119,
+        "packing_seconds": 0.005229606002103537,
+        "compute_seconds": 1.2074817399989115,
+        "transpose_seconds": 0.005187255999771878,
+        "postprocess_seconds": 5.0549999286886305e-05,
+        "software_preprocess_seconds": 0.0002531300051487051,
+        "parallelism": 3.912935494994949,
+        "plan": {
+          "variant": 2,
+          "mb": 32,
+          "nb": 128,
+          "pad": 0,
+          "mode": 1,
+          "block": 32,
+          "pack_threads": 4
+        },
+        "kernel": "NEON 8x2 MB=32 NB=128 BTpad=0 pack=1x4",
+        "gops": 14.163442857269956
+      },
+      "verified": true
+    },
+    {
+      "mode": "PL3",
+      "repeat": 6,
+      "cores": [
+        0,
+        1,
+        2
+      ],
+      "total_s": 0.03231336399767315,
+      "copy_a_s": 0.0019967920015915297,
+      "transpose_call_s": 0.004800675000296906,
+      "transpose_profile": {
+        "seconds": 0.004606555005011614,
+        "transpose_s": 0.004446093997103162,
+        "native_startup_s": 5.1139999413862824e-05,
+        "python_wrapper_s": 9.308100561611354e-05,
+        "software_preprocess_s": 0.00014422100502997637,
+        "postprocess_s": 1.6240002878475934e-05
+      },
+      "input_sync_s": 0.0023732729969196953,
+      "submit_s": 0.0017910620008478872,
+      "wait_s": 0.013075472998025361,
+      "output_sync_s": 0.0013779420041828416,
+      "output_copy_s": 0.006898146995808929,
+      "validation_s": 0.45135987699904945,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 704,
+          "counters": {
+            "cycles": 3218210,
+            "compute_cycles": 2977920,
+            "load_cycles": 1455254,
+            "store_cycles": 3042049,
+            "read_bytes": 12451840,
+            "write_bytes": 5767168,
+            "saturated": false
+          }
+        },
+        {
+          "core": 1,
+          "start": 704,
+          "rows": 672,
+          "counters": {
+            "cycles": 3090653,
+            "compute_cycles": 2842560,
+            "load_cycles": 1294709,
+            "store_cycles": 2904903,
+            "read_bytes": 12124160,
+            "write_bytes": 5505024,
+            "saturated": false
+          }
+        },
+        {
+          "core": 2,
+          "start": 1376,
+          "rows": 672,
+          "counters": {
+            "cycles": 3138907,
+            "compute_cycles": 2842560,
+            "load_cycles": 1359887,
+            "store_cycles": 2907936,
+            "read_bytes": 12124160,
+            "write_bytes": 5505024,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.012872968729687297,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "PL2",
+      "repeat": 6,
+      "cores": [
+        0,
+        1
+      ],
+      "total_s": 0.0408747420005966,
+      "copy_a_s": 0.0024335720008821227,
+      "transpose_call_s": 0.007939698996779043,
+      "transpose_profile": {
+        "seconds": 0.007773158002237324,
+        "transpose_s": 0.004444094003702048,
+        "native_startup_s": 0.0032176539971260354,
+        "python_wrapper_s": 9.43100021686405e-05,
+        "software_preprocess_s": 0.003311963999294676,
+        "postprocess_s": 1.7099999240599573e-05
+      },
+      "input_sync_s": 0.0023578520049341023,
+      "submit_s": 0.0012723309991997667,
+      "wait_s": 0.01865668999380432,
+      "output_sync_s": 0.0013771910016657785,
+      "output_copy_s": 0.006837407003331464,
+      "validation_s": 0.4407125959987752,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 1024,
+          "counters": {
+            "cycles": 4544253,
+            "compute_cycles": 4331520,
+            "load_cycles": 1241129,
+            "store_cycles": 4413254,
+            "read_bytes": 17301504,
+            "write_bytes": 8388608,
+            "saturated": false
+          }
+        },
+        {
+          "core": 1,
+          "start": 1024,
+          "rows": 1024,
+          "counters": {
+            "cycles": 4571944,
+            "compute_cycles": 4331520,
+            "load_cycles": 1242066,
+            "store_cycles": 4413709,
+            "read_bytes": 17301504,
+            "write_bytes": 8388608,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.018287958879588794,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    },
+    {
+      "mode": "PL1",
+      "repeat": 6,
+      "cores": [
+        0
+      ],
+      "total_s": 0.05446272600238444,
+      "copy_a_s": 0.0018285719997948036,
+      "transpose_call_s": 0.004857945001276676,
+      "transpose_profile": {
+        "seconds": 0.004664255000534467,
+        "transpose_s": 0.00444815399532672,
+        "native_startup_s": 9.901000157697126e-05,
+        "python_wrapper_s": 9.874100214801729e-05,
+        "software_preprocess_s": 0.00019775100372498855,
+        "postprocess_s": 1.835000148275867e-05
+      },
+      "input_sync_s": 0.0023702120015514083,
+      "submit_s": 0.0008459409946226515,
+      "wait_s": 0.03636038800323149,
+      "output_sync_s": 0.0013915009985794313,
+      "output_copy_s": 0.006808167003327981,
+      "validation_s": 0.43749953199585434,
+      "rows": [
+        {
+          "core": 0,
+          "start": 0,
+          "rows": 2048,
+          "counters": {
+            "cycles": 9035037,
+            "compute_cycles": 8663040,
+            "load_cycles": 2181120,
+            "store_cycles": 8817264,
+            "read_bytes": 34078720,
+            "write_bytes": 16777216,
+            "saturated": false
+          }
+        }
+      ],
+      "hardware_max_s": 0.03614050940509405,
+      "cpu_mhz": 1049.9895,
+      "pl_mhz": 249.9975,
+      "verified": true
+    }
+  ],
+  "measurement": "ordinary host A/B -> independent ordinary host C; A copy, NEON B transpose, cache sync, submit, full writeback wait, C copy included; allocations/setup/validation excluded",
+  "softmax_tested": false,
+  "dma_copy_used": false,
+  "driver_sha256": "4c72ca636c3340d72b90a3a4544d93984f5570c32d2ad32122beb98d53207d67",
+  "bitfile_sha256": "405dfca6e6a85d787b7568828b403c0f3894dba33f5e3bdd5d3f2e834eb2570f",
+  "hwh_sha256": "9e39b5e61f43bda6cf14266a8802fd11eb07e54c952dee9bf37bfab1ce802c07",
+  "clock_mhz": 249.9975,
+  "cpu_mhz": 1049.9895,
+  "cpu_frequency": [
+    {
+      "policy": "policy0",
+      "selected_khz": 1199999,
+      "reported_khz": 1049999,
+      "source": "cpuinfo_cur_freq"
+    }
+  ],
+  "cpu_plan": {
+    "variant": 2,
+    "mb": 32,
+    "nb": 128,
+    "pad": 0,
+    "mode": 1,
+    "block": 32,
+    "pack_threads": 4
+  },
+  "pack_plan": {
+    "mode": 1,
+    "block": 64,
+    "threads": 4
+  },
+  "buffers": {
+    "A": {
+      "address": 2016411648,
+      "bytes": 4194304,
+      "coherent": false
+    },
+    "BT": {
+      "address": 2020605952,
+      "bytes": 4194304,
+      "coherent": false
+    },
+    "C": {
+      "address": 2024800256,
+      "bytes": 16777216,
+      "coherent": false
+    }
+  },
+  "input_sha256": {
+    "A": "d71da1374c2f45185b3ced585778fcb3ac717152a1b52917bcf4e619659dc472",
+    "B": "7dd9c9d92bd47c9ff7b2be57ed49cc523bcaf45011baade135b4d40ea8d15e87"
+  },
+  "setup_s": 1.8350766010044026,
+  "summary": {
+    "CPU": {
+      "total_s": {
+        "median": 1.211559325001872,
+        "mean": 1.2112660861688103,
+        "minimum": 1.195304232001945,
+        "maximum": 1.2247309180092998
+      }
+    },
+    "PL1": {
+      "total_s": {
+        "median": 0.058584616002917755,
+        "mean": 0.05784126850145791,
+        "minimum": 0.05446272600238444,
+        "maximum": 0.0588680619985098
+      },
+      "hardware_max_s": {
+        "median": 0.036140265402654026,
+        "mean": 0.036140270736040696,
+        "minimum": 0.03614005740057401,
+        "maximum": 0.03614050940509405
+      },
+      "copy_a_s": {
+        "median": 0.002069581998512149,
+        "mean": 0.0020579803325138832,
+        "minimum": 0.0018285719997948036,
+        "maximum": 0.0022471219999715686
+      },
+      "transpose_call_s": {
+        "median": 0.004849200002354337,
+        "mean": 0.005934531167440582,
+        "minimum": 0.004804945005162153,
+        "maximum": 0.008341528999153525
+      },
+      "input_sync_s": {
+        "median": 0.002348477501072921,
+        "mean": 0.002347482500529926,
+        "minimum": 0.0023225120021379553,
+        "maximum": 0.0023702120015514083
+      },
+      "submit_s": {
+        "median": 0.0008660809980938211,
+        "mean": 0.0008656376642951121,
+        "minimum": 0.0008443209953838959,
+        "maximum": 0.0008858910005073994
+      },
+      "wait_s": {
+        "median": 0.03639851800107863,
+        "mean": 0.03639533300156472,
+        "minimum": 0.03636038800323149,
+        "maximum": 0.036416517999896314
+      },
+      "output_sync_s": {
+        "median": 0.0013822510009049438,
+        "mean": 0.0013895293329066287,
+        "minimum": 0.0013772710008197464,
+        "maximum": 0.001426590999471955
+      },
+      "output_copy_s": {
+        "median": 0.008857880002324237,
+        "mean": 0.00885077450220706,
+        "minimum": 0.006808167003327981,
+        "maximum": 0.010946891998173669
+      },
+      "core_counters": {
+        "0": {
+          "cycles": 9034976.0,
+          "compute_cycles": 8663040.0,
+          "load_cycles": 2181182.0,
+          "store_cycles": 8817275.5,
+          "read_bytes": 34078720.0,
+          "write_bytes": 16777216.0
+        }
+      }
+    },
+    "PL2": {
+      "total_s": {
+        "median": 0.04193424800178036,
+        "mean": 0.04272612933345954,
+        "minimum": 0.040849242999684066,
+        "maximum": 0.04539972799830139
+      },
+      "hardware_max_s": {
+        "median": 0.01828771887718877,
+        "mean": 0.018287305539722062,
+        "minimum": 0.018284866848668486,
+        "maximum": 0.018287966879668795
+      },
+      "copy_a_s": {
+        "median": 0.0024367019977944437,
+        "mean": 0.0023706423320012013,
+        "minimum": 0.0020392820006236434,
+        "maximum": 0.0025062420027097687
+      },
+      "transpose_call_s": {
+        "median": 0.007970798498718068,
+        "mean": 0.007748491334496066,
+        "minimum": 0.006009406002704054,
+        "maximum": 0.008372859003429767
+      },
+      "input_sync_s": {
+        "median": 0.0023641225016035605,
+        "mean": 0.002358595833356958,
+        "minimum": 0.002325472996744793,
+        "maximum": 0.0023702929975115694
+      },
+      "submit_s": {
+        "median": 0.001274835998628987,
+        "mean": 0.0012852463332819752,
+        "minimum": 0.0012723309991997667,
+        "maximum": 0.001339271002507303
+      },
+      "wait_s": {
+        "median": 0.01866727949527558,
+        "mean": 0.018670084498201806,
+        "minimum": 0.018616518995258957,
+        "maximum": 0.018732799995632377
+      },
+      "output_sync_s": {
+        "median": 0.0013778419997834135,
+        "mean": 0.0013801981682869762,
+        "minimum": 0.0013771910016657785,
+        "maximum": 0.0013926910032751039
+      },
+      "output_copy_s": {
+        "median": 0.008857294000335969,
+        "mean": 0.008912870833834555,
+        "minimum": 0.006837407003331464,
+        "maximum": 0.011136911001813132
+      },
+      "core_counters": {
+        "0": {
+          "cycles": 4544308.0,
+          "compute_cycles": 4331520.0,
+          "load_cycles": 1241301.5,
+          "store_cycles": 4413245.5,
+          "read_bytes": 17301504.0,
+          "write_bytes": 8388608.0
+        },
+        "1": {
+          "cycles": 4571884.0,
+          "compute_cycles": 4331520.0,
+          "load_cycles": 1241826.5,
+          "store_cycles": 4413741.5,
+          "read_bytes": 17301504.0,
+          "write_bytes": 8388608.0
+        }
+      }
+    },
+    "PL3": {
+      "total_s": {
+        "median": 0.03467619599905447,
+        "mean": 0.03591040749961394,
+        "minimum": 0.03231336399767315,
+        "maximum": 0.04091876299935393
+      },
+      "hardware_max_s": {
+        "median": 0.012878618786187863,
+        "mean": 0.012876759434261009,
+        "minimum": 0.01285018450184502,
+        "maximum": 0.012891832918329182
+      },
+      "copy_a_s": {
+        "median": 0.0019958070006396156,
+        "mean": 0.002095763833494857,
+        "minimum": 0.0019855520004057325,
+        "maximum": 0.002323432003322523
+      },
+      "transpose_call_s": {
+        "median": 0.0048133449963643216,
+        "mean": 0.006169089665490901,
+        "minimum": 0.004800675000296906,
+        "maximum": 0.00909597900317749
+      },
+      "input_sync_s": {
+        "median": 0.0023675475022173487,
+        "mean": 0.0023620893334737048,
+        "minimum": 0.0023247930002980866,
+        "maximum": 0.002412622001429554
+      },
+      "submit_s": {
+        "median": 0.0017554709993419237,
+        "mean": 0.0017792664997008008,
+        "minimum": 0.001716872000542935,
+        "maximum": 0.001939472000231035
+      },
+      "wait_s": {
+        "median": 0.013158459001715528,
+        "mean": 0.013162470500295361,
+        "minimum": 0.013075472998025361,
+        "maximum": 0.0132514139986597
+      },
+      "output_sync_s": {
+        "median": 0.0013782220012217294,
+        "mean": 0.0014006266683281865,
+        "minimum": 0.0013773410028079525,
+        "maximum": 0.0015053320021252148
+      },
+      "output_copy_s": {
+        "median": 0.008950264498707838,
+        "mean": 0.008941100998830128,
+        "minimum": 0.006819016998633742,
+        "maximum": 0.011106812002253719
+      },
+      "core_counters": {
+        "0": {
+          "cycles": 3219622.5,
+          "compute_cycles": 2977920.0,
+          "load_cycles": 1463758.0,
+          "store_cycles": 3041972.0,
+          "read_bytes": 12451840.0,
+          "write_bytes": 5767168.0
+        },
+        "1": {
+          "cycles": 3092013.0,
+          "compute_cycles": 2842560.0,
+          "load_cycles": 1303723.0,
+          "store_cycles": 2905007.0,
+          "read_bytes": 12124160.0,
+          "write_bytes": 5505024.0
+        },
+        "2": {
+          "cycles": 3141008.5,
+          "compute_cycles": 2842560.0,
+          "load_cycles": 1365420.0,
+          "store_cycles": 2908035.5,
+          "read_bytes": 12124160.0,
+          "write_bytes": 5505024.0
+        }
+      }
+    }
+  },
+  "all_verified": true,
+  "environment_final": {
+    "cpu_mhz": 1049.9895,
+    "pl_mhz": 249.9975,
+    "cpu": [
+      {
+        "policy": "policy0",
+        "selected_khz": 1199999,
+        "reported_khz": 1049999,
+        "source": "cpuinfo_cur_freq"
+      }
+    ]
+  }
+}

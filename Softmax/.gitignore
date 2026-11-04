@@ -1,0 +1,6 @@
+tb/build/
+build/
+__pycache__/
+*.vvp
+*.jou
+*.log

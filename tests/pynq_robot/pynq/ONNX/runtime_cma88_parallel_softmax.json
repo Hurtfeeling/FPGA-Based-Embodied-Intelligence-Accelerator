@@ -1,0 +1,10 @@
+{
+  "resident_cache_mib": 88,
+  "shared_scratch": true,
+  "softmax": {
+    "default": {"fraction": 1.0, "threads": 4, "pipeline": false},
+    "shapes": {
+      "(1, 12, 1024, 1024)": {"fraction": 0.5, "threads": 3, "pipeline": true}
+    }
+  }
+}

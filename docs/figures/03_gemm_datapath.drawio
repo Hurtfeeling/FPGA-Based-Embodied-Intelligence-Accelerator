@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-11-03T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="03_gemm_datapath" name="GEMM 单核数据通路">
+    <mxGraphModel dx="1380" dy="830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1380" pageHeight="830" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ctrl" value="AXI-Lite 参数与控制：地址 / M N K / START / 状态 / 统计" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#fff4e3;strokeColor=#9a5a13;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=19;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="110" width="1290" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dma" value="128 位 AXI DMA&lt;br&gt;A / BT burst 读取&lt;br&gt;C burst 写回&lt;br&gt;响应与边界处理" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="250" width="220" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="a" value="A 缓存 512 KiB&lt;br&gt;256 KiB BRAM + 256 KiB URAM&lt;br&gt;32×K 行条带" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="235" width="340" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bt" value="BT 缓存 512 KiB&lt;br&gt;256 KiB BRAM + 256 KiB URAM&lt;br&gt;32×K 列对应条带" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="405" width="340" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sa" value="32×32 脉动阵列&lt;br&gt;1024 个 PE&lt;br&gt;INT8 乘法 / INT32 累加&lt;br&gt;输入缓存统一 3 拍读取" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=19;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="275" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="c" value="C 缓存&lt;br&gt;256 KiB URAM&lt;br&gt;64 个输出槽&lt;br&gt;保存绝对目标坐标" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="250" width="195" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="schedule" value="宏块调度与输出 Writer&lt;br&gt;条带就绪即计算；达到水位即可回写；B 响应后释放输出槽" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="600" width="720" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="A 读 / 写缓存" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="dma" target="a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="BT 读 / 写缓存" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="dma" target="bt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="A 向量" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="a" target="sa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="BT 向量" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="bt" target="sa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="INT32 结果" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="sa" target="c">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="C 数据与写事务" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="c" target="schedule">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="AXI 写命令" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="schedule" target="dma">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="任务配置" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9a5a13;endArrow=block;endFill=1;" edge="1" parent="1" source="ctrl" target="schedule">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="条带加载控制" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#526274;endArrow=block;endFill=1;" edge="1" parent="1" source="schedule" target="a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="条带加载控制" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#526274;endArrow=block;endFill=1;" edge="1" parent="1" source="schedule" target="bt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" value="数据顺序与任务进度受缓存水位、条带命中、Writer 队列和 AXI 在途事务共同约束" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#526274;" vertex="1" parent="1">
+          <mxGeometry x="200" y="755" width="1050" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

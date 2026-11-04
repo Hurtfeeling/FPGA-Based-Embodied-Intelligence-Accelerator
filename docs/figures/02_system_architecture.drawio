@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-11-03T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="02_system_architecture" name="PS-PL 系统总体结构">
+    <mxGraphModel dx="1400" dy="930" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="930" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="app" value="应用输入与执行端&lt;br&gt;摄像头图像 / 自然语言&lt;br&gt;机器人状态 / SO-101 动作" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="120" width="300" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="ps" value="PS 处理系统&lt;br&gt;PYNQ / Python 应用&lt;br&gt;数据准备、任务调度、状态与结果处理&lt;br&gt;PL0：250 MHz；公共时钟与复位" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="120" width="500" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="ddr" value="DDR 物理内存&lt;br&gt;A / BT / C / FP32 中间矩阵&lt;br&gt;调用方管理缓冲区与一致性" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="120" width="310" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl" value="32 位 AXI-Lite 控制互连" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#fff4e3;strokeColor=#9a5a13;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="345" width="1190" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="g0" value="GEMM 0&lt;br&gt;32×32 PE&lt;br&gt;INT8 → INT32" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="280" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="g1" value="GEMM 1&lt;br&gt;32×32 PE&lt;br&gt;INT8 → INT32" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="480" width="280" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="g2" value="GEMM 2&lt;br&gt;32×32 PE&lt;br&gt;INT8 → INT32" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="480" width="280" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="sm" value="Softmax&lt;br&gt;4 路流水&lt;br&gt;FP32 → FP32" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="480" width="280" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="smart" value="AXI SmartConnect：汇聚三个 GEMM 和 Softmax 的四个数据主接口" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=19;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="185" y="700" width="1000" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="hp" value="PS S_AXI_HP0_FPD&lt;br&gt;128 位共享数据接口" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf5f0;strokeColor=#186b61;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="825" width="430" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="应用闭环待集成&lt;br&gt;尚未完成 SmolVLA 端到端推理" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#17232f;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="30" y="825" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="规划应用输入" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#677584;endArrow=none;endFill=1;" edge="1" parent="1" source="app" target="ps">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="CPU 访问" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#186b61;endArrow=block;endFill=1;" edge="1" parent="1" source="ps" target="ddr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="控制" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9a5a13;endArrow=block;endFill=1;" edge="1" parent="1" source="ps" target="ctrl">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="配置 / 状态" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9a5a13;endArrow=block;endFill=1;" edge="1" parent="1" source="ctrl" target="g0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="配置 / 状态" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9a5a13;endArrow=block;endFill=1;" edge="1" parent="1" source="ctrl" target="g1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="配置 / 状态" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9a5a13;endArrow=block;endFill=1;" edge="1" parent="1" source="ctrl" target="g2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="配置 / 状态" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9a5a13;endArrow=block;endFill=1;" edge="1" parent="1" source="ctrl" target="sm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="128-bit AXI4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="g0" target="smart">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="128-bit AXI4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="g1" target="smart">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="128-bit AXI4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="g2" target="smart">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="128-bit AXI4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="sm" target="smart">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="仲裁" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="smart" target="hp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="DDR 读写" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="hp" target="ddr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" value="共享 HP0 / DDR 带宽" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=16;fontColor=#526274;" vertex="1" parent="1">
+          <mxGeometry x="900" y="850" width="450" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

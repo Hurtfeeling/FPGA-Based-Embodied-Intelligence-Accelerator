@@ -1,0 +1,242 @@
+[
+  {
+    "shape": [
+      50,
+      720
+    ],
+    "padded": [
+      64,
+      736
+    ],
+    "results": {
+      "numpy_full_clear": {
+        "median_ms": 0.11676900612656027,
+        "min_ms": 0.11562899453565478,
+        "written_bytes": 47104,
+        "padding_bytes": 11104
+      },
+      "numpy_edges_only": {
+        "median_ms": 0.13151900202501565,
+        "min_ms": 0.13007900270167738,
+        "written_bytes": 47104,
+        "padding_bytes": 11104
+      },
+      "neon_fused": {
+        "median_ms": 0.15279900981113315,
+        "min_ms": 0.15137900481931865,
+        "written_bytes": 47104,
+        "padding_bytes": 11104
+      }
+    }
+  },
+  {
+    "shape": [
+      64,
+      12288
+    ],
+    "padded": [
+      64,
+      12288
+    ],
+    "results": {
+      "numpy_full_clear": {
+        "median_ms": 0.5495060031535104,
+        "min_ms": 0.5025759892305359,
+        "written_bytes": 786432,
+        "padding_bytes": 0
+      },
+      "numpy_edges_only": {
+        "median_ms": 0.41568701271899045,
+        "min_ms": 0.4057670012116432,
+        "written_bytes": 786432,
+        "padding_bytes": 0
+      },
+      "neon_fused": {
+        "median_ms": 0.2660879981704056,
+        "min_ms": 0.26014799368567765,
+        "written_bytes": 786432,
+        "padding_bytes": 0
+      }
+    }
+  },
+  {
+    "shape": [
+      177,
+      960
+    ],
+    "padded": [
+      192,
+      960
+    ],
+    "results": {
+      "numpy_full_clear": {
+        "median_ms": 0.14886900316923857,
+        "min_ms": 0.1468090049456805,
+        "written_bytes": 184320,
+        "padding_bytes": 14400
+      },
+      "numpy_edges_only": {
+        "median_ms": 0.13578901416622102,
+        "min_ms": 0.1338090078206733,
+        "written_bytes": 184320,
+        "padding_bytes": 14400
+      },
+      "neon_fused": {
+        "median_ms": 0.20466800197027624,
+        "min_ms": 0.20321799092926085,
+        "written_bytes": 184320,
+        "padding_bytes": 14400
+      }
+    }
+  },
+  {
+    "shape": [
+      177,
+      2560
+    ],
+    "padded": [
+      192,
+      2560
+    ],
+    "results": {
+      "numpy_full_clear": {
+        "median_ms": 0.3069280064664781,
+        "min_ms": 0.3027869970537722,
+        "written_bytes": 491520,
+        "padding_bytes": 38400
+      },
+      "numpy_edges_only": {
+        "median_ms": 0.2627479989314452,
+        "min_ms": 0.25886799267027527,
+        "written_bytes": 491520,
+        "padding_bytes": 38400
+      },
+      "neon_fused": {
+        "median_ms": 0.2079779951600358,
+        "min_ms": 0.2061080012936145,
+        "written_bytes": 491520,
+        "padding_bytes": 38400
+      }
+    }
+  },
+  {
+    "shape": [
+      1024,
+      1024
+    ],
+    "padded": [
+      1024,
+      1024
+    ],
+    "results": {
+      "numpy_full_clear": {
+        "median_ms": 0.6795350054744631,
+        "min_ms": 0.6714850023854524,
+        "written_bytes": 1048576,
+        "padding_bytes": 0
+      },
+      "numpy_edges_only": {
+        "median_ms": 0.545985996723175,
+        "min_ms": 0.5415960040409118,
+        "written_bytes": 1048576,
+        "padding_bytes": 0
+      },
+      "neon_fused": {
+        "median_ms": 0.3285879938630387,
+        "min_ms": 0.3234570031054318,
+        "written_bytes": 1048576,
+        "padding_bytes": 0
+      }
+    }
+  },
+  {
+    "shape": [
+      1024,
+      3072
+    ],
+    "padded": [
+      1024,
+      3072
+    ],
+    "results": {
+      "numpy_full_clear": {
+        "median_ms": 2.0769639959326014,
+        "min_ms": 2.0345249940874055,
+        "written_bytes": 3145728,
+        "padding_bytes": 0
+      },
+      "numpy_edges_only": {
+        "median_ms": 1.7129570042015985,
+        "min_ms": 1.6815279959701002,
+        "written_bytes": 3145728,
+        "padding_bytes": 0
+      },
+      "neon_fused": {
+        "median_ms": 1.0269929916830733,
+        "min_ms": 0.9815920057008043,
+        "written_bytes": 3145728,
+        "padding_bytes": 0
+      }
+    }
+  },
+  {
+    "shape": [
+      960,
+      2048
+    ],
+    "padded": [
+      960,
+      2048
+    ],
+    "results": {
+      "numpy_full_clear": {
+        "median_ms": 1.2979299935977906,
+        "min_ms": 1.2877199915237725,
+        "written_bytes": 1966080,
+        "padding_bytes": 0
+      },
+      "numpy_edges_only": {
+        "median_ms": 1.053482003044337,
+        "min_ms": 1.0462329955771565,
+        "written_bytes": 1966080,
+        "padding_bytes": 0
+      },
+      "neon_fused": {
+        "median_ms": 0.6524950003949925,
+        "min_ms": 0.6255549960769713,
+        "written_bytes": 1966080,
+        "padding_bytes": 0
+      }
+    }
+  },
+  {
+    "shape": [
+      320,
+      720
+    ],
+    "padded": [
+      320,
+      736
+    ],
+    "results": {
+      "numpy_full_clear": {
+        "median_ms": 0.3822770086117089,
+        "min_ms": 0.37968700053170323,
+        "written_bytes": 235520,
+        "padding_bytes": 5120
+      },
+      "numpy_edges_only": {
+        "median_ms": 0.37505799264181405,
+        "min_ms": 0.373616989236325,
+        "written_bytes": 235520,
+        "padding_bytes": 5120
+      },
+      "neon_fused": {
+        "median_ms": 0.23878800857346505,
+        "min_ms": 0.2372479939367622,
+        "written_bytes": 235520,
+        "padding_bytes": 5120
+      }
+    }
+  }
+]

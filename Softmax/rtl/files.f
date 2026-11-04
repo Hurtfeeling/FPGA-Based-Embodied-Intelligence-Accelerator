@@ -1,0 +1,14 @@
++incdir+Softmax/rtl
+Softmax/rtl/softmax_storage.v
+Softmax/rtl/softmax_exp4.v
+Softmax/rtl/softmax_fp32_sub4.v
+Softmax/rtl/softmax_fp32_mul4.v
+Softmax/rtl/softmax_sum4.v
+Softmax/rtl/softmax_recip.v
+Softmax/rtl/softmax_norm4.v
+Softmax/rtl/softmax_core.v
+Softmax/rtl/softmax_axil_regs.v
+Softmax/rtl/softmax_accelerator_top.v
+GEMM_V2/rtl/gemm_axi_dma128.v
+GEMM_V2/rtl/gemm_axi_duplex128.v
+Softmax/rtl/softmax_sum_to_fp32.v

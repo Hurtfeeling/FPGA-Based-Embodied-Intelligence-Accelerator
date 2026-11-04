@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-11-03T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="07_attention_integration" name="Attention 应用接入路径">
+    <mxGraphModel dx="1330" dy="590" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1330" pageHeight="590" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qk" value="GEMM：QKᵀ&lt;br&gt;INT8 输入&lt;br&gt;INT32 累加结果" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="155" width="220" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="scale" value="缩放、转换与 mask&lt;br&gt;INT32 → FP32&lt;br&gt;量化比例与 √d" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="155" width="270" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="softmax" value="FP32 Softmax&lt;br&gt;逐行概率归一化&lt;br&gt;FP32 概率输出" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="155" width="250" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="quant" value="量化与布局转换&lt;br&gt;FP32 → INT8&lt;br&gt;组织后续 GEMM 输入" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#f2f4f6;strokeColor=#677584;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="985" y="155" width="300" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="pv" value="GEMM：概率 × V&lt;br&gt;接收转换后的 INT8 输入" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#eaf3fa;strokeColor=#23608b;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="965" y="390" width="320" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" value="当前完成边界&lt;br&gt;GEMM 与 Softmax 分别实现；尚未验证为完整 Attention 流水" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;spacing=10;fillColor=#fff4e3;strokeColor=#9a5a13;strokeWidth=2;fontFamily=Microsoft YaHei;fontSize=18;fontColor=#17232f;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="390" width="800" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="qk" target="scale">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="scale" target="softmax">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="softmax" target="quant">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#23608b;endArrow=block;endFill=1;" edge="1" parent="1" source="quant" target="pv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" value="蓝色：已有算子能力；灰色：待接入步骤；箭头表示数据依赖" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=17;fontColor=#526274;" vertex="1" parent="1">
+          <mxGeometry x="70" y="530" width="1210" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<rect width="100%" height="100%" fill="white"/>
+<text x="700.0" y="39.72" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="27" fill="#17232f" font-weight="700" text-anchor="middle">PS PL 异构系统总体结构</text>
+<text x="700.0" y="71.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#526274" font-weight="400" text-anchor="middle">当前导出工程：3 个 GEMM + 1 个 Softmax，共享 128 位 HP0 数据通路</text>
+<polyline points="30,110 330,110" fill="none" stroke="#677584" stroke-width="2" stroke-dasharray="8 6"/>
+<polyline points="330,110 330,280" fill="none" stroke="#677584" stroke-width="2" stroke-dasharray="8 6"/>
+<polyline points="330,280 30,280" fill="none" stroke="#677584" stroke-width="2" stroke-dasharray="8 6"/>
+<polyline points="30,280 30,110" fill="none" stroke="#677584" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="30" y="110" width="300" height="170" rx="12" fill="#f2f4f6" stroke="#677584" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="180.0" y="145.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#677584" font-weight="700" text-anchor="middle">应用输入与执行端</text>
+<text x="180.0" y="207.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">摄像头图像 / 自然语言</text>
+<text x="180.0" y="230.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">机器人状态 / SO-101 动作</text>
+<rect x="420" y="110" width="530" height="170" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="685.0" y="145.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#186b61" font-weight="700" text-anchor="middle">PS 处理系统</text>
+<text x="685.0" y="195.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">PYNQ / Python 应用</text>
+<text x="685.0" y="218.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">数据准备、任务调度、状态与结果处理</text>
+<text x="685.0" y="242.62" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">PL0：250 MHz；公共时钟与复位</text>
+<rect x="1040" y="110" width="320" height="170" rx="12" fill="#eaf5f0" stroke="#186b61" stroke-width="2"/>
+<text x="1200.0" y="145.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#186b61" font-weight="700" text-anchor="middle">DDR 物理内存</text>
+<text x="1200.0" y="207.26" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">A / BT / C / FP32 中间矩阵</text>
+<text x="1200.0" y="230.94" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">调用方持有缓冲区并管理一致性</text>
+<polyline points="330,192 405,192" fill="none" stroke="#526274" stroke-width="2" stroke-dasharray="8 6"/>
+<polygon points="405,192 395.0950818741206,196.78462087522354 395.0950818741206,187.21537912477646" fill="#526274"/>
+<polyline points="950,165 1025,165" fill="none" stroke="#186b61" stroke-width="2"/>
+<polygon points="1025,165 1015.0950818741205,169.78462087522354 1015.0950818741205,160.21537912477646" fill="#186b61"/>
+<text x="985" y="140.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#186b61" font-weight="400" text-anchor="middle">CPU 访问</text>
+<polyline points="480,280 480,320" fill="none" stroke="#526274" stroke-width="2"/>
+<polygon points="480,320 475.21537912477646,310.0950818741206 484.78462087522354,310.0950818741206" fill="#526274"/>
+<rect x="100" y="335" width="1200" height="65" rx="12" fill="#fff4e3" stroke="#9a5a13" stroke-width="2"/>
+<text x="700.0" y="374.7" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#9a5a13" font-weight="700" text-anchor="middle">32 位 AXI-Lite 控制互连</text>
+<rect x="45" y="465" width="285" height="135" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="187.5" y="500.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">GEMM 0</text>
+<text x="187.5" y="544.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">32×32 PE</text>
+<text x="187.5" y="568.4399999999999" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">INT8 → INT32</text>
+<polyline points="187,400 187,450" fill="none" stroke="#9a5a13" stroke-width="2"/>
+<polygon points="187,450 182.21537912477646,440.0950818741206 191.78462087522354,440.0950818741206" fill="#9a5a13"/>
+<polyline points="187,600 187,675" fill="none" stroke="#23608b" stroke-width="2"/>
+<polygon points="187,675 182.21537912477646,665.0950818741205 191.78462087522354,665.0950818741205" fill="#23608b"/>
+<text x="187" y="635.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#23608b" font-weight="400" text-anchor="middle">128 位 AXI4 主接口</text>
+<rect x="385" y="465" width="285" height="135" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="527.5" y="500.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">GEMM 1</text>
+<text x="527.5" y="544.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">32×32 PE</text>
+<text x="527.5" y="568.4399999999999" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">INT8 → INT32</text>
+<polyline points="527,400 527,450" fill="none" stroke="#9a5a13" stroke-width="2"/>
+<polygon points="527,450 522.2153791247765,440.0950818741206 531.7846208752235,440.0950818741206" fill="#9a5a13"/>
+<polyline points="527,600 527,675" fill="none" stroke="#23608b" stroke-width="2"/>
+<polygon points="527,675 522.2153791247765,665.0950818741205 531.7846208752235,665.0950818741205" fill="#23608b"/>
+<text x="527" y="635.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#23608b" font-weight="400" text-anchor="middle">128 位 AXI4 主接口</text>
+<rect x="725" y="465" width="285" height="135" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="867.5" y="500.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">GEMM 2</text>
+<text x="867.5" y="544.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">32×32 PE</text>
+<text x="867.5" y="568.4399999999999" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">INT8 → INT32</text>
+<polyline points="867,400 867,450" fill="none" stroke="#9a5a13" stroke-width="2"/>
+<polygon points="867,450 862.2153791247765,440.0950818741206 871.7846208752235,440.0950818741206" fill="#9a5a13"/>
+<polyline points="867,600 867,675" fill="none" stroke="#23608b" stroke-width="2"/>
+<polygon points="867,675 862.2153791247765,665.0950818741205 871.7846208752235,665.0950818741205" fill="#23608b"/>
+<text x="867" y="635.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#23608b" font-weight="400" text-anchor="middle">128 位 AXI4 主接口</text>
+<rect x="1065" y="465" width="285" height="135" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="1207.5" y="500.2" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">Softmax</text>
+<text x="1207.5" y="544.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">4 路流水</text>
+<text x="1207.5" y="568.4399999999999" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#17232f" font-weight="400" text-anchor="middle">FP32 → FP32</text>
+<polyline points="1207,400 1207,450" fill="none" stroke="#9a5a13" stroke-width="2"/>
+<polygon points="1207,450 1202.2153791247765,440.0950818741206 1211.7846208752235,440.0950818741206" fill="#9a5a13"/>
+<polyline points="1207,600 1207,675" fill="none" stroke="#23608b" stroke-width="2"/>
+<polygon points="1207,675 1202.2153791247765,665.0950818741205 1211.7846208752235,665.0950818741205" fill="#23608b"/>
+<text x="1207" y="635.04" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="14" fill="#23608b" font-weight="400" text-anchor="middle">128 位 AXI4 主接口</text>
+<rect x="180" y="690" width="1010" height="65" rx="12" fill="#eaf3fa" stroke="#23608b" stroke-width="2"/>
+<text x="685.0" y="729.7" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="20" fill="#23608b" font-weight="700" text-anchor="middle">AXI SmartConnect  四主汇聚为一路</text>
+<polyline points="1190,722 1380,722 1380,305 1200,305 1200,280" fill="none" stroke="#23608b" stroke-width="3"/>
+<polygon points="1200,280 1204.7846208752235,289.9049181258794 1195.2153791247765,289.9049181258794" fill="#23608b"/>
+<text x="1280" y="685.76" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="16" fill="#23608b" font-weight="400" text-anchor="middle">读 / 写</text>
+<text x="1255" y="806.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="400" text-anchor="middle">S_AXI_HP0_FPD</text>
+<text x="1255" y="831.28" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#23608b" font-weight="400" text-anchor="middle">128 位数据接口</text>
+<rect x="30" y="800" width="950" height="62" rx="12" fill="#f2f4f6" stroke="#677584" stroke-width="2"/>
+<text x="505.0" y="837.12" font-family="Microsoft YaHei,SimHei,sans-serif" font-size="17" fill="#677584" font-weight="700" text-anchor="middle">应用闭环待集成；图中虚线不代表已完成 SmolVLA 端到端推理</text>
+</svg>

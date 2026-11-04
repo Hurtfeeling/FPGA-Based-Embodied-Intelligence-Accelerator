@@ -1,0 +1,214 @@
+{
+  "actual_pl_execution": false,
+  "bridge_library": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/libsmolvla_ort_cpu.so",
+  "clock_at_end": {
+    "cpu_mhz": 1049.9895,
+    "cpuinfo_cur_freq_khz": 1049999,
+    "pl_mhz": 249.9975,
+    "scaling_cur_freq_khz": 1199999,
+    "scaling_max_freq_khz": 1199999,
+    "scaling_min_freq_khz": 1199999
+  },
+  "clock_at_start": {
+    "cpu_mhz": 1049.9895,
+    "cpuinfo_cur_freq_khz": 1049999,
+    "pl_mhz": 249.9975,
+    "scaling_cur_freq_khz": 1199999,
+    "scaling_max_freq_khz": 1199999,
+    "scaling_min_freq_khz": 1199999
+  },
+  "completed_measured_repeats": 3,
+  "cpu_baseline": null,
+  "cpu_baseline_info": null,
+  "cpu_mem_arena": false,
+  "cpu_mhz": 1049.9895,
+  "cpu_threads": 4,
+  "graph_optimization": "disabled",
+  "hybrid_scope": "Only explicitly converted large GEMM nodes use PL; small GEMM and all Softmax remain in ONNX Runtime CPU",
+  "inputs": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/validation_0.npz",
+  "inputs_sha256": "bde66e0ababee62faff20fe86767b3a093fb7781675b35a1c09be55fd39b5258",
+  "inter_op_threads": 1,
+  "intra_op_threads": 4,
+  "max_rss_kib": 1565092,
+  "median_inference_seconds": 58.01845175999915,
+  "memory_pattern": false,
+  "mode": "cpu",
+  "model": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/smolvla_w8a8_fp32.onnx",
+  "model_bytes": 553621017,
+  "model_sha256": "1cda67f165949be5194cad339459fff4b0a60a38849be3b4063fff68c10bedca",
+  "onnxruntime_version": "1.16.3",
+  "output_dtype": "float32",
+  "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cpu.npy",
+  "output_shape": [
+    1,
+    50,
+    6
+  ],
+  "pl_mhz": 249.9975,
+  "preparation_seconds": 4.409387029001664,
+  "process_cpu_affinity": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "process_cpu_affinity_at_end": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "ps_dma_used": false,
+  "records": [
+    {
+      "callback_calls": 0,
+      "callback_seconds": 0.0,
+      "callback_shapes": {},
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "operators": {},
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cpu.round_00_warmup.npy",
+      "output_finite": true,
+      "output_max": 1.26959228515625,
+      "output_min": -2.987299680709839,
+      "phase": "warmup",
+      "repeat": 0,
+      "report_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cpu.round_00_warmup.json",
+      "seconds": 61.61893295600021,
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "callback_calls": 0,
+      "callback_seconds": 0.0,
+      "callback_shapes": {},
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "operators": {},
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cpu.round_01_measure.npy",
+      "output_finite": true,
+      "output_max": 1.26959228515625,
+      "output_min": -2.987299680709839,
+      "phase": "measure",
+      "repeat": 1,
+      "report_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cpu.round_01_measure.json",
+      "seconds": 58.11028201999943,
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "callback_calls": 0,
+      "callback_seconds": 0.0,
+      "callback_shapes": {},
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "operators": {},
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cpu.round_02_measure.npy",
+      "output_finite": true,
+      "output_max": 1.26959228515625,
+      "output_min": -2.987299680709839,
+      "phase": "measure",
+      "repeat": 2,
+      "report_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cpu.round_02_measure.json",
+      "seconds": 58.01845175999915,
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    },
+    {
+      "callback_calls": 0,
+      "callback_seconds": 0.0,
+      "callback_shapes": {},
+      "clock": {
+        "cpu_mhz": 1049.9895,
+        "cpuinfo_cur_freq_khz": 1049999,
+        "pl_mhz": 249.9975,
+        "scaling_cur_freq_khz": 1199999,
+        "scaling_max_freq_khz": 1199999,
+        "scaling_min_freq_khz": 1199999
+      },
+      "operators": {},
+      "output_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cpu.round_03_measure.npy",
+      "output_finite": true,
+      "output_max": 1.26959228515625,
+      "output_min": -2.987299680709839,
+      "phase": "measure",
+      "repeat": 3,
+      "report_file": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103/model/cpu.round_03_measure.json",
+      "seconds": 58.012602908998815,
+      "vs_export_references": {
+        "fp32_actions": {
+          "mae": 0.028680503610521556,
+          "max_abs": 0.20000655949115753
+        },
+        "onnx_actions": {
+          "mae": 0.01691394569973151,
+          "max_abs": 0.06319171190261841
+        },
+        "reference_actions": {
+          "mae": 0.020924989885340136,
+          "max_abs": 0.12430313974618912
+        }
+      }
+    }
+  ],
+  "requested_repeats": 3,
+  "runtime_root": "/home/xilinx/jupyter_notebooks/smolvla_final/GEMM_V2/eval_wrist_beside_20261103",
+  "session_load_seconds": 622.8482004639991,
+  "status": "complete",
+  "timing_scope": "smol_run full graph; copies, callbacks, dispatch and PL included; session initialization and report/output file writes excluded",
+  "warmups": 1
+}
